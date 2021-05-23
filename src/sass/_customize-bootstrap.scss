@@ -46,6 +46,18 @@ body {
 	width: fit-content;
 }
 
+.btn-primary {
+	padding: 0.7rem 3rem;
+	color: $gray-200;
+	box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
+	border: none;
+}
+
+.btn-primary:hover {
+	background-color: #222;
+	color: #444;
+}
+
 @media (min-width: 992px) {
 	.main-container {
 		max-width: 85vw;
@@ -102,7 +114,7 @@ body {
 .hero h1 {
 	font-size: 3rem;
 	font-weight: 800;
-	line-height: 1.2em;
+	line-height: 2ex;
 	color: $gray-800;
 	letter-spacing: 0.03ch;
 	text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
@@ -122,6 +134,85 @@ body {
 }
 
 .main-teams {
+	text-align: center;
+}
+
+.main-teams h2 {
+	font-weight: 800;
+	margin-bottom: 2rem;
+	color: $gray-800;
+}
+
+.main-teams h4 {
+	max-width: 40ch;
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: $gray-600;
+	margin: 0 auto 4rem;
+}
+
+.teams-details {
+	padding: 0 10vh;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
+	gap: 2rem;
+}
+
+@media (min-width: 992px) {
+	.main-teams h4 {
+		max-width: 55ch;
+	}
+
+	.main-teams .teams-details {
+		padding: 0;
+		flex-direction: row;
+	}
+}
+
+.teams-box {
+	flex-basis: 23%;
+	margin-bottom: 3rem;
+}
+
+@mixin teams-box-h3 {
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 12vmin;
+	padding-top: 15vmin;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: $gray-800;
+
+	@media (min-width: 992px) {
+		background-size: 5vmin;
+		padding-top: 7vmin;
+	}
+}
+
+.teams-box:nth-child(1) h3 {
+	background: url("../../ico/tutor/online-education.png");
+	@include teams-box-h3;
+}
+
+.teams-box:nth-child(2) h3 {
+	background: url("../../ico/tutor/thinking.png");
+	@include teams-box-h3;
+}
+
+.teams-box:nth-child(3) h3 {
+	background: url("../../ico/tutor/test.png");
+	@include teams-box-h3;
+}
+
+.teams-box:nth-child(4) h3 {
+	background: url("../../ico/tutor/success.png");
+	@include teams-box-h3;
+}
+
+.teams-box p {
+	color: $gray-700;
+	font-size: 0.9rem;
+	line-height: 2;
 }
