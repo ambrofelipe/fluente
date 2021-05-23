@@ -1,0 +1,127 @@
+$navbar-light-active-color: hsl(154, 90%, 35%);
+
+:root {
+	--wire: 1px solid #000;
+	--bg-trans: rgba(248, 249, 250, 0.75);
+}
+
+html,
+body {
+	height: 150%;
+}
+
+.bg-translucent {
+	background: var(--bg-trans);
+	backdrop-filter: blur(10px);
+}
+
+.bg-translucent .navbar-toggler {
+	color: rgba(0, 0, 0, 0.55);
+}
+
+.bg-translucent .navbar-toggler-icon {
+	color: rgba(0, 0, 0, 0.847);
+}
+
+.navbar-brand {
+	background: url("/img/logo-light.svg") no-repeat;
+	width: 150px;
+	height: 50px;
+}
+
+.nav-link.active {
+	font-weight: 400;
+	width: fit-content;
+	padding-bottom: 1px;
+	border-bottom: 2px solid hsl(154, 90%, 35%);
+}
+
+.nav-link > svg {
+	position: relative;
+	bottom: 2px;
+}
+
+.navbar-nav > button {
+	height: fit-content;
+	width: fit-content;
+}
+
+@media (min-width: 992px) {
+	.main-container {
+		max-width: 85vw;
+		margin: 0 auto;
+	}
+}
+
+.hero {
+	width: 100%;
+	max-height: 200vh;
+	position: relative;
+	top: -200px;
+	background-image: url("/img/header.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.agenda {
+	background: rgba(255, 255, 255, 0.5);
+	margin: auto !important;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+
+.agenda-spacer-top {
+	flex: 1 0 100%;
+	min-height: 55vh;
+}
+
+.agenda-spacer-bottom {
+	flex: 1 0 100%;
+	min-height: 20vh;
+}
+
+.agenda > div:nth-child(2) {
+	flex: 0 0 40%;
+	min-width: 20rem;
+	max-width: 25rem;
+}
+
+.agenda > div:nth-child(3) {
+	flex: 1 1 60%;
+	min-width: 35ch;
+	max-width: 50ch;
+}
+
+.hero h1 {
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 1.2em;
+	color: $gray-800;
+	letter-spacing: 0.03ch;
+	text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 strong {
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 0.5em;
+	color: $primary-content;
+}
+
+.hero h2 {
+	margin-top: 1em;
+	font-size: 1.5em;
+	text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-teams {
+	display: flex;
+	flex-direction: column;
+}
