@@ -21,28 +21,37 @@ main.teams {
 	}
 }
 
-@media (min-width: 992px) {
-	.teams-container {
-		max-width: 80vw;
-		margin: 0 auto;
-	}
-}
+// @media (min-width: 992px) {
+// 	.teams-container {
+// 		//max-width: 80vw;
+// 		margin: 0 auto;
+// 	}
+// }
 
 .teams-details {
-	padding: 0 10vh;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 2rem;
 
-	@media (min-width: 992px) {
-		padding: 0;
+	// @media (min-width: 992px) {
+	// 	padding: 0;
+	// }
+
+	@media (min-width: 1200px) {
+		flex-flow: row nowrap;
 	}
 }
 
 .teams-box {
+	min-width: 30ch;
 	margin-bottom: 3rem;
+	flex: 0 0 50%;
+
+	@media (min-width: 1200px) {
+		flex: 0 0 25%;
+		max-width: 25rem;
+	}
 
 	h3 {
 		background-position: top center;

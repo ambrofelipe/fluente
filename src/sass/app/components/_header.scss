@@ -61,12 +61,6 @@ header {
 			text-shadow: 1px 3px 4px $shadow;
 		}
 	}
-
-	@media (max-width: 320px) {
-		* {
-			max-width: 95vw;
-		}
-	}
 }
 
 .agenda-spacer {
@@ -87,7 +81,6 @@ header {
 	padding: 0;
 	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	max-width: 95vw;
 
 	.month-title {
 		background-color: $secondary;
@@ -98,6 +91,7 @@ header {
 		font-size: 1.3rem;
 		font-weight: 400;
 		padding: 1.2rem 0;
+		border-radius: 5px 5px 0 0;
 	}
 
 	form {
@@ -109,7 +103,7 @@ header {
 			display: inline-block;
 			flex: 1 0 14%;
 			font-size: 0.9rem;
-			padding: 0.5rem;
+			padding: 0.5rem 0;
 			text-align: center;
 			text-transform: uppercase;
 			color: $gray-400;
@@ -117,14 +111,10 @@ header {
 		}
 
 		label.day {
-			flex: 1 0 14%;
+			flex-shrink: 0;
 			height: 2.5rem;
-			width: 2.5rem;
+			width: (100% / 7);
 			text-align: center;
-
-			&:last-of-type {
-				flex: 0 0 14%;
-			}
 
 			span {
 				display: inline-block;
@@ -145,8 +135,6 @@ header {
 
 			&.invalid {
 				opacity: 0;
-				width: 1.5rem;
-				height: 1.5rem;
 
 				span {
 					display: none;

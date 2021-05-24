@@ -10956,11 +10956,6 @@ header {
   color: #343a40;
   text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 320px) {
-  .agenda * {
-    max-width: 95vw;
-  }
-}
 
 .agenda-spacer {
   flex: 1 0 100%;
@@ -10978,7 +10973,6 @@ header {
   padding: 0;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  max-width: 95vw;
 }
 .calendar .month-title {
   background-color: #0bda81;
@@ -10989,6 +10983,7 @@ header {
   font-size: 1.3rem;
   font-weight: 400;
   padding: 1.2rem 0;
+  border-radius: 5px 5px 0 0;
 }
 .calendar form {
   display: flex;
@@ -10999,20 +10994,17 @@ header {
   display: inline-block;
   flex: 1 0 14%;
   font-size: 0.9rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   text-align: center;
   text-transform: uppercase;
   color: #ced4da;
   background-color: #343a40;
 }
 .calendar form label.day {
-  flex: 1 0 14%;
+  flex-shrink: 0;
   height: 2.5rem;
-  width: 2.5rem;
+  width: 14.2857142857%;
   text-align: center;
-}
-.calendar form label.day:last-of-type {
-  flex: 0 0 14%;
 }
 .calendar form label.day span {
   display: inline-block;
@@ -11031,8 +11023,6 @@ header {
 }
 .calendar form label.day.invalid {
   opacity: 0;
-  width: 1.5rem;
-  height: 1.5rem;
 }
 .calendar form label.day.invalid span {
   display: none;
@@ -11060,28 +11050,28 @@ main.teams .teams-title h4, main.teams .teams-title .h4 {
   }
 }
 
-@media (min-width: 992px) {
-  .teams-container {
-    max-width: 80vw;
-    margin: 0 auto;
-  }
-}
 .teams-details {
-  padding: 0 10vh;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .teams-details {
-    padding: 0;
+    flex-flow: row nowrap;
   }
 }
 
 .teams-box {
+  min-width: 30ch;
   margin-bottom: 3rem;
+  flex: 0 0 50%;
+}
+@media (min-width: 1200px) {
+  .teams-box {
+    flex: 0 0 25%;
+    max-width: 25rem;
+  }
 }
 .teams-box h3, .teams-box .h3 {
   background-position: top center;
