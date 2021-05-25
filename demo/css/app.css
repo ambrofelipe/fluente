@@ -11030,6 +11030,7 @@ header {
 
 main.teams {
   text-align: center;
+  padding-bottom: 5rem;
 }
 main.teams .teams-title h2, main.teams .teams-title .h2 {
   font-weight: 800;
@@ -11061,49 +11062,177 @@ main.teams .teams-title h4, main.teams .teams-title .h4 {
     flex-flow: row nowrap;
   }
 }
-
-.teams-box {
-  min-width: 30ch;
+.teams-details .teams-box {
+  min-width: 26ch;
   margin-bottom: 3rem;
-  flex: 0 0 50%;
+  margin-right: 1rem;
+  flex: 0 0 40%;
 }
 @media (min-width: 1200px) {
-  .teams-box {
-    flex: 0 0 25%;
-    max-width: 25rem;
+  .teams-details .teams-box {
+    flex: 0 0 20%;
+    max-width: 35ch;
   }
 }
-.teams-box h3, .teams-box .h3 {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 12vmin;
-  padding-top: 18vmin;
+.teams-details .teams-box h3, .teams-details .teams-box .h3 {
   font-size: 1.2rem;
   font-weight: 400;
   color: #343a40;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 15vmin;
+  padding-top: 20vmin;
 }
-@media (min-width: 768px) {
-  .teams-box h3, .teams-box .h3 {
+@media (min-width: 576px) {
+  .teams-details .teams-box h3, .teams-details .teams-box .h3 {
     background-size: 7vmin;
     padding-top: 10vmin;
   }
 }
-.teams-box:nth-child(1) h3, .teams-box:nth-child(1) .h3 {
+.teams-details .teams-box:nth-child(1) h3, .teams-details .teams-box:nth-child(1) .h3 {
   background-image: url(../ico/online-education.png);
 }
-.teams-box:nth-child(2) h3, .teams-box:nth-child(2) .h3 {
+.teams-details .teams-box:nth-child(2) h3, .teams-details .teams-box:nth-child(2) .h3 {
   background-image: url(../ico/thinking.png);
 }
-.teams-box:nth-child(3) h3, .teams-box:nth-child(3) .h3 {
+.teams-details .teams-box:nth-child(3) h3, .teams-details .teams-box:nth-child(3) .h3 {
   background-image: url(../ico/test.png);
 }
-.teams-box:nth-child(4) h3, .teams-box:nth-child(4) .h3 {
+.teams-details .teams-box:nth-child(4) h3, .teams-details .teams-box:nth-child(4) .h3 {
   background-image: url(../ico/success.png);
 }
-.teams-box p {
+.teams-details .teams-box p {
   color: #495057;
   margin: 0 auto;
   font-size: 0.9rem;
   line-height: 2;
   max-width: 30ch;
+}
+
+section.rapidos {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding-top: 10rem;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+}
+@media (min-width: 1200px) {
+  section.rapidos {
+    flex-flow: row nowrap;
+  }
+}
+section.rapidos .side {
+  flex: 0 0 30%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+@media (min-width: 992px) {
+  section.rapidos .side {
+    text-align: left;
+    align-content: flex-start;
+    margin-left: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  section.rapidos .side {
+    max-width: 23rem;
+  }
+}
+section.rapidos .side p {
+  font-size: 0.9rem;
+  margin-bottom: 5rem;
+  max-width: 40ch;
+}
+section.rapidos .side h2, section.rapidos .side .h2 {
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #343a40;
+}
+section.rapidos .side h4, section.rapidos .side .h4 {
+  max-width: 40ch;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #6c757d;
+  margin: 0 auto 4rem;
+}
+@media (min-width: 992px) {
+  section.rapidos .side h4, section.rapidos .side .h4 {
+    max-width: 55ch;
+  }
+}
+
+.rapidos-details {
+  flex: 0 0 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 60rem;
+}
+@media (min-width: 1200px) {
+  .rapidos-details {
+    flex-flow: row wrap;
+  }
+}
+.rapidos-details .rapidos-box {
+  flex: 0 0 40%;
+  min-width: 30ch;
+  margin-bottom: 3rem;
+  background-size: 12vmin;
+  padding-top: 18vmin;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .rapidos-details .rapidos-box {
+    background-size: 8vmin;
+    background-position: 1% 15%;
+    padding-top: 0;
+    padding-left: 10vmin;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .rapidos-details .rapidos-box {
+    flex: 0 0 50%;
+    max-width: 25rem;
+  }
+}
+.rapidos-details .rapidos-box:nth-child(1) {
+  background-image: url(../ico/microphone.png);
+}
+.rapidos-details .rapidos-box:nth-child(2) {
+  background-image: url(../ico/diploma.png);
+}
+.rapidos-details .rapidos-box:nth-child(3) {
+  background-image: url(../ico/backpack.png);
+}
+.rapidos-details .rapidos-box:nth-child(4) {
+  background-image: url(../ico/presentation.png);
+}
+.rapidos-details .rapidos-box h3, .rapidos-details .rapidos-box .h3 {
+  font-variant: small-caps;
+  font-size: 1.3rem;
+  color: #343a40;
+  max-width: 35ch;
+}
+.rapidos-details .rapidos-box p {
+  color: #495057;
+  font-size: 0.9rem;
+  max-width: 40ch;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.rapidos-details a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 10%;
 }

@@ -1,32 +1,37 @@
-main.teams {
-	text-align: center;
+@mixin main-h2 {
+	font-weight: 800;
+	margin-bottom: 2rem;
+	color: $gray-800;
+}
 
-	.teams-title h2 {
-		font-weight: 800;
-		margin-bottom: 2rem;
-		color: $gray-800;
-	}
+@mixin main-h4 {
+	max-width: 40ch;
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: $gray-600;
+	margin: 0 auto 4rem;
 
-	.teams-title h4 {
-		max-width: 40ch;
-		font-size: 0.9rem;
-		font-weight: 300;
-		line-height: 1.5;
-		color: $gray-600;
-		margin: 0 auto 4rem;
-
-		@media (min-width: 992px) {
-			max-width: 55ch;
-		}
+	@media (min-width: 992px) {
+		max-width: 55ch;
 	}
 }
 
-// @media (min-width: 992px) {
-// 	.teams-container {
-// 		//max-width: 80vw;
-// 		margin: 0 auto;
-// 	}
-// }
+@mixin details-box-bg {
+}
+
+main.teams {
+	text-align: center;
+	padding-bottom: 5rem;
+
+	.teams-title h2 {
+		@include main-h2;
+	}
+
+	.teams-title h4 {
+		@include main-h4;
+	}
+}
 
 .teams-details {
 	display: flex;
@@ -34,61 +39,177 @@ main.teams {
 	justify-content: center;
 	gap: 2rem;
 
-	// @media (min-width: 992px) {
-	// 	padding: 0;
-	// }
+	@media (min-width: 1200px) {
+		flex-flow: row nowrap;
+	}
+
+	.teams-box {
+		min-width: 26ch;
+		margin-bottom: 3rem;
+		margin-right: 1rem;
+		flex: 0 0 40%;
+
+		@media (min-width: 1200px) {
+			flex: 0 0 20%;
+			max-width: 35ch;
+		}
+
+		h3 {
+			font-size: 1.2rem;
+			font-weight: 400;
+			color: $gray-800;
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 15vmin;
+			padding-top: 20vmin;
+
+			@media (min-width: 576px) {
+				background-size: 7vmin;
+				padding-top: 10vmin;
+			}
+		}
+
+		&:nth-child(1) h3 {
+			background-image: url("../../ico/tutor/online-education.png");
+		}
+
+		&:nth-child(2) h3 {
+			background-image: url("../../ico/tutor/thinking.png");
+		}
+
+		&:nth-child(3) h3 {
+			background-image: url("../../ico/tutor/test.png");
+		}
+
+		&:nth-child(4) h3 {
+			background-image: url("../../ico/tutor/success.png");
+		}
+
+		p {
+			color: $gray-700;
+			margin: 0 auto;
+			font-size: 0.9rem;
+			line-height: 2;
+			max-width: 30ch;
+		}
+	}
+}
+
+section.rapidos {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	background-color: $gray-100;
+	padding-top: 10rem;
+	text-align: center;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 
 	@media (min-width: 1200px) {
 		flex-flow: row nowrap;
 	}
-}
 
-.teams-box {
-	min-width: 30ch;
-	margin-bottom: 3rem;
-	flex: 0 0 50%;
+	.side {
+		flex: 0 0 30%;
+		display: flex;
+		flex-flow: column wrap;
+		align-content: center;
 
-	@media (min-width: 1200px) {
-		flex: 0 0 25%;
-		max-width: 25rem;
-	}
+		@media (min-width: 992px) {
+			text-align: left;
+			align-content: flex-start;
+			margin-left: 5rem;
+		}
 
-	h3 {
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: 12vmin;
-		padding-top: 18vmin;
-		font-size: 1.2rem;
-		font-weight: 400;
-		color: $gray-800;
+		@media (min-width: 1200px) {
+			max-width: 23rem;
+		}
 
-		@media (min-width: 768px) {
-			background-size: 7vmin;
-			padding-top: 10vmin;
+		p {
+			font-size: 0.9rem;
+			margin-bottom: 5rem;
+			max-width: 40ch;
 		}
 	}
 
-	&:nth-child(1) h3 {
-		background-image: url("../../ico/tutor/online-education.png");
+	.side h2 {
+		@include main-h2;
 	}
 
-	&:nth-child(2) h3 {
-		background-image: url("../../ico/tutor/thinking.png");
+	.side h4 {
+		@include main-h4;
+	}
+}
+
+.rapidos-details {
+	flex: 0 0 70%;
+	display: flex;
+	flex-wrap: wrap;
+	align-self: center;
+	justify-content: center;
+	gap: 2rem;
+	max-width: 60rem;
+
+	@media (min-width: 1200px) {
+		flex-flow: row wrap;
 	}
 
-	&:nth-child(3) h3 {
-		background-image: url("../../ico/tutor/test.png");
+	.rapidos-box {
+		flex: 0 0 40%;
+		min-width: 30ch;
+		margin-bottom: 3rem;
+		background-size: 12vmin;
+		padding-top: 18vmin;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		@media (min-width: 768px) {
+			background-size: 8vmin;
+			background-position: 1% 15%;
+			padding-top: 0;
+			padding-left: 10vmin;
+			text-align: left;
+		}
+
+		@media (min-width: 1200px) {
+			flex: 0 0 50%;
+			max-width: 25rem;
+		}
+
+		&:nth-child(1) {
+			background-image: url("../../ico/tutor/microphone.png");
+		}
+
+		&:nth-child(2) {
+			background-image: url("../../ico/tutor/diploma.png");
+		}
+
+		&:nth-child(3) {
+			background-image: url("../../ico/tutor/backpack.png");
+		}
+
+		&:nth-child(4) {
+			background-image: url("../../ico/tutor/presentation.png");
+		}
+
+		h3 {
+			font-variant: small-caps;
+			font-size: 1.3rem;
+			color: $gray-800;
+			max-width: 35ch;
+		}
+
+		p {
+			color: $gray-700;
+			font-size: 0.9rem;
+			max-width: 40ch;
+			line-height: 1.5;
+			margin: 0 auto;
+		}
 	}
 
-	&:nth-child(4) h3 {
-		background-image: url("../../ico/tutor/success.png");
-	}
-
-	p {
-		color: $gray-700;
-		margin: 0 auto;
-		font-size: 0.9rem;
-		line-height: 2;
-		max-width: 30ch;
+	a {
+		display: block;
+		width: fit-content;
+		margin: 0 10%;
 	}
 }
