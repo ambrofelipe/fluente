@@ -143,3 +143,114 @@ header {
 		}
 	}
 }
+
+footer {
+	display: flex;
+	flex-flow: column wrap;
+	background-color: darken($tertiary, 5%);
+	color: $gray-500;
+	font-size: 0.9rem;
+	padding-top: 2rem;
+
+	@media (min-width: 992px) {
+		flex-flow: row wrap;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	& > a {
+		display: block;
+		background: url("../../img/logo-e.svg") no-repeat;
+		width: 9rem;
+		height: 9rem;
+		margin: 0 auto;
+		opacity: 0.7;
+	}
+
+	.nav-footer {
+		flex: 1 1 40%;
+		margin-top: 1rem;
+		align-items: flex-start;
+		max-width: 60rem;
+
+		a {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			color: $gray-500;
+			padding: 0.5rem 0 2px 0;
+			margin-right: 1.5rem;
+
+			&:nth-child(1) {
+				margin-left: 3rem;
+			}
+
+			&:nth-child(3) {
+				margin-right: auto;
+			}
+
+			&.active {
+				color: darken($secondary, 20%) !important;
+				border-bottom: 2px solid darken($secondary, 20%);
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		.nav a:nth-child(1),
+		.nav a:nth-child(2),
+		.nav a:nth-child(3) {
+			display: none;
+		}
+	}
+
+	.nav a:nth-child(4) {
+		margin-left: auto;
+		color: $gray-500;
+	}
+
+	.nav a:nth-child(5) {
+		margin-right: auto;
+		color: $gray-500;
+	}
+
+	.texto {
+		flex: 1 0 100%;
+		margin: 3rem 1rem 0 1rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgba($gray-700, 0.3);
+		text-align: center;
+
+		address {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			margin-top: 2rem;
+		}
+
+		@media (min-width: 992px) {
+			display: flex;
+			justify-content: space-between;
+
+			p {
+				flex: 0 0 45%;
+				text-align: left;
+				max-width: 45ch;
+			}
+
+			address {
+				flex: 0 0 40%;
+				margin-top: 0;
+				max-width: 35ch;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+
+			& > p {
+				margin-right: 20rem;
+			}
+		}
+	}
+}
