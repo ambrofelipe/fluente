@@ -29,7 +29,7 @@
 }
 
 @mixin side {
-	flex: 0 0 30%;
+	flex: 0 0 25%;
 	display: flex;
 	flex-flow: column wrap;
 	align-content: center;
@@ -38,12 +38,14 @@
 	@media (min-width: 992px) {
 		text-align: left;
 		align-content: flex-start;
-		margin-left: 5rem;
-		margin-right: 1rem;
+		width: 52rem;
+		align-self: center;
 	}
 
 	@media (min-width: 1200px) {
 		max-width: 23rem;
+		margin-left: 0;
+		margin-right: 1rem;
 	}
 
 	h2 {
@@ -78,7 +80,7 @@ main.teams {
 	@include main;
 
 	.teams-box {
-		min-width: 26ch;
+		min-width: 27ch;
 		margin: 0 0.5rem 3rem 0.5rem;
 		flex: 0 0 40%;
 
@@ -142,12 +144,11 @@ section.rapidos {
 }
 
 .rapidos-details {
-	flex: 0 0 70%;
+	flex: 0 0 65%;
 	display: flex;
 	flex-wrap: wrap;
 	align-self: center;
 	justify-content: space-evenly;
-	gap: 2rem;
 	max-width: 60rem;
 
 	@media (min-width: 1200px) {
@@ -164,6 +165,7 @@ section.rapidos {
 		background-repeat: no-repeat;
 
 		@media (min-width: 768px) {
+			min-width: 35ch;
 			background-size: 6vmin;
 			background-position: 1% 15%;
 			padding-top: 0;
@@ -172,7 +174,7 @@ section.rapidos {
 		}
 
 		@media (min-width: 1200px) {
-			flex: 0 0 50%;
+			flex: 0 0 45%;
 			max-width: 40ch;
 		}
 
@@ -286,6 +288,14 @@ section.bio {
 			max-width: 60rem;
 		}
 
+		h2 {
+			@include main-h2;
+		}
+
+		h4 {
+			@include main-h4;
+		}
+
 		p {
 			font-size: 0.9rem;
 			line-height: 2;
@@ -294,12 +304,38 @@ section.bio {
 			max-width: 75ch;
 		}
 
-		h2 {
-			@include main-h2;
+		p:nth-of-type(4) {
+			width: calc(3rem + 20ch);
+			height: 3rem;
+			padding-left: 3.5rem;
+			background: url("../../ico/tutor/presentation-1.png") $gray-100
+				center left / 3rem no-repeat padding-box;
+			margin-top: 3rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 5rem;
+			position: relative;
+			float: left;
+			margin-right: 1rem;
 		}
 
-		h4 {
-			@include main-h4;
+		p:nth-of-type(5) {
+			width: calc(3rem + 18ch);
+			height: 3rem;
+			padding-left: 3.5rem;
+			background: url("../../ico/tutor/chat.png") $gray-100 center left /
+				3rem no-repeat padding-box;
+			margin-top: 3rem;
+			text-align: left;
+			text-transform: uppercase;
+			font-weight: 700;
+			position: relative;
+			float: left;
+
+			@media (min-width: 1200px) {
+				width: calc(3rem + 30ch);
+				line-height: 5rem;
+			}
 		}
 	}
 }
@@ -417,6 +453,10 @@ section.brinde {
 	padding-bottom: 5rem;
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 
+	@media (min-width: 576px) {
+		background-position: center bottom;
+	}
+
 	@media (min-width: 768px) {
 		flex-flow: row nowrap;
 		text-align: left;
@@ -430,14 +470,19 @@ section.brinde {
 
 	.side {
 		@include side;
+		padding: 0 1rem;
 
 		p:not(p:nth-of-type(1)) {
 			text-align: left;
 		}
+
+		@media (min-width: 768px) {
+			padding: 0;
+		}
 	}
 
 	#brinde-form {
-		flex: 0 1 60%;
+		flex: 0 1 65%;
 
 		align-content: center;
 		gap: 1rem;
@@ -446,7 +491,7 @@ section.brinde {
 
 		@media (min-width: 768px) {
 			max-width: 60rem;
-			padding: 9.8rem 2rem;
+			padding: 9.8rem 4rem;
 			align-content: space-between;
 		}
 

@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const jQuery = require("jquery");
 module.exports = {
 	devServer: {
 		contentBase: path.resolve(__dirname, "demo"),
@@ -86,6 +87,10 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "../css/app.css",
+		}),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
 		}),
 	],
 };
