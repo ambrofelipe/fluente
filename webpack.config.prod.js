@@ -1,20 +1,25 @@
 const path = require("path");
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const jQuery = require("jquery");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
+	mode: "production",
+	devtool: "source-map",
 	devServer: {
-		contentBase: path.resolve(__dirname, "demo"),
+		contentBase: path.resolve(__dirname, "dist"),
 		compress: true,
-		publicPath: "demo",
+		publicPath: "dist",
 		writeToDisk: true,
 	},
 	entry: "./src/js/app.js",
-	mode: "development",
 	output: {
 		filename: "app.js",
-		path: path.resolve(__dirname, "demo/js"),
-		publicPath: "demo",
+		path: path.resolve(__dirname, "dist/js"),
+		publicPath: "dist",
 	},
 	module: {
 		rules: [
@@ -42,6 +47,13 @@ module.exports = {
 						loader: "sass-loader",
 					},
 				],
+			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /[\\/]node_modules[\\/]/,
+				use: {
+					loader: "babel-loader",
+				},
 			},
 			{
 				test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
@@ -85,12 +97,21 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: "../css/app.css",
-		}),
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery",
 		}),
+		new MiniCssExtractPlugin({
+			filename: "../css/app.css",
+		}),
+		new CleanWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			filename: "../index.html",
+			inject: false,
+			template: path.resolve(__dirname, "src", "index.html"),
+		}),
 	],
+	optimization: {
+		minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+	},
 };

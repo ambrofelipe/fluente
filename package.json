@@ -1,37 +1,50 @@
 {
-  "name": "bootstrap-take3",
-  "version": "1.0.0",
-  "description": "take 3",
-  "main": "js/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start:dev": "webpack serve"
-  },
-  "keywords": [
-    "andrew",
-    "wilson"
-  ],
-  "author": "Felipe Ambrosio",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "bootstrap-icons": "^1.5.0",
-    "css-loader": "^5.2.4",
-    "fibers": "^5.0.0",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^6.0.0",
-    "postcss-loader": "^5.3.0",
-    "sass": "^1.32.13",
-    "sass-loader": "^11.1.1",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.1",
-    "jquery": "^3.6.0"
-  }
+	"name": "fluente",
+	"version": "0.1.0",
+	"description": "Todo mundo é capaz de aprender inglês online",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ambrofelipe/fluente.git"
+	},
+	"main": "js/app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack --config=webpack.config.prod.js",
+		"start-dev": "webpack serve --config=webpack.config.dev.js"
+	},
+	"keywords": [
+		"inglês",
+		"toefl",
+		"ielts",
+		"tourism"
+	],
+	"author": "Felipe Ambrosio",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/preset-env": "^7.14.4",
+		"autoprefixer": "^10.2.5",
+		"babel-loader": "^8.2.2",
+		"bootstrap-icons": "^1.5.0",
+		"clean-webpack-plugin": "^4.0.0-alpha.0",
+		"css-loader": "^5.2.4",
+		"css-minimizer-webpack-plugin": "^3.0.0",
+		"fibers": "^5.0.0",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.3.1",
+		"mini-css-extract-plugin": "^1.6.0",
+		"node-sass": "^6.0.0",
+		"postcss-loader": "^5.3.0",
+		"sass": "^1.32.13",
+		"sass-loader": "^11.1.1",
+		"terser-webpack-plugin": "^5.1.2",
+		"webpack": "^5.37.0",
+		"webpack-cli": "^4.7.0",
+		"webpack-dev-server": "^3.11.2"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.9.2",
+		"bootstrap": "^5.0.1",
+		"jquery": "^3.6.0"
+	}
 }
