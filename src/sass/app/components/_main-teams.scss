@@ -264,6 +264,13 @@ section.bio {
 		}
 	}
 
+	.device {
+		transform: scale(0.7);
+
+		@media (min-width: 992px) {
+			margin-top: -8rem;
+		}
+	}
 	.foto {
 		flex: 0 0 40%;
 		margin-bottom: 3rem;

@@ -6,10 +6,12 @@
 
 // Bootstrap
 @import "vars";
-@import "~bootstrap/scss/bootstrap";
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 @import "customize-bootstrap";
 
 // App layout
 @import "app/components/app";
 @import "app/components/main-teams";
+@import "../../devices.css/src/reset";
+@import "../../devices.css/src/iphone-x";
