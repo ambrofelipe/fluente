@@ -3,7 +3,7 @@ window.bootstrap = require("bootstrap/dist/js/bootstrap.bundle.js");
 var myCarousel = document.querySelector("#galeria");
 var carousel = new bootstrap.Carousel(myCarousel);
 
-// COUNTER
+// CONTADOR
 
 var a = 0;
 
@@ -36,4 +36,21 @@ $(function () {
 			a = 1;
 		}
 	});
+});
+
+// TEMA
+
+$(function () {
+	$("#mode-button").onclick = () => {
+		if (body.classList.contains("dark-theme")) {
+			console.log("works until here");
+			body.classList.setAttribute("class", "light-theme");
+			$("#mode-button").text("Modo noturno");
+			localStorage.setItem("userMode", "light-theme");
+		} else {
+			body.classList.setAttribute("class", "dark-theme");
+			$("#mode-button").text("Modo diurno");
+			localStorage.setItem("userMode", "dark-theme");
+		}
+	};
 });

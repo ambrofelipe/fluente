@@ -1,68 +1,5 @@
-@mixin main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
-
-	@media (min-width: 1200px) {
-		flex-flow: row nowrap;
-	}
-}
-
-@mixin main-h2 {
-	font-weight: 800;
-	margin-bottom: 2rem;
-	color: $gray-800;
-}
-
-@mixin main-h4 {
-	max-width: 40ch;
-	font-size: 0.9rem;
-	font-weight: 300;
-	line-height: 1.5;
-	color: $gray-600;
-	margin: 0 auto 4rem;
-
-	@media (min-width: 992px) {
-		max-width: 55ch;
-	}
-}
-
-@mixin side {
-	flex: 0 0 25%;
-	display: flex;
-	flex-flow: column wrap;
-	align-content: center;
-	margin-bottom: 5rem;
-
-	@media (min-width: 992px) {
-		text-align: left;
-		align-content: flex-start;
-		width: 52rem;
-		align-self: center;
-	}
-
-	@media (min-width: 1200px) {
-		max-width: 23rem;
-		margin-left: 0;
-		margin-right: 1rem;
-	}
-
-	h2 {
-		@include main-h2;
-	}
-
-	h4 {
-		@include main-h4;
-	}
-
-	p {
-		font-size: 0.9rem;
-		max-width: 40ch;
-	}
-}
-
 main.teams {
+	background: var(--main-bg);
 	text-align: center;
 	padding-top: 4rem;
 	padding-bottom: 5rem;
@@ -92,7 +29,7 @@ main.teams {
 		h3 {
 			font-size: 1.2rem;
 			font-weight: 400;
-			color: $gray-800;
+			color: var(--main-h3);
 			background-position: top center;
 			background-repeat: no-repeat;
 			background-size: 15vmin;
@@ -105,23 +42,23 @@ main.teams {
 		}
 
 		&:nth-child(1) h3 {
-			background-image: url("../../ico/tutor/online-education.png");
+			background-image: url("/ico/online-education.png");
 		}
 
 		&:nth-child(2) h3 {
-			background-image: url("../../ico/tutor/thinking.png");
+			background-image: url("/ico/thinking.png");
 		}
 
 		&:nth-child(3) h3 {
-			background-image: url("../../ico/tutor/test.png");
+			background-image: url("/ico/test.png");
 		}
 
 		&:nth-child(4) h3 {
-			background-image: url("../../ico/tutor/success.png");
+			background-image: url("/ico/success.png");
 		}
 
 		p {
-			color: $gray-700;
+			color: var(--paragraph);
 			margin: 0 auto;
 			font-size: 0.9rem;
 			line-height: 2;
@@ -133,7 +70,7 @@ main.teams {
 section.rapidos {
 	@include main;
 	flex-flow: column nowrap;
-	background-color: $gray-100;
+	background-color: var(--alt-bg);
 	padding-top: 10rem;
 	padding-bottom: 5rem;
 	clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
@@ -179,29 +116,29 @@ section.rapidos {
 		}
 
 		&:nth-child(1) {
-			background-image: url("../../ico/tutor/microphone.png");
+			background-image: url("/ico/microphone.png");
 		}
 
 		&:nth-child(2) {
-			background-image: url("../../ico/tutor/diploma.png");
+			background-image: url("/ico/diploma.png");
 		}
 
 		&:nth-child(3) {
-			background-image: url("../../ico/tutor/backpack.png");
+			background-image: url("/ico/backpack.png");
 		}
 
 		&:nth-child(4) {
-			background-image: url("../../ico/tutor/presentation.png");
+			background-image: url("/ico/presentation.png");
 		}
 
 		h3 {
 			font-variant: small-caps;
 			font-size: 1.3rem;
-			color: $gray-800;
+			color: var(--main-h3);
 		}
 
 		p {
-			color: $gray-700;
+			color: var(--paragraph);
 			font-size: 0.9rem;
 			max-width: 40ch;
 			line-height: 1.5;
@@ -217,6 +154,7 @@ section.rapidos {
 }
 
 section.galeria {
+	background: var(--main-bg);
 	text-align: center;
 	padding-top: 4rem;
 	padding-bottom: 5rem;
@@ -250,7 +188,7 @@ section.galeria {
 section.bio {
 	@include main;
 	flex-flow: column nowrap;
-	background-color: $gray-100;
+	background-color: var(--alt-bg);
 	padding-top: 10rem;
 	padding-bottom: 5rem;
 	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 95%);
@@ -264,17 +202,33 @@ section.bio {
 		}
 	}
 
-	.device {
+	.iphone-x {
 		transform: scale(0.7);
+		margin: 0 auto;
 
 		@media (min-width: 992px) {
 			margin-top: -8rem;
 		}
+
+		.notch {
+			top: 25px;
+		}
+
+		.screen {
+			background-color: black;
+		}
+
+		.device-content {
+			height: 812px;
+			position: relative;
+			left: -520px;
+		}
 	}
+
 	.foto {
 		flex: 0 0 40%;
 		margin-bottom: 3rem;
-		background-image: url("../../img/bio.jpg");
+		background-image: url("/img/bio.jpg");
 		background-position: center top;
 		background-repeat: no-repeat;
 		min-width: 300px;
@@ -315,8 +269,8 @@ section.bio {
 			width: calc(3rem + 20ch);
 			height: 3rem;
 			padding-left: 3.5rem;
-			background: url("../../ico/tutor/presentation-1.png") $gray-100
-				center left / 3rem no-repeat padding-box;
+			background: url("/ico/presentation-1.png") var(--alt-bg) center left /
+				3rem no-repeat padding-box;
 			margin-top: 3rem;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -330,8 +284,8 @@ section.bio {
 			width: calc(3rem + 18ch);
 			height: 3rem;
 			padding-left: 3.5rem;
-			background: url("../../ico/tutor/chat.png") $gray-100 center left /
-				3rem no-repeat padding-box;
+			background: url("/ico/chat.png") var(--alt-bg) center left / 3rem
+				no-repeat padding-box;
 			margin-top: 3rem;
 			text-align: left;
 			text-transform: uppercase;
@@ -348,6 +302,7 @@ section.bio {
 }
 
 section.dizem {
+	background: var(--main-bg);
 	text-align: center;
 	padding-top: 4rem;
 
@@ -387,10 +342,10 @@ section.dizem {
 	.texto {
 		min-width: 32ch;
 		border-radius: 0.5rem;
-		background: $gray-300;
+		background: var(--bg-testimonials);
 		padding: 2rem 1.5rem;
 		text-align: center;
-		color: $gray-800;
+		color: var(--text-testimonials);
 		position: relative;
 		z-index: 1000;
 
@@ -411,7 +366,7 @@ section.dizem {
 		height: 0;
 		border-left: 25px solid transparent;
 		border-right: 25px solid transparent;
-		border-top: 20px solid $gray-300;
+		border-top: 20px solid var(--bg-testimonials);
 		position: relative;
 		top: -1em;
 		left: 5rem;
@@ -431,31 +386,31 @@ section.dizem {
 			font-size: 1.5rem;
 			margin-left: 5rem;
 			line-height: 4rem;
-			color: $gray-800;
+			color: var(--text);
 		}
 	}
 
 	& .testimonial:nth-child(1) .nome-perfil {
-		background-image: url("../../img/pp-10.jpg");
+		background-image: url("/img/pp-10.jpg");
 	}
 
 	& .testimonial:nth-child(2) .nome-perfil {
-		background-image: url("../../img/pp-2.jpg");
+		background-image: url("/img/pp-2.jpg");
 	}
 
 	& .testimonial:nth-child(3) .nome-perfil {
-		background-image: url("../../img/pp.jpg");
+		background-image: url("/img/pp.jpg");
 	}
 
 	& .testimonial:nth-child(4) .nome-perfil {
-		background-image: url("../../img/pp-1.jpg");
+		background-image: url("/img/pp-1.jpg");
 	}
 }
 
 section.brinde {
 	@include main;
 	flex-flow: column nowrap;
-	background: url("../../ico/gift.png") $gray-100 0% 80%/95% no-repeat;
+	background: var(--bg-brinde) var(--alt-bg) 0% 80%/95% no-repeat;
 	padding-top: 10rem;
 	padding-bottom: 5rem;
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
@@ -512,7 +467,7 @@ section.brinde {
 			height: 2.5rem;
 			width: 100%;
 			font-weight: 700;
-			background: rgba($gray-300, 0.5);
+			background: var(--bg-input);
 			padding: 0.5rem;
 			border: 0;
 			border-bottom: 2px solid lighten($tertiary, 30%);
@@ -520,7 +475,7 @@ section.brinde {
 			transition: border-bottom 0.3s ease;
 
 			&::placeholder {
-				color: $gray-900;
+				color: var(--placeholder);
 				opacity: 1;
 			}
 

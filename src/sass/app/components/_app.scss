@@ -1,5 +1,87 @@
-header {
+body {
+	color: var(--text);
+}
+
+// Estiliza a barra de rolagem
+body::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: $tertiary;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: $primary;
+}
+
+@mixin main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	text-align: center;
+
+	@media (min-width: 1200px) {
+		flex-flow: row nowrap;
+	}
+}
+
+@mixin main-h2 {
+	font-weight: 800;
+	margin-bottom: 2rem;
+	color: var(--main-h2);
+}
+
+@mixin main-h4 {
+	max-width: 40ch;
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: var(--main-h4);
+	margin: 0 auto 4rem;
+
+	@media (min-width: 992px) {
+		max-width: 55ch;
+	}
+}
+
+@mixin side {
+	flex: 0 0 25%;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	margin-bottom: 5rem;
+
+	@media (min-width: 992px) {
+		text-align: left;
+		align-content: flex-start;
+		width: 52rem;
+		align-self: center;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 23rem;
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+
+	h2 {
+		@include main-h2;
+	}
+
+	h4 {
+		@include main-h4;
+	}
+
+	p {
+		font-size: 0.9rem;
+		max-width: 40ch;
+	}
+}
+
+header.inicial {
+	text-align: center;
+	background-color: var(--main-bg);
 	background-image: url("/img/header.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -13,7 +95,7 @@ header {
 }
 
 .agenda {
-	background: rgba(255, 255, 255, 0.5);
+	background: var(--header-mask);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -43,7 +125,7 @@ header {
 			font-size: 2rem;
 			font-weight: 800;
 			line-height: 2.5ex;
-			color: $gray-800;
+			color: var(--main-h1);
 			text-shadow: 3px 5px 10px $shadow;
 
 			strong {
@@ -57,7 +139,7 @@ header {
 			margin-top: 1rem;
 			font-size: 1.3em;
 			line-height: 2.5ex;
-			color: $gray-800;
+			color: var(--main-h2);
 			text-shadow: 1px 3px 4px $shadow;
 		}
 	}
@@ -79,11 +161,11 @@ header {
 	background-color: $primary-content;
 	color: $gray-200;
 	padding: 0;
-	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 5px 10px $shadow;
 	border-radius: 5px;
 
 	.month-title {
-		background-color: $secondary;
+		background-color: darken($secondary, 5%);
 		width: 100%;
 		text-align: center;
 		color: $gray-200;

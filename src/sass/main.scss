@@ -12,6 +12,6 @@
 
 // App layout
 @import "app/components/app";
+@import "app/components/main-docs";
 @import "app/components/main-teams";
-@import "../../devices.css/src/reset";
-@import "../../devices.css/src/iphone-x";
+@import "/node_modules/Devices.css/assets/scss/devices.scss";

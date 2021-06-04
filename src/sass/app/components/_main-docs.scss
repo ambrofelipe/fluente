@@ -1,0 +1,237 @@
+// Menu horizontal em mobile
+.navbar-docs {
+	bottom: 0;
+	width: 100vw;
+	height: 5rem;
+	position: fixed;
+	background-color: var(--bg-nav);
+	backdrop-filter: blur(10px);
+	transition: width 200ms ease;
+	z-index: 1;
+
+	.navbar-nav {
+		flex-direction: row;
+		height: 100%;
+
+		li {
+			background-position: center;
+			padding: 0;
+			filter: grayscale(100%) opacity(0.7);
+
+			&:nth-child(1) a {
+				background-image: url("/ico/docs/teams.svg");
+			}
+
+			&:nth-child(2) a {
+				background-image: url("/ico/docs/onedrive.svg");
+			}
+			&:nth-child(3) a {
+				background-image: url("/ico/docs/onenote.svg");
+			}
+			&:nth-child(4) a {
+				background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='file-alt' class='svg-inline--fa fa-file-alt fa-w-12' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23979797' d='M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z'%3E%3C/path%3E%3C/svg%3E");
+				background-size: 1.5rem;
+			}
+			&:nth-child(5) a {
+				background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='credit-card' class='svg-inline--fa fa-credit-card fa-w-18' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23979797' d='M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z'%3E%3C/path%3E%3C/svg%3E");
+				background-size: 2rem;
+			}
+
+			a {
+				background-size: 5rem;
+				background-repeat: no-repeat;
+				color: transparent;
+			}
+
+			.nav-link {
+				padding-top: 0;
+				padding-bottom: 0;
+				transition: none;
+			}
+
+			&:hover {
+				filter: grayscale(0) opacity(1);
+				background-color: var(--bg-nav-hover);
+				transition: 200ms ease;
+			}
+		}
+	}
+}
+
+// Estilos específicos do menu horizontal em mobile
+@media only screen and (max-width: 575px) {
+	.navbar-docs .navbar-nav li a {
+		display: block;
+		background-position: center;
+		height: 100%;
+	}
+
+	#main-doc {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	// Torna o menu vertical
+	.navbar-docs {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+		box-shadow: 0 0 1em $shadow;
+
+		// Aplica a logomarca no menu
+		header a {
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			background-image: url("/img/logo-e.svg");
+			background-repeat: no-repeat;
+			margin: auto;
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.navbar-nav {
+			flex-direction: column;
+
+			li {
+				height: 3em;
+				margin-bottom: 1em;
+
+				// Esconde o texto no menu colapsado
+				a {
+					line-height: 3em;
+					min-width: 16em;
+					background-position: right center;
+					padding-left: 5em;
+					color: transparent;
+					text-decoration: none;
+					position: absolute;
+					left: -11em;
+					text-align: right;
+				}
+
+				// Centraliza os ícones que não são do Office no menu colapsado
+				&:nth-child(4) {
+					margin-top: 5em;
+					a {
+						background-position-x: calc(100% - 1.75em);
+					}
+				}
+
+				&:nth-child(5) a {
+					background-position-x: calc(100% - 1.5em);
+				}
+			}
+		}
+
+		&:hover {
+			width: 16rem;
+
+			.navbar-nav li {
+				// Exibe o texto no menu aberto
+				a {
+					display: block;
+					background-position: left center;
+					color: var(--link);
+					text-align: left;
+					left: 0;
+				}
+
+				// Centraliza os ícones que não são do Office no menu aberto
+				&:nth-child(4) a {
+					background-position-x: 1.75rem;
+				}
+
+				&:nth-child(5) a {
+					background-position-x: 1.5rem;
+				}
+			}
+
+			// Usa a logo completa no menu aberto
+			header a {
+				width: auto;
+				height: 4rem;
+				background-image: var(--logo);
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: auto;
+				margin-top: 1rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	// Espaço no conteúdo para o menu o sobreponha
+	#main-doc {
+		padding: 6.5rem 1rem 0 6rem;
+		padding-left: 6rem;
+		padding-top: 6.5rem;
+	}
+}
+
+#main-doc {
+	background: var(--main-bg);
+}
+
+// Separador entre sections
+hr.linha {
+	border: 0;
+	border-top: 1px solid $primary;
+	height: 0;
+	margin: 4rem auto 4rem;
+	text-align: center;
+	width: 30%;
+
+	// Adiciona a logo entre a linha de separação
+	&::before {
+		content: "";
+		background: var(--main-bg) url("/img/logo-e.svg") no-repeat center;
+		background-size: 20px 20px;
+		padding: 20px;
+		position: absolute;
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+}
+
+.main-section {
+	// Títulos
+	header {
+		font-size: 3rem;
+		font-weight: 800;
+		background-image: var(--font-gradient);
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		margin-bottom: 0.5em;
+	}
+
+	// Texto
+	p {
+		line-height: 1.5;
+		max-width: 125ch;
+	}
+
+	// Código
+	code {
+		background: var(--code-bg);
+		border: 1px solid var(--code-border);
+		border-left: 3px solid $secondary;
+		border-radius: 5px;
+		font-family: "Courier New", Courier, monospace;
+		color: var(--code);
+		font-size: 0.9rem;
+		word-wrap: break-word;
+		line-height: 1.6;
+		padding: 1em 1.5em;
+		display: block;
+	}
+
+	code,
+	ul li {
+		min-width: 15rem;
+		max-width: 90%;
+		margin: 0 auto 1.6em;
+	}
+}

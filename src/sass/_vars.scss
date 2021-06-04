@@ -1,11 +1,110 @@
+// Paleta de cores
 $primary: hsl(356, 87%, 60%);
 $secondary: hsl(154, 90%, 45%);
 $tertiary: hsl(224, 29%, 25%);
 
-$primary-content: hsl(356, 70%, 60%);
+// Cores de fundo
+$bg-light: hsl(210, 17%, 98%);
+$bg-dark: hsl(0, 0%, 12%);
+$header-mask-light: rgba($bg-light, 0.5);
+$header-mask-dark: rgba($tertiary, 0.7);
+
+// Cores de menus
+$bg-trans-light: rgba($bg-light, 0.75);
+$bg-trans-dark: darken(rgba($tertiary, 0.75), 20%);
 
 $a-active-color: hsl(154, 90%, 35%);
-$bg-trans: rgba(248, 249, 250, 0.75);
-$shadow: rgba(0, 0, 0, 0.2);
 
+// Fundo do calendário e strong h1
+$primary-content: hsl(356, 70%, 60%);
+
+// Outros
+$shadow: rgba(0, 0, 0, 0.2);
 $wire: 1px solid #000;
+
+// Escala de preto
+$gray-100: hsl(210, 17%, 98%);
+$gray-200: hsl(210, 16%, 93%);
+$gray-300: hsl(210, 14%, 89%);
+$gray-400: hsl(210, 14%, 83%);
+$gray-500: hsl(210, 11%, 71%);
+$gray-600: hsl(208, 7%, 46%);
+$gray-700: hsl(210, 9%, 31%);
+$gray-800: hsl(210, 10%, 23%);
+$gray-900: hsl(210, 11%, 15%);
+
+// Usa Modo Diurno por padrão
+:root {
+	// Fundo, menu e logo
+	--main-bg: white;
+	--alt-bg: #{$gray-100};
+	--bg-nav: #{$bg-trans-light};
+	--bg-nav-hover: #{darken($bg-light, 10%)};
+	--logo: url("/img/logo-light.svg");
+	--header-mask: #{$header-mask-light};
+	--bg-testimonials: #{$gray-200};
+	--bg-brinde: url("/img/gift-light.svg");
+	--bg-input: #{rgba(($gray-300), 0.5)};
+
+	// Headers, texto e links
+	--main-h1: #{$gray-800};
+	--main-h2: #{$gray-800};
+	--main-h3: #{$gray-800};
+	--main-h4: #{$gray-600};
+	--paragraph: #{$gray-700};
+	--link: #{$gray-700};
+	--text: #{$gray-700};
+	--text-testimonials: #{$gray-800};
+	--placeholder: #{$gray-900};
+	--font-gradient: linear-gradient(
+		190deg,
+		#{darken($tertiary, 20%)},
+		#{lighten($tertiary, 10%)}
+	);
+
+	// <code> em docs.html
+	--code-bg: #{$gray-100};
+	--code-border: #{$gray-200};
+	--code: #{$gray-700};
+}
+
+// Aplica preferência do usuário pelo Modo Noturno
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		// Fundo, menu e logo
+		--main-bg: #{$bg-dark};
+		--alt-bg: black;
+		--bg-nav: #{$bg-trans-dark};
+		--bg-nav-hover: #{darken($bg-dark, 5%)};
+		--logo: url("/img/logo-dark.svg");
+		--header-mask: #{$header-mask-dark};
+		--bg-testimonials: #{$gray-800};
+		--bg-brinde: url("/img/gift-dark.svg");
+		--bg-input: #{rgba(($gray-700), 0.5)};
+
+		// Headers, texto e links
+		--main-h1: #{$gray-200};
+		--main-h2: #{$gray-200};
+		--main-h3: #{$gray-200};
+		--main-h4: #{$gray-400};
+		--paragraph: #{$gray-400};
+		--link: #{$gray-300};
+		--text: #{$gray-200};
+		--placeholder: #{$gray-100};
+		--font-gradient: linear-gradient(
+			190deg,
+			#{lighten($tertiary, 20%)},
+			#{lighten($tertiary, 70%)}
+		);
+		--text-testimonials: #{$gray-200};
+
+		// <code> em docs.html
+		--code-bg: #{$gray-800};
+		--code-border: #{$gray-700};
+		--code: #{$gray-300};
+	}
+
+	body {
+		background-color: var(--main-bg) !important;
+	}
+}
