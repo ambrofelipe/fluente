@@ -6,9 +6,9 @@ module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
-		contentBase: path.resolve(__dirname, "dist"),
+		contentBase: path.resolve(__dirname, "docs"),
 		compress: true,
-		publicPath: "dist",
+		publicPath: "docs",
 		writeToDisk: true,
 	},
 });

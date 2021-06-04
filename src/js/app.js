@@ -1,4 +1,4 @@
 import "bootstrap";
 import "../sass/main.scss";
-import "jquery";
+// import "jquery";
 import "./custom";
