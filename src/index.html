@@ -8,7 +8,23 @@
 		<link rel="stylesheet" href="css/app.css" />
 	</head>
 	<body>
-		<nav
+
+		<nav class="navbar">
+			<div class="menu">
+				<a href="#" class="navbar-logo"></a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<ul>
+					<li><a href="#">Por que estudar online</a></li>
+					<li><a href="">Contratar com segurança</a></li>
+					<li><a href=""><i class="bi bi-person-circle"></i> Acessar</a></li>
+				</ul>
+			</div>
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+		</nav>
+
+		<!-- <nav
 			class="
 				navbar
 				sticky-top
@@ -18,52 +34,23 @@
 		>
 			<div class="container-xl">
 				<a class="navbar-brand" href="#"></a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
+				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div
-					class="collapse navbar-collapse"
-					id="navbarSupportedContent"
-				>
+
+<div class="navbar-collapse collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a
-								class="nav-link active"
-								aria-current="page"
-								href="#"
-								>Por que estudar online</a
-							>
+							<a class="nav-link active" aria-current="page" href="#">Por que estudar online</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"
-								>Contratar com segurança</a
-							>
+							<a class="nav-link" href="#">Contratar com segurança</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-person-circle"
-									viewBox="0 0 16 16"
-								>
-									<path
-										d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
-									/>
-									<path
-										fill-rule="evenodd"
-										d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-									/>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+									<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
 								</svg>
 								Acessar
 							</a>
@@ -71,7 +58,7 @@
 					</ul>
 				</div>
 			</div>
-		</nav>
+		</nav> -->
 
 		<header class="inicial">
 			<div class="agenda">
@@ -285,7 +272,7 @@
 					</p>
 				</div>
 			</div>
-			<a href="#" class="btn btn-primary" role="button"
+			<a href="#" class="botao-main" role="button"
 				>Valores e matrícula</a
 			>
 		</main>
@@ -336,7 +323,7 @@
 						e vocabulário apresentação de resultados.
 					</p>
 				</div>
-				<a href="#" class="btn btn-primary" role="button"
+				<a href="#" class="botao-main" role="button"
 					>Valores e matrícula</a
 				>
 			</div>
@@ -452,8 +439,8 @@
 				<div class="inner-shadow"></div>
 				<div class="screen">
 					<video class="device-content" muted autoplay>
-						<source src="img/video.mp4" type="video/mp4">
-						Seu navegador não oferece a funcionalidade de vídeos. tESt
+						<source src="img/video.mp4" type="video/mp4" />
+						Seu navegador não oferece a funcionalidade de vídeos.
 					</video>
 				</div>
 			</div>
@@ -577,7 +564,7 @@
 
 				<button
 					id="submit"
-					class="btn btn-primary"
+					class="botao-main"
 					type="submit"
 					form="brinde-form"
 				>
@@ -588,12 +575,12 @@
 
 		<footer>
 			<a href="https://fluente.me"></a>
-			<nav class="nav nav-footer">
-				<a class="nav-link active" aria-current="page" href="#"
+			<nav class="nav-footer">
+				<a class="active" aria-current="page" href="#"
 					>Por que estudar online</a
 				>
-				<a class="nav-link" href="#">Contratar com segurança</a>
-				<a class="nav-link" href="#">Acessar</a>
+				<a href="#">Contratar com segurança</a>
+				<a href="#">Acessar</a>
 				<a href="https://facebook.com/fluente.me" target="_blank">
 					<i class="bi bi-facebook" aria-label="Facebook"></i>
 				</a>

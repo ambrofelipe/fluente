@@ -19,6 +19,9 @@ $a-active-color: hsl(154, 90%, 35%);
 $primary-content: hsl(356, 70%, 60%);
 
 // Outros
+$font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+	Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $shadow: rgba(0, 0, 0, 0.2);
 $wire: 1px solid #000;
 
@@ -102,9 +105,5 @@ $gray-900: hsl(210, 11%, 15%);
 		--code-bg: #{$gray-800};
 		--code-border: #{$gray-700};
 		--code: #{$gray-300};
-	}
-
-	body {
-		background-color: var(--main-bg) !important;
 	}
 }
