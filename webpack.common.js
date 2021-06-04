@@ -9,8 +9,8 @@ module.exports = {
 
 	output: {
 		filename: "app.js",
-		path: path.resolve(__dirname, "dist/js"),
-		publicPath: "dist",
+		path: path.resolve(__dirname, "docs/js"),
+		publicPath: "docs",
 		clean: true,
 	},
 
