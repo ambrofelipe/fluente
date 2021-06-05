@@ -1,18 +1,12 @@
 const path = require("path");
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const jQuery = require("jquery");
 
 module.exports = {
 	entry: "./src/js/app.js",
-
-	output: {
-		filename: "app.js",
-		path: path.resolve(__dirname, "docs/js"),
-		publicPath: "docs",
-		clean: true,
-	},
 
 	module: {
 		rules: [
@@ -21,6 +15,9 @@ module.exports = {
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
+						options: {
+							publicPath: '../',
+						},
 					},
 					{
 						loader: "css-loader",
@@ -49,43 +46,29 @@ module.exports = {
 				},
 			},
 			{
+				test: /\.html$/i,
+				loader: "html-loader",
+			},
+			{
 				test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-							outputPath: "../fonts/",
-							publicPath: "../fonts/",
-						},
-					},
-				],
+				type: "asset/resource",
+				generator: {
+					filename: "fonts/[name][ext]",
+				},
 			},
 			{
 				test: /\.(svg|jpg|jpeg|gif|mp4)(\?\S*)?$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-							outputPath: "../img/",
-							publicPath: "../img/",
-						},
-					},
-				],
+				type: "asset/resource",
+				generator: {
+					filename: "img/[name][ext]",
+				},
 			},
 			{
 				test: /\.(png)(\?\S*)?$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-							outputPath: "../ico/",
-							publicPath: "../ico/",
-						},
-					},
-				],
+				type: "asset/resource",
+				generator: {
+					filename: "ico/[name][ext]",
+				},
 			},
 		],
 	},
@@ -96,17 +79,22 @@ module.exports = {
 			jQuery: "jquery",
 		}),
 		new MiniCssExtractPlugin({
-			filename: "../css/app.css",
+			filename: "css/app.css",
 		}),
 		new HtmlWebpackPlugin({
-			filename: "../index.html",
-			inject: false,
+			filename: "index.html",
 			template: path.resolve(__dirname, "src", "index.html"),
 		}),
 		new HtmlWebpackPlugin({
-			filename: "../docs.html",
-			inject: false,
+			filename: "docs.html",
 			template: path.resolve(__dirname, "src", "docs.html"),
 		}),
+		new CleanWebpackPlugin(),
 	],
+
+	output: {
+		filename: "js/app.js",
+		path: path.resolve(__dirname, "docs"),
+		clean: true,
+	},
 };

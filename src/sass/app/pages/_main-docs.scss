@@ -71,8 +71,8 @@
 	}
 }
 
+// Torna o menu vertical
 @media only screen and (min-width: 576px) {
-	// Torna o menu vertical
 	.navbar-docs {
 		top: 0;
 		width: 5rem;
@@ -195,8 +195,8 @@ hr.linha {
 	}
 }
 
+// Títulos, texto e código
 .main-section {
-	// Títulos
 	header {
 		font-size: 3rem;
 		font-weight: 800;
@@ -207,13 +207,11 @@ hr.linha {
 		margin-bottom: 0.5em;
 	}
 
-	// Texto
 	p {
 		line-height: 1.5;
 		max-width: 125ch;
 	}
 
-	// Código
 	code {
 		background: var(--code-bg);
 		border: 1px solid var(--code-border);

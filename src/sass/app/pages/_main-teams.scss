@@ -1,4 +1,4 @@
-main.teams {
+section.teams {
 	background: var(--main-bg);
 	text-align: center;
 	padding-top: 4rem;
@@ -244,9 +244,11 @@ section.bio {
 
 	.info {
 		flex: 0 1 60%;
+		margin-bottom: 6rem;
 
 		@media (min-width: 768px) {
 			max-width: 60rem;
+			margin-bottom: 0;
 		}
 
 		h2 {
@@ -269,8 +271,8 @@ section.bio {
 			width: calc(3rem + 20ch);
 			height: 3rem;
 			padding-left: 3.5rem;
-			background: url("/ico/presentation-1.png") var(--alt-bg) center left /
-				3rem no-repeat padding-box;
+			background: url("/ico/presentation-1.png") center left / 3rem
+				no-repeat padding-box;
 			margin: 3rem 1rem 0;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -283,8 +285,8 @@ section.bio {
 			width: calc(3rem + 18ch);
 			height: 3rem;
 			padding-left: 3.5rem;
-			background: url("/ico/chat.png") var(--alt-bg) center left / 3rem
-				no-repeat padding-box;
+			background: url("/ico/chat.png") center left / 3rem no-repeat
+				padding-box;
 			margin: 3rem 0 0 1rem;
 			text-align: left;
 			text-transform: uppercase;
@@ -346,7 +348,7 @@ section.dizem {
 		text-align: center;
 		color: var(--text-testimonials);
 		position: relative;
-		z-index: 1000;
+		z-index: 2;
 
 		& > span {
 			font-size: 15rem;

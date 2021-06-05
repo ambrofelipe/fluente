@@ -7,11 +7,10 @@
 // Bootstrap
 @import "vars";
 @import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons.css";
 @import "customize-bootstrap";
 
 // App layout
 @import "app/components/app";
-@import "app/components/main-docs";
-@import "app/components/main-teams";
+@import "app/pages/main-docs";
+@import "app/pages/main-teams";
 @import "/node_modules/Devices.css/assets/scss/devices.scss";
