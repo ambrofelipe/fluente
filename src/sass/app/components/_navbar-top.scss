@@ -1,0 +1,182 @@
+header.navbar {
+	background: var(--bg-nav);
+	backdrop-filter: blur(10px);
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0.5rem;
+
+	.nav-toggle {
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+
+	.nav-toggle:focus ~ .nav-toggle-label {
+		outline: 3px solid $primary;
+	}
+
+	.nav-toggle-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 1em;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-toggle-label span,
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		display: block;
+		background: var(--nav-toggle-label);
+		height: 2px;
+		width: 2em;
+		border-radius: 2px;
+		position: relative;
+	}
+
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		content: "";
+		position: absolute;
+	}
+
+	.nav-toggle-label span::before {
+		bottom: 7px;
+	}
+
+	.nav-toggle-label span::after {
+		top: 7px;
+	}
+
+	.navbar-logo {
+		display: block;
+		background: var(--logo) no-repeat;
+		width: 150px;
+		height: 50px;
+		margin: 0.5em 0;
+		padding-bottom: 0.3125em;
+		padding-top: 0.3125em;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	nav {
+		position: absolute;
+		text-align: left;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: var(--bg-nav);
+		backdrop-filter: blur(10px);
+		transform: scale(1, 0);
+		transform-origin: top;
+		transition: transform 400ms ease-in-out;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				margin: 1em;
+
+				a {
+					color: var(--link);
+					text-decoration: none;
+					opacity: 0;
+					transition: opacity 150ms ease-in-out;
+
+					&:hover,
+					&.active {
+						color: $secondary;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-toggle:checked ~ nav {
+		transform: scale(1, 1);
+	}
+
+	.nav-toggle:checked ~ nav a {
+		opacity: 1;
+		transition: opacity 250ms ease-in-out 250ms;
+	}
+}
+
+@media screen and (min-width: 992px) {
+
+	header.navbar {
+		justify-content: center;
+		flex-wrap: nowrap;
+		
+		.nav-toggle-label {
+			display: none;
+		}
+
+		.navbar-logo {
+			display: block;
+			padding: 1rem 0;
+			flex: 0 2 30rem;
+		}
+
+		nav {
+			position: relative;
+			width: auto;
+			transition: none;
+			transform: scale(1, 1);
+			background: none;
+			backdrop-filter: none;
+			margin-right: 1rem;
+			top: initial;
+			left: initial;
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			flex: 0 1 40rem;
+
+			ul {
+				display: flex;
+
+				li {
+					margin-left: 3em;
+					margin-bottom: 0;
+		
+					a {
+						opacity: 1;
+						position: relative;
+		
+						&::before {
+							content: "";
+							display: block;
+							height: 5px;
+							background: $secondary;
+							position: absolute;
+							top: -0.75em;
+							left: 0;
+							right: 0;
+							transform: scale(0, 1);
+							transition: transform ease-in-out 250ms;
+						}
+		
+						&:hover::before,
+						&.active::before {
+							transform: scale(1, 1);
+						}
+					}
+				}
+			}
+		}
+	}	
+}

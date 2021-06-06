@@ -11,6 +11,13 @@
 
 // App layout
 @import "app/components/app";
+@import "app/components/navbar-top";
+@import "app/components/navbar-side";
+@import "app/components/calendar";
+@import "app/components/buttons";
+@import "app/components/footer";
+
+// Pages
 @import "app/pages/main-docs";
 @import "app/pages/main-teams";
 @import "/node_modules/Devices.css/assets/scss/devices.scss";

@@ -1,0 +1,29 @@
+.botao-main {
+	display: inline-block;
+	background: $primary-content;
+	padding: 0.7rem 3rem;
+	color: $gray-200;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 3px 40px $shadow;
+	border: none;
+	border-radius: 0.25rem;
+	transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
+		box-shadow 150ms ease-in-out;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:hover {
+		background-color: #222;
+		color: #444;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
