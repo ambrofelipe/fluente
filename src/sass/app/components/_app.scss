@@ -63,7 +63,7 @@ main.inicial {
 		flex: 1 0 40%;
 		min-width: 18rem;
 		max-width: 25rem;
-		margin-bottom: 1rem;
+		margin-bottom: 1em;
 	}
 
 	& > div:nth-child(3) {
@@ -75,7 +75,7 @@ main.inicial {
 		max-width: 40ch;
 
 		@media (min-width: 768px) {
-			margin-left: 1rem;
+			margin-left: 1em;
 		}
 
 		h1 {
@@ -93,7 +93,7 @@ main.inicial {
 		}
 
 		h2 {
-			margin-top: 1rem;
+			margin-top: 1em;
 			font-size: 1.3em;
 			line-height: 2.5ex;
 			color: var(--main-h2);

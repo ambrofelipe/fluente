@@ -1,8 +1,8 @@
 section.teams {
 	background: var(--main-bg);
 	text-align: center;
-	padding-top: 4rem;
-	padding-bottom: 5rem;
+	padding-top: 4em;
+	padding-bottom: 5em;
 
 	.teams-title h2 {
 		@include main-h2;
@@ -18,7 +18,7 @@ section.teams {
 
 	.teams-box {
 		min-width: 27ch;
-		margin: 0 0.5rem 3rem 0.5rem;
+		margin: 0 0.5em 3em 0.5em;
 		flex: 0 0 40%;
 
 		@media (min-width: 1200px) {
@@ -60,7 +60,7 @@ section.teams {
 		p {
 			color: var(--paragraph);
 			margin: 0 auto;
-			font-size: 0.9rem;
+			font-size: 0.9em;
 			line-height: 2;
 			max-width: 30ch;
 		}
@@ -71,8 +71,8 @@ section.rapidos {
 	@include main;
 	flex-flow: column nowrap;
 	background-color: var(--alt-bg);
-	padding-top: 10rem;
-	padding-bottom: 5rem;
+	padding-top: 10em;
+	padding-bottom: 5em;
 	clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
 
 	.side {
@@ -95,7 +95,7 @@ section.rapidos {
 	.rapidos-box {
 		flex: 0 0 40%;
 		min-width: 30ch;
-		margin-bottom: 3rem;
+		margin-bottom: 3em;
 		background-size: 12vmin;
 		padding-top: 18vmin;
 		background-position: top center;
@@ -133,14 +133,14 @@ section.rapidos {
 
 		h3 {
 			font-variant: small-caps;
-			font-size: 1.3rem;
+			font-size: 1.3em;
 			font-weight: 500;
 			color: var(--main-h3);
 		}
 
 		p {
 			color: var(--paragraph);
-			font-size: 0.9rem;
+			font-size: 0.9em;
 			max-width: 40ch;
 			line-height: 1.5;
 			margin: 0 auto;
@@ -157,8 +157,8 @@ section.rapidos {
 section.galeria {
 	background: var(--main-bg);
 	text-align: center;
-	padding-top: 4rem;
-	padding-bottom: 5rem;
+	padding-top: 4em;
+	padding-bottom: 5em;
 
 	.galeria-title h2 {
 		@include main-h2;
@@ -190,8 +190,8 @@ section.bio {
 	@include main;
 	flex-flow: column nowrap;
 	background-color: var(--alt-bg);
-	padding-top: 10rem;
-	padding-bottom: 5rem;
+	padding-top: 10em;
+	padding-bottom: 5em;
 	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 95%);
 
 	@media (min-width: 768px) {
@@ -208,7 +208,7 @@ section.bio {
 		align-self: center;
 
 		@media (min-width: 992px) {
-			margin-top: -8rem;
+			margin-top: -8em;
 		}
 
 		.notch {
@@ -228,7 +228,7 @@ section.bio {
 
 	.foto {
 		flex: 0 0 40%;
-		margin-bottom: 3rem;
+		margin-bottom: 3em;
 		//background-image: url("/img/bio.jpg");
 		//background-position: center top;
 		//background-repeat: no-repeat;
@@ -237,14 +237,14 @@ section.bio {
 
 		@media (min-width: 992px) {
 			max-width: 23rem;
-			margin-left: 5rem;
-			margin-right: 1rem;
+			margin-left: 5em;
+			margin-right: 1em;
 		}
 	}
 
 	.info {
 		flex: 0 1 60%;
-		margin-bottom: 6rem;
+		margin-bottom: 6em;
 
 		@media (min-width: 768px) {
 			max-width: 60rem;
@@ -260,43 +260,43 @@ section.bio {
 		}
 
 		p {
-			font-size: 0.9rem;
+			font-size: 0.9em;
 			line-height: 2;
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 75ch;
 		}
 
-		p:nth-of-type(4) {
-			width: calc(3rem + 20ch);
-			height: 3rem;
-			padding-left: 3.5rem;
-			background: url("/ico/presentation-1.png") center left / 3rem
-				no-repeat padding-box;
-			margin: 3rem 1rem 0;
-			text-transform: uppercase;
-			font-weight: 700;
-			line-height: 5rem;
+		%p-bio {
 			position: relative;
 			float: left;
-		}
-
-		p:nth-of-type(5) {
-			width: calc(3rem + 18ch);
 			height: 3rem;
 			padding-left: 3.5rem;
-			background: url("/ico/chat.png") center left / 3rem no-repeat
-				padding-box;
-			margin: 3rem 0 0 1rem;
 			text-align: left;
 			text-transform: uppercase;
 			font-weight: 700;
-			position: relative;
-			float: left;
+		}
+
+		p:nth-of-type(4) {
+			@extend %p-bio;
+			width: calc(3rem + 20ch);
+			background: url("/ico/presentation-1.png") center left / 3rem
+				no-repeat padding-box;
+			margin: 3em 1em 0;
+			line-height: 5em;
+		}
+
+		p:nth-of-type(5) {
+			@extend %p-bio;
+			width: calc(3rem + 18ch);
+			background: url("/ico/chat.png") center left / 3rem no-repeat
+				padding-box;
+			margin: 3em 0 0 1em;
+
 
 			@media (min-width: 1200px) {
 				width: calc(3rem + 30ch);
-				line-height: 5rem;
+				line-height: 5em;
 			}
 		}
 	}
@@ -305,7 +305,7 @@ section.bio {
 section.dizem {
 	background: var(--main-bg);
 	text-align: center;
-	padding-top: 4rem;
+	padding-top: 4em;
 
 	.dizem-title h2 {
 		@include main-h2;
@@ -333,10 +333,10 @@ section.dizem {
 
 	.testimonial {
 		flex: 0 1 45%;
-		margin: 0 0.5rem 3rem;
+		margin: 0 0.5em 3em;
 
 		@media (min-width: 1200px) {
-			margin: 0 1.5rem;
+			margin: 0 1.5em;
 		}
 	}
 
@@ -344,7 +344,7 @@ section.dizem {
 		min-width: 32ch;
 		border-radius: 0.5rem;
 		background: var(--bg-testimonials);
-		padding: 2rem 1.5rem;
+		padding: 2em 1.5em;
 		text-align: center;
 		color: var(--text-testimonials);
 		position: relative;
@@ -384,9 +384,9 @@ section.dizem {
 
 		span {
 			text-align: left;
-			font-size: 1.5rem;
+			font-size: 1.5em;
 			margin-left: 5rem;
-			line-height: 4rem;
+			line-height: 4em;
 			color: var(--text);
 		}
 	}
@@ -412,8 +412,8 @@ section.brinde {
 	@include main;
 	flex-flow: column nowrap;
 	background: var(--bg-brinde) var(--alt-bg) 0% 80%/95% no-repeat;
-	padding-top: 10rem;
-	padding-bottom: 5rem;
+	padding-top: 10em;
+	padding-bottom: 5em;
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 
 	@media (min-width: 576px) {
@@ -433,7 +433,7 @@ section.brinde {
 
 	.side {
 		@include side;
-		padding: 0 1rem;
+		padding: 0 1em;
 
 		p:not(p:nth-of-type(1)) {
 			text-align: left;
@@ -448,13 +448,13 @@ section.brinde {
 		flex: 0 1 65%;
 
 		align-content: center;
-		gap: 1rem;
+		gap: 1em;
 		display: flex;
 		flex-flow: column wrap;
 
 		@media (min-width: 768px) {
 			max-width: 60rem;
-			padding: 9.8rem 4rem;
+			padding: 9.8em 4em;
 			align-content: space-between;
 		}
 
@@ -469,7 +469,7 @@ section.brinde {
 			width: 100%;
 			font-weight: 700;
 			background: var(--bg-input);
-			padding: 0.5rem;
+			padding: 0.5em;
 			border: 0;
 			border-bottom: 2px solid lighten($tertiary, 30%);
 			border-radius: 0.25rem;
