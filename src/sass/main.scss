@@ -6,18 +6,21 @@
 
 // Bootstrap
 @import "vars";
-@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/bootstrap";
 @import "customize-bootstrap";
 
 // App layout
-@import "app/components/app";
-@import "app/components/navbar-top";
-@import "app/components/navbar-side";
-@import "app/components/calendar";
-@import "app/components/buttons";
-@import "app/components/footer";
+@import "components/app";
+@import "components/navbar-top";
+@import "components/navbar-side";
+@import "components/calendar";
+@import "components/buttons";
+@import "components/footer";
 
 // Pages
-@import "app/pages/main-docs";
-@import "app/pages/main-teams";
-@import "/node_modules/Devices.css/assets/scss/devices.scss";
+@import "pages/main-docs";
+@import "pages/main-teams";
+@import "pages/main-portfolio";
+
+// Packages
+@import "devices.css/assets/scss/devices.scss";

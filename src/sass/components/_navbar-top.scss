@@ -15,10 +15,10 @@ header.navbar {
 		position: absolute !important;
 		top: -9999px !important;
 		left: -9999px !important;
-	}
 
-	.nav-toggle:focus ~ .nav-toggle-label {
-		outline: 3px solid $primary;
+		&:focus ~ .nav-toggle-label {
+			outline: 3px solid $primary;
+		}
 	}
 
 	.nav-toggle-label {
@@ -29,31 +29,31 @@ header.navbar {
 		height: 100%;
 		display: flex;
 		align-items: center;
-	}
 
-	.nav-toggle-label span,
-	.nav-toggle-label span::before,
-	.nav-toggle-label span::after {
-		display: block;
-		background: var(--nav-toggle-label);
-		height: 2px;
-		width: 2em;
-		border-radius: 2px;
-		position: relative;
-	}
+		span,
+		span::before,
+		span::after {
+			display: block;
+			background: var(--nav-toggle-label);
+			height: 2px;
+			width: 2em;
+			border-radius: 2px;
+			position: relative;
+		}
 
-	.nav-toggle-label span::before,
-	.nav-toggle-label span::after {
-		content: "";
-		position: absolute;
-	}
+		span::before,
+		span::after {
+			content: "";
+			position: absolute;
+		}
 
-	.nav-toggle-label span::before {
-		bottom: 7px;
-	}
+		span::before {
+			bottom: 7px;
+		}
 
-	.nav-toggle-label span::after {
-		top: 7px;
+		span::after {
+			top: 7px;
+		}
 	}
 
 	.navbar-logo {
@@ -94,31 +94,45 @@ header.navbar {
 					opacity: 0;
 					transition: opacity 150ms ease-in-out;
 
+					// &.icone-link {
+					// 	display: block;
+					// 	background: url("/img/person-circle.svg") left center /
+					// 		1rem no-repeat;
+					// 	padding-left: 1.5rem;
+					// }
+
 					&:hover,
 					&.active {
 						color: $secondary;
+					}
+
+					svg {
+						position: relative;
+						top: -3px;
+						margin-right: 0.25rem;
 					}
 				}
 			}
 		}
 	}
 
-	.nav-toggle:checked ~ nav {
-		transform: scale(1, 1);
-	}
+	.nav-toggle:checked {
+		& ~ nav {
+			transform: scale(1, 1);
+		}
 
-	.nav-toggle:checked ~ nav a {
-		opacity: 1;
-		transition: opacity 250ms ease-in-out 250ms;
+		& ~ nav a {
+			opacity: 1;
+			transition: opacity 250ms ease-in-out 250ms;
+		}
 	}
 }
 
 @media screen and (min-width: 992px) {
-
 	header.navbar {
 		justify-content: center;
 		flex-wrap: nowrap;
-		
+
 		.nav-toggle-label {
 			display: none;
 		}
@@ -151,11 +165,11 @@ header.navbar {
 				li {
 					margin-left: 3em;
 					margin-bottom: 0;
-		
+
 					a {
 						opacity: 1;
 						position: relative;
-		
+
 						&::before {
 							content: "";
 							display: block;
@@ -168,7 +182,7 @@ header.navbar {
 							transform: scale(0, 1);
 							transition: transform ease-in-out 250ms;
 						}
-		
+
 						&:hover::before,
 						&.active::before {
 							transform: scale(1, 1);
@@ -177,5 +191,5 @@ header.navbar {
 				}
 			}
 		}
-	}	
+	}
 }

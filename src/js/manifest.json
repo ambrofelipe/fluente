@@ -1,0 +1,63 @@
+{
+	"short_name": "Fluente",
+	"name": "Fluente — Todo mundo é capaz de aprender inglês online.",
+	"icons": [
+		{
+			"src": "../ico/e192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "../ico/e512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#F2404C",
+	"shortcuts": [
+		{
+			"name": "Por que estudar online",
+			"short_name": "Estudar online",
+			"description": "A melhor forma é divertindo-se e fazendo o que gosta.",
+			"url": "/",
+			"icons": [{ "src": "../ico/e192.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "Contratar com segurança",
+			"short_name": "Contratar",
+			"description": "Escolha um curso de inglês por videoconferência que contempla seu objetivo pessoal, com professor experiente e ambiente de aula online profissional.",
+			"url": "/contratar",
+			"icons": [{ "src": "../ico/e192.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "Portfolio",
+			"short_name": "Portfolio",
+			"description": "Conheça mais sobre as aulas.",
+			"url": "/",
+			"icons": [{ "src": "../ico/e192.png", "sizes": "192x192" }]
+		},
+		{
+			"name": "Espaço de dúvidas",
+			"short_name": "Docs",
+			"description": "Tire todas as dúvidas sobre apps, material, pagamento e mais.",
+			"url": "/",
+			"icons": [{ "src": "../ico/e192.png", "sizes": "192x192" }]
+		}
+	],
+	"description": "E a melhor forma é divertindo-se e fazendo o que gosta. Escolha um curso de inglês por videoconferência que contempla seu objetivo pessoal, com professor experiente e ambiente de aula online profissional.",
+	"screenshots": [
+		{
+			"src": "../img/screenshot1.jpg",
+			"type": "image/jpg",
+			"sizes": "828x1472"
+		},
+		{
+			"src": "../img/screenshot2.jpg",
+			"type": "image/jpg",
+			"sizes": "828x1472"
+		}
+	]
+}

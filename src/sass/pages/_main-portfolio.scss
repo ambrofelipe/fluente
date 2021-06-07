@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.main-portfolio {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		font-family: "Poppins", sans-serif;
+		text-align: center;
+	}
+
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

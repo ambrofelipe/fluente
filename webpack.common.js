@@ -16,7 +16,7 @@ module.exports = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							publicPath: '../',
+							publicPath: "../",
 						},
 					},
 					{
@@ -39,8 +39,8 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(js|jsx)$/,
-				exclude: /[\\/]node_modules[\\/]/,
+				test: /\.(js|jsx?)$/,
+				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
 				},
@@ -48,6 +48,13 @@ module.exports = {
 			{
 				test: /\.html$/i,
 				loader: "html-loader",
+			},
+			{
+				test: /\.(json)(\?\S*)?$/,
+				type: "asset/resource",
+				generator: {
+					filename: "js/[name][ext]",
+				},
 			},
 			{
 				test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
@@ -88,6 +95,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: "docs.html",
 			template: path.resolve(__dirname, "src", "docs.html"),
+		}),
+		new HtmlWebpackPlugin({
+			filename: "portfolio.html",
+			template: path.resolve(__dirname, "src", "portfolio.html"),
 		}),
 		new CleanWebpackPlugin(),
 	],
