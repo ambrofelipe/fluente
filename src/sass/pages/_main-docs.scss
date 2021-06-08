@@ -102,6 +102,14 @@ hr.linha {
 		line-height: 1.6;
 		padding: 1em 1.5em;
 		display: block;
+
+		a {
+			color: $secondary;
+
+			&:hover {
+				color: shift-color($secondary, 20%);
+			}
+		}
 	}
 
 	code,

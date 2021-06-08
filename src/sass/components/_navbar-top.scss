@@ -59,7 +59,7 @@ header.navbar {
 	.navbar-logo {
 		display: block;
 		background: var(--logo) no-repeat;
-		width: 150px;
+		width: 144px;
 		height: 50px;
 		margin: 0.5em 0;
 		padding-bottom: 5px;
@@ -108,7 +108,7 @@ header.navbar {
 
 					svg {
 						position: relative;
-						top: -3px;
+						top: 2px;
 						margin-right: 0.25rem;
 					}
 				}
@@ -165,6 +165,7 @@ header.navbar {
 				li {
 					margin-left: 3em;
 					margin-bottom: 0;
+					flex-shrink: 0;
 
 					a {
 						opacity: 1;

@@ -58,9 +58,7 @@ section.teams {
 		}
 
 		p {
-			color: var(--paragraph);
 			margin: 0 auto;
-			font-size: 0.9em;
 			line-height: 2;
 			max-width: 30ch;
 		}
@@ -139,10 +137,7 @@ section.rapidos {
 		}
 
 		p {
-			color: var(--paragraph);
-			font-size: 0.9em;
 			max-width: 40ch;
-			line-height: 1.5;
 			margin: 0 auto;
 		}
 	}
@@ -260,10 +255,8 @@ section.bio {
 		}
 
 		p {
-			font-size: 0.9em;
+			font-size: 1em;
 			line-height: 2;
-			margin-left: auto;
-			margin-right: auto;
 			max-width: 75ch;
 		}
 
@@ -344,6 +337,7 @@ section.dizem {
 		border-radius: 0.5rem;
 		background: var(--bg-testimonials);
 		padding: 2em 1.5em;
+		font-size: 1em;
 		text-align: center;
 		color: var(--text-testimonials);
 		position: relative;
@@ -375,6 +369,7 @@ section.dizem {
 	.nome-perfil {
 		height: 4rem;
 		width: 4rem;
+		margin-left: 0;
 		position: relative;
 		left: calc(5rem + 25px - 2rem);
 		/* 5rem - leva ao início da seta; 25px - leva ao centro da seta; 2rem (metade da foto) - centraliza a foto sob a seta */
@@ -466,7 +461,9 @@ section.brinde {
 		#email {
 			height: 2.5rem;
 			width: 100%;
+			font-size: inherit;
 			font-weight: 700;
+			line-height: inherit;
 			background: var(--bg-input);
 			padding: 0.5em;
 			border: 0;

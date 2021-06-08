@@ -79,6 +79,7 @@ main.inicial {
 		}
 
 		h1 {
+			margin: 0;
 			font-size: 2rem;
 			font-weight: 800;
 			line-height: 2.5ex;
@@ -93,7 +94,6 @@ main.inicial {
 		}
 
 		h2 {
-			margin-top: 1em;
 			font-size: 1.3em;
 			line-height: 2.5ex;
 			color: var(--main-h2);
@@ -112,4 +112,13 @@ main.inicial {
 	&.bottom {
 		min-height: 20vh;
 	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	color: var(--paragraph);
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -10,10 +10,15 @@
 	z-index: 1;
 
 	.navbar-nav {
+		display: flex;
 		flex-direction: row;
 		height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
 
 		li {
+			list-style: none;
 			background-position: center;
 			padding: 0;
 			filter: grayscale(100%) opacity(0.7);
@@ -25,8 +30,8 @@
 			}
 
 			.nav-link {
-				padding-top: 0;
-				padding-bottom: 0;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
 				transition: none;
 			}
 
@@ -76,8 +81,7 @@
 			flex-direction: column;
 
 			li {
-				height: 3em;
-				margin-bottom: 1em;
+				height: 4em;
 
 				// Esconde o texto no menu colapsado e
 				// estilo geral de ícones
