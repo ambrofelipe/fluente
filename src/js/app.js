@@ -9,7 +9,7 @@ import Macy from "macy";
 let indexPage = document.querySelector(".teams");
 if (indexPage) {
 	// MACY IN SECTION GALERIA
-	var masonry = Macy({
+	let masonry = Macy({
 		container: "#galeria",
 		trueOrder: false,
 		waitForImages: false,
@@ -87,14 +87,14 @@ import "particles.js";
 import Typewriter from "typewriter-effect/dist/core";
 
 // Executa somente na página portfolio - to-do: code splitting
-let portfolioPage = document.getElementById("main-portfolio");
+let portfolioPage = document.querySelector("#welcome-section");
 if (portfolioPage) {
 	// PARTICLES EFFECT IN PORTFOLIO
 	// Inicia particles.js
-	particlesJS.load("main-portfolio", "js/particles.json");
+	particlesJS.load("welcome-section", "js/particles.json");
 
 	// TYPEWRITER EFFECT IN PORTFOLIO
-	let typePortfolio = document.getElementById("typeHeader");
+	let typePortfolio = document.querySelector("#typeHeader");
 
 	var typewriter = new Typewriter(typePortfolio, {
 		loop: false,
@@ -115,4 +115,25 @@ if (portfolioPage) {
 		.typeString(" and accessible.")
 		.pauseFor(1000)
 		.start();
+
+	// MACY IN PORTFOLIO
+	let projects = Macy({
+		container: "#galeria",
+		trueOrder: false,
+		waitForImages: false,
+		useOwnImageLoader: false,
+		debug: true,
+		mobileFirst: true,
+		columns: 1,
+		margin: {
+			y: 16,
+			x: "2%",
+		},
+		breakAt: {
+			1200: 6,
+			940: 5,
+			520: 3,
+			400: 2,
+		},
+	});
 }

@@ -36,7 +36,7 @@ footer {
 				margin-left: 3em;
 			}
 
-			&:nth-child(3) {
+			&:last-child {
 				margin-right: auto;
 			}
 
@@ -51,7 +51,13 @@ footer {
 
 			&:nth-child(5) {
 				background: url("/img/instagram.svg") center / 20px no-repeat;
-				margin-right: auto;
+				width: 20px;
+				height: 20px;
+				margin-top: 8px;
+			}
+
+			&:nth-child(6) {
+				background: url("/img/github.svg") center / 20px no-repeat;
 				width: 20px;
 				height: 20px;
 				margin-top: 8px;

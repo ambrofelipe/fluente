@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
-#main-portfolio {
+section#welcome-section {
 	height: 100vh;
+	background: var(--alt-bg);
 	display: flex;
 	flex-direction: column;
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
 	@media screen and (min-width: 992px) {
 		flex-direction: row;
@@ -13,21 +15,25 @@
 
 	.info {
 		min-height: 30vh;
+		max-width: 40rem;
 		flex: 1 0 60%;
 
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
+		padding-bottom: 5rem;
 
 		h1 {
 			width: 100%;
 			margin: 0;
 			font-family: "Poppins", sans-serif;
+			font-size: 2em;
 			text-align: left;
 		}
 
 		h2 {
 			width: 100%;
+			min-height: 7rem;
 			margin: 0;
 			font-family: "Source Code Pro", monospace;
 			font-weight: 400;
@@ -38,7 +44,7 @@
 		transform: scale(0.6);
 		align-self: center;
 		position: relative;
-		z-index: 9999;
+		z-index: 2;
 		margin-top: -10rem;
 
 		.notch {
@@ -60,5 +66,22 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+}
+
+main#projects {
+	text-align: center;
+	padding-top: 4em;
+	padding-bottom: 5em;
+
+	.galeria-title h2 {
+		@include main-h2;
+		max-width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.galeria-title h4 {
+		@include main-h4;
 	}
 }
