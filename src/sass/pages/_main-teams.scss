@@ -1,3 +1,81 @@
+main.inicial {
+	text-align: center;
+	background-color: var(--main-bg);
+	background-image: url("/img/header.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+
+	@media (min-width: 992px) {
+		text-align: left;
+	}
+
+	.agenda {
+		background: var(--header-mask);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 3rem;
+
+		& > div:nth-child(2) {
+			flex: 1 0 40%;
+			min-width: 18rem;
+			max-width: 25rem;
+			margin-bottom: 1em;
+		}
+
+		& > div:nth-child(3) {
+			flex: 1 1 60%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			min-width: 18rem;
+			max-width: 40ch;
+
+			@media (min-width: 768px) {
+				margin-left: 1em;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: 2rem;
+				font-weight: 800;
+				line-height: 2.5ex;
+				color: var(--main-h1);
+				text-shadow: 3px 5px 10px $shadow;
+
+				strong {
+					font-weight: 800;
+					line-height: 0.5em;
+					color: $primary-content;
+				}
+			}
+
+			h2 {
+				font-size: 1.3em;
+				line-height: 2.5ex;
+				color: var(--main-h2);
+				text-shadow: 1px 3px 4px $shadow;
+			}
+		}
+
+		.agenda-spacer {
+			flex: 1 0 100%;
+
+			&.top {
+				min-height: 37vh;
+			}
+
+			&.bottom {
+				min-height: 20vh;
+			}
+		}
+	}
+}
+
 section.teams {
 	background: var(--main-bg);
 	text-align: center;

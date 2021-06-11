@@ -4,9 +4,8 @@
 * fluente.me
 */
 
-@import "vars";
-
 // App layout
+@import "components/vars";
 @import "components/app";
 @import "components/navbar-top";
 @import "components/navbar-side";
