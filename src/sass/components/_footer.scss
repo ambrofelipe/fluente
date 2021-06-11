@@ -2,8 +2,6 @@ footer {
 	display: flex;
 	flex-flow: column wrap;
 	background-color: darken($tertiary, 5%);
-	color: $gray-500;
-	font-size: 0.9rem;
 	padding-top: 2em;
 
 	& > a {
@@ -91,6 +89,12 @@ footer {
 		border-top: 1px solid rgba($gray-700, 0.3);
 		text-align: center;
 
+		p,
+		address {
+			// Overrides p from _app.scss
+			color: $gray-500;
+		}
+
 		address {
 			display: flex;
 			flex-flow: row wrap;
@@ -107,6 +111,7 @@ footer {
 				flex: 0 0 45%;
 				text-align: left;
 				max-width: 45ch;
+				margin-left: 0;
 			}
 
 			address {

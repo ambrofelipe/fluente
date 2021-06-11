@@ -85,6 +85,7 @@
 	}
 }
 
+// Mixins
 @mixin main {
 	display: flex;
 	flex-wrap: wrap;
@@ -153,6 +154,7 @@
 	}
 }
 
+// Normaliza
 body {
 	background-color: var(--main-bg) !important;
 	margin: 0;
@@ -178,6 +180,7 @@ body::-webkit-scrollbar-thumb {
 	background: $primary;
 }
 
+// Normaliza p
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
