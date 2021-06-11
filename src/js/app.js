@@ -26,7 +26,7 @@ if (indexPage) {
 
 		let options = {
 			root: null, // null observa com relação ao viewport
-			rootMargin: "-100px 0", // espera o contador passar 100px da margem inferior
+			rootMargin: "-100px", // espera o contador passar 100px da margem inferior
 			threshold: 1.0, // inicia quando estiver 100% visível
 		};
 
