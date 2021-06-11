@@ -1,9 +1,7 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const jQuery = require("jquery");
 
 module.exports = {
 	entry: "./src/js/app.js",
@@ -81,10 +79,6 @@ module.exports = {
 	},
 
 	plugins: [
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-		}),
 		new MiniCssExtractPlugin({
 			filename: "css/app.css",
 		}),

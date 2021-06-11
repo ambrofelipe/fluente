@@ -3,11 +3,35 @@ import "../sass/main.scss";
 // Plugins
 
 import { CountUp } from "countup.js";
+import Macy from "macy";
 
 // Executa somente na página index - to-do: code splitting
 let indexPage = document.querySelector(".teams");
 if (indexPage) {
+	// MACY IN SECTION GALERIA
+	var masonry = Macy({
+		container: "#galeria",
+		trueOrder: false,
+		waitForImages: false,
+		useOwnImageLoader: false,
+		debug: true,
+		mobileFirst: true,
+		columns: 1,
+		margin: {
+			y: 16,
+			x: "2%",
+		},
+		breakAt: {
+			1200: 6,
+			940: 5,
+			520: 3,
+			400: 2,
+		},
+	});
+
+	// COUNTUP IN SECTION BIO
 	let target;
+	let jaContou = 0;
 
 	// Aguarda a página carregar para definir o alvo e iniciar o observador
 	window.addEventListener(
@@ -26,7 +50,7 @@ if (indexPage) {
 
 		let options = {
 			root: null, // null observa com relação ao viewport
-			rootMargin: "-100px", // espera o contador passar 100px da margem inferior
+			rootMargin: "-10%", // espera o contador passar 100px da margem inferior
 			threshold: 1.0, // inicia quando estiver 100% visível
 		};
 
@@ -37,7 +61,7 @@ if (indexPage) {
 	// Define o callback chamado pelo observador
 	function iniciaContador(entries, observer) {
 		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
+			if (entry.isIntersecting && !jaContou) {
 				let options = {
 					duration: 4,
 				};
@@ -51,6 +75,7 @@ if (indexPage) {
 					console.error(experiencia.error);
 					console.error(alunos.error);
 				}
+				jaContou = 1;
 			}
 		});
 	}
