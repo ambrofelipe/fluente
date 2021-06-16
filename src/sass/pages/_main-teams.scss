@@ -392,7 +392,7 @@ section.dizem {
 		margin: 0 0.5em 3em;
 	}
 
-	.texto {
+	blockquote {
 		min-width: 32ch;
 		border-radius: 0.5rem;
 		background: var(--bg-testimonials);
@@ -404,9 +404,11 @@ section.dizem {
 		position: relative;
 		z-index: 2;
 
-		& > span {
-			font-size: 15rem;
+		&::before {
+			content: open-quote;
+			width: 7.5rem;
 			font-family: serif;
+			font-size: 15rem;
 			font-weight: 800;
 			position: absolute;
 			left: 1rem;
@@ -416,7 +418,7 @@ section.dizem {
 		}
 
 		&::after {
-			content: "";
+			content: close-quote;
 			width: 0;
 			height: 0;
 			display: block;
@@ -435,8 +437,8 @@ section.dizem {
 		width: 4rem;
 		margin-left: 0;
 		position: relative;
-		left: calc(5rem + 25px - 2rem);
-		/* 5rem - leva ao início da seta; 25px - leva ao centro da seta; 2rem (metade da foto) - centraliza a foto sob a seta */
+		left: calc(4rem + 50px);
+		/* 4rem - leva ao início da seta; 50px - leva ao centro da seta */
 		background-size: 4rem;
 		border-radius: 50%;
 
