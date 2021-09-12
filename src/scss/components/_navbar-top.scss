@@ -1,0 +1,196 @@
+header.navbar {
+	background: var(--bg-nav);
+	backdrop-filter: blur(10px);
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0.5em;
+
+	.nav-toggle {
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+
+		&:focus ~ .nav-toggle-label {
+			outline: 3px solid $primary;
+		}
+	}
+
+	.nav-toggle-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 1em;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		span,
+		span::before,
+		span::after {
+			display: block;
+			background: var(--nav-toggle-label);
+			height: 2px;
+			width: 2em;
+			border-radius: 2px;
+			position: relative;
+		}
+
+		span::before,
+		span::after {
+			content: "";
+			position: absolute;
+		}
+
+		span::before {
+			bottom: 7px;
+		}
+
+		span::after {
+			top: 7px;
+		}
+	}
+
+	.navbar-logo {
+		display: block;
+		background: var(--logo) no-repeat;
+		width: 144px;
+		height: 50px;
+		margin: 0.5em 0;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	nav {
+		position: absolute;
+		text-align: left;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: var(--bg-nav);
+		backdrop-filter: blur(10px);
+		transform: scale(1, 0);
+		transform-origin: top;
+		transition: transform 400ms ease-in-out;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				margin: 1em;
+
+				a {
+					color: var(--link);
+					text-decoration: none;
+					opacity: 0;
+					transition: opacity 150ms ease-in-out;
+
+					// &.icone-link {
+					// 	display: block;
+					// 	background: url("/img/person-circle.svg") left center /
+					// 		1rem no-repeat;
+					// 	padding-left: 1.5rem;
+					// }
+
+					&:hover,
+					&.active {
+						color: $secondary;
+					}
+
+					svg {
+						position: relative;
+						top: 2px;
+						margin-right: 0.25rem;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-toggle:checked {
+		& ~ nav {
+			transform: scale(1, 1);
+		}
+
+		& ~ nav a {
+			opacity: 1;
+			transition: opacity 250ms ease-in-out 250ms;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	header.navbar {
+		justify-content: center;
+		flex-wrap: nowrap;
+
+		.nav-toggle-label {
+			display: none;
+		}
+
+		.navbar-logo {
+			display: block;
+			padding: 1em 0;
+			flex: 0 2 30rem; // Limits the menu+logo to ~1200px
+		}
+
+		nav {
+			position: relative;
+			width: auto;
+			transition: none;
+			transform: scale(1, 1);
+			background: none;
+			backdrop-filter: none;
+			top: initial;
+			left: initial;
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			flex: 0 1 43rem; // Limits the menu+logo to ~1200px
+
+			ul {
+				display: flex;
+
+				li {
+					margin-left: 3em;
+					margin-bottom: 0;
+					flex-shrink: 0;
+
+					a {
+						opacity: 1;
+						position: relative;
+
+						&::before {
+							content: "";
+							display: block;
+							height: 5px;
+							background: $secondary;
+							position: absolute;
+							top: -0.75em;
+							left: 0;
+							right: 0;
+							transform: scale(0, 1);
+							transition: transform ease-in-out 250ms;
+						}
+
+						&:hover::before,
+						&.active::before {
+							transform: scale(1, 1);
+						}
+					}
+				}
+			}
+		}
+	}
+}

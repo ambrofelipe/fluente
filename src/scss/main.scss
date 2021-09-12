@@ -1,0 +1,23 @@
+/*!
+* Fluente
+* Author: Felipe Ambrosio
+* fluente.me
+*/
+
+// App layout
+@import "components/vars";
+@import "components/app";
+@import "components/navbar-top";
+@import "components/navbar-side";
+@import "components/calendar";
+@import "components/buttons";
+@import "components/gallery";
+@import "components/footer";
+
+// Pages
+@import "pages/main-docs";
+@import "pages/main-teams";
+@import "pages/main-portfolio";
+
+// Packages
+@import "devices.css/assets/scss/devices.scss";

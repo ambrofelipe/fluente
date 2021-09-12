@@ -1,0 +1,139 @@
+footer {
+	display: flex;
+	flex-flow: column wrap;
+	background-color: darken($tertiary, 5%);
+	padding-top: 2em;
+
+	& > a {
+		display: block;
+		align-self: center;
+		background: url(../img/logo-e.svg) no-repeat;
+		width: 9rem;
+		height: 9rem;
+		opacity: 0.7;
+	}
+
+	.nav-footer {
+		flex: 1 1 40%;
+		margin-top: 1rem;
+		align-items: flex-start;
+		max-width: 60rem;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+
+		a {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			color: $gray-500;
+			padding: 0.5em 0 2px 0;
+			margin-right: 1.5em;
+			text-decoration: none;
+
+			&:nth-child(1) {
+				margin-left: 3em;
+			}
+
+			&:last-child {
+				margin-right: auto;
+			}
+
+			&:nth-child(4) {
+				background: url(../img/facebook.svg) center / 20px no-repeat;
+				fill: $gray-500;
+				margin-left: auto;
+				width: 20px;
+				height: 20px;
+				margin-top: 8px;
+			}
+
+			&:nth-child(5) {
+				background: url(../img/instagram.svg) center / 20px no-repeat;
+				width: 20px;
+				height: 20px;
+				margin-top: 8px;
+			}
+
+			&:nth-child(6) {
+				background: url(../img/github.svg) center / 20px no-repeat;
+				width: 20px;
+				height: 20px;
+				margin-top: 8px;
+			}
+
+			&.active {
+				color: darken($secondary, 20%);
+				border-bottom: 2px solid darken($secondary, 20%);
+			}
+
+			@media (max-width: 991px) {
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		flex-flow: row wrap;
+		justify-content: center;
+		padding: 2rem;
+
+		.nav-footer {
+			max-width: 50rem;
+		}
+	}
+
+	.texto {
+		flex: 1 0 100%;
+		margin: 3em 1em 0;
+		padding-top: 2rem;
+		border-top: 1px solid rgba($gray-700, 0.3);
+		text-align: center;
+
+		p,
+		address {
+			// Overrides p from _app.scss
+			color: $gray-500;
+		}
+
+		address {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			margin: 2em 0 1em;
+			font-style: normal;
+		}
+
+		@media (min-width: 992px) {
+			display: flex;
+			justify-content: space-between;
+
+			p {
+				flex: 0 0 45%;
+				text-align: left;
+				max-width: 45ch;
+				margin-left: 0;
+			}
+
+			address {
+				flex: 0 0 40%;
+				margin-top: 0;
+				max-width: 35ch;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+
+			& > p {
+				margin-right: 20rem;
+			}
+		}
+	}
+}

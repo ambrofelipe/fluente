@@ -44,11 +44,8 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.html$/i,
-				loader: "html-loader",
-			},
-			{
 				test: /\.(json)(\?\S*)?$/,
+				exclude: /node_modules/,
 				type: "asset/resource",
 				generator: {
 					filename: "js/[name][ext]",
@@ -87,6 +84,10 @@ module.exports = {
 			template: path.resolve(__dirname, "src", "index.html"),
 		}),
 		new HtmlWebpackPlugin({
+			filename: "contratar.html",
+			template: path.resolve(__dirname, "src", "contratar.html"),
+		}),
+		new HtmlWebpackPlugin({
 			filename: "docs.html",
 			template: path.resolve(__dirname, "src", "docs.html"),
 		}),
@@ -98,7 +99,9 @@ module.exports = {
 	],
 
 	output: {
-		filename: "js/app.js",
+		filename: "js/[name].[fullhash:8].js",
+		chunkFilename: "js/[id].[fullhash:8].js",
+		sourceMapFilename: "js/[name].[fullhash:8].map",
 		path: path.resolve(__dirname, "docs"),
 		clean: true,
 	},
