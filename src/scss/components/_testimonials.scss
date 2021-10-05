@@ -1,0 +1,111 @@
+@use "../abstracts/" as *;
+
+section.dizem {
+	background: var(--main-bg);
+	text-align: center;
+	padding-top: 4em;
+
+	.dizem-title h2 {
+		@include main-h2;
+		max-width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.dizem-title h4 {
+		@include main-h4;
+	}
+
+	.dizem-carousel {
+		margin: 0 auto;
+	}
+}
+
+.dizem-testimonials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	text-align: center;
+	max-width: 80rem;
+	margin: 0 auto;
+
+	.testimonial {
+		flex: 0 1 45%;
+		margin: 0 0.5em 3em;
+	}
+
+	blockquote {
+		min-width: 32ch;
+		border-radius: 0.5rem;
+		background: var(--bg-testimonials);
+		padding: 2em 1.5em 1em;
+		margin-bottom: 1.5rem;
+		font-size: 1em;
+		text-align: center;
+		color: var(--text-testimonials);
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			content: open-quote;
+			width: 7.5rem;
+			font-family: serif;
+			font-size: 15rem;
+			font-weight: 800;
+			position: absolute;
+			left: 1rem;
+			top: -7rem;
+			opacity: 0.1;
+			z-index: -1;
+		}
+
+		&::after {
+			content: close-quote;
+			width: 0;
+			height: 0;
+			display: block;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-top: 20px solid var(--bg-testimonials);
+			position: relative;
+			top: 2em;
+			left: 3.5em;
+		}
+	}
+
+	.autor {
+		display: block;
+		height: 4rem;
+		width: 4rem;
+		margin-left: 0;
+		position: relative;
+		left: calc(4rem + 50px);
+		/* 4rem - leva ao início da seta; 50px - leva ao centro da seta */
+		background-size: 4rem;
+		border-radius: 50%;
+
+		span {
+			text-align: left;
+			font-size: 1.5em;
+			margin-left: 5rem;
+			line-height: 4em;
+			color: var(--text);
+		}
+	}
+
+	& .testimonial:nth-child(1) .autor {
+		background-image: url(../img/pp-10.jpg);
+	}
+
+	& .testimonial:nth-child(2) .autor {
+		background-image: url(../img/pp-2.jpg);
+	}
+
+	& .testimonial:nth-child(3) .autor {
+		background-image: url(../img/pp.jpg);
+	}
+
+	& .testimonial:nth-child(4) .autor {
+		background-image: url(../img/pp-1.jpg);
+	}
+}

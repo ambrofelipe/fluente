@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 header.navbar {
 	background: var(--bg-nav);
 	backdrop-filter: blur(10px);

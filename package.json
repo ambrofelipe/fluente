@@ -42,9 +42,8 @@
 		"webpack-merge": "^5.7.3"
 	},
 	"dependencies": {
-		"@popperjs/core": "^2.9.2",
-		"Devices.css": "github:marvelapp/devices.css",
 		"countup.js": "^2.0.7",
+		"Devices.css": "github:marvelapp/devices.css",
 		"macy": "^2.5.1",
 		"particles.js": "^2.0.0",
 		"typewriter-effect": "^2.17.0"

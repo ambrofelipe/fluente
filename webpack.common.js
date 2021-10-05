@@ -84,16 +84,16 @@ module.exports = {
 			template: path.resolve(__dirname, "src", "index.html"),
 		}),
 		new HtmlWebpackPlugin({
-			filename: "contratar.html",
-			template: path.resolve(__dirname, "src", "contratar.html"),
+			filename: "contratar/index.html",
+			template: path.resolve(__dirname, "src", "contratar/index.html"),
 		}),
 		new HtmlWebpackPlugin({
-			filename: "docs.html",
-			template: path.resolve(__dirname, "src", "docs.html"),
+			filename: "docs/index.html",
+			template: path.resolve(__dirname, "src", "docs/index.html"),
 		}),
 		new HtmlWebpackPlugin({
-			filename: "portfolio.html",
-			template: path.resolve(__dirname, "src", "portfolio.html"),
+			filename: "portfolio/index.html",
+			template: path.resolve(__dirname, "src", "portfolio/index.html"),
 		}),
 		new CleanWebpackPlugin(),
 	],

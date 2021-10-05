@@ -1,3 +1,6 @@
+@use "../abstracts/" as *;
+@use 'sass:math';
+
 .calendar {
 	background-color: $primary-content;
 	color: $gray-200;
@@ -25,7 +28,7 @@
 		label.weekday {
 			display: inline-block;
 			flex-grow: 1;
-			flex-basis: calc(100% / 7);
+			flex-basis: math.div(100%, 7);
 			font-size: 0.9rem;
 			padding: 0.5em 0;
 			text-align: center;
@@ -37,7 +40,7 @@
 		label.day {
 			flex-shrink: 0;
 			height: 2.5rem;
-			width: (100% / 7);
+			width: math.div(100%, 7);
 			text-align: center;
 
 			& > span {

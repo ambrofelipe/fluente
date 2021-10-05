@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+section.brinde {
+	@include main;
+	flex-flow: column nowrap;
+	background: var(--bg-brinde) var(--alt-bg) 0% 80%/95% no-repeat;
+	padding-top: 10em;
+	padding-bottom: 5em;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+
+	@media (min-width: 576px) {
+		background-position: center bottom;
+	}
+
+	@media (min-width: 768px) {
+		flex-flow: row nowrap;
+		text-align: left;
+		background-position: 80% 40%;
+		background-size: 80%;
+
+		.side * {
+			margin-left: 0 !important;
+		}
+	}
+
+	.side {
+		@include side;
+		padding: 0 1em;
+
+		p:not(p:nth-of-type(1)) {
+			text-align: left;
+		}
+
+		@media (min-width: 768px) {
+			padding: 0;
+		}
+	}
+
+	#brinde-form {
+		flex: 0 1 65%;
+
+		align-content: center;
+		gap: 1em;
+		display: flex;
+		flex-flow: column wrap;
+
+		@media (min-width: 768px) {
+			max-width: 60rem;
+			padding: 9.8em 4em;
+			align-content: space-between;
+		}
+
+		label {
+			min-height: 4rem;
+			min-width: 15rem;
+		}
+
+		#nome,
+		#email {
+			height: 2.5rem;
+			width: 100%;
+			font-size: inherit;
+			font-weight: 700;
+			line-height: inherit;
+			background: var(--bg-input);
+			padding: 0.5em;
+			border: 0;
+			border-bottom: 2px solid lighten($tertiary, 30%);
+			border-radius: 0.25rem;
+			transition: border-bottom 0.3s ease;
+
+			&::placeholder {
+				color: var(--placeholder);
+				opacity: 1;
+			}
+
+			&:active,
+			&:focus {
+				outline: none;
+				border-bottom: 2px solid $tertiary;
+			}
+		}
+	}
+}

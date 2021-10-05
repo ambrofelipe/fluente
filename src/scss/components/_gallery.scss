@@ -1,3 +1,23 @@
+@use "../abstracts/" as *;
+
+section.galeria {
+	background: var(--main-bg);
+	text-align: center;
+	padding-top: 4em;
+	padding-bottom: 5em;
+
+	.galeria-title h2 {
+		@include main-h2;
+		max-width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.galeria-title h4 {
+		@include main-h4;
+	}
+}
+
 #galeria::before,
 #galeria::after {
 	content: "";

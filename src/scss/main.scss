@@ -4,20 +4,24 @@
 * fluente.me
 */
 
+// Base
+@use "abstracts/app";
+@use "abstracts/mixins";
+
+// Layouts
+@use "pages/main-teams";
+@use "pages/main-docs";
+@use "pages/main-portfolio";
+
 // App layout
-@import "components/vars";
-@import "components/app";
-@import "components/navbar-top";
-@import "components/navbar-side";
-@import "components/calendar";
-@import "components/buttons";
-@import "components/gallery";
-@import "components/footer";
-
-// Pages
-@import "pages/main-docs";
-@import "pages/main-teams";
-@import "pages/main-portfolio";
-
-// Packages
-@import "devices.css/assets/scss/devices.scss";
+@use "components/navbar-top";
+@use "components/navbar-side";
+@use "components/calendar";
+@use "components/buttons";
+@use "components/teams";
+@use "components/rapidos";
+@use "components/gallery";
+@use "components/bio";
+@use "components/testimonials";
+@use "components/brinde";
+@use "components/footer";

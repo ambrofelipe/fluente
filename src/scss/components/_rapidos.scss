@@ -1,0 +1,85 @@
+@use "../abstracts/" as *;
+
+section.rapidos {
+	@include main;
+	flex-flow: column nowrap;
+	background-color: var(--alt-bg);
+	padding-top: 10em;
+	padding-bottom: 5em;
+	clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
+
+	.side {
+		@include side;
+	}
+}
+
+.rapidos-details {
+	flex: 0 0 65%;
+	display: flex;
+	flex-wrap: wrap;
+	align-self: center;
+	justify-content: space-evenly;
+	max-width: 60rem;
+
+	@media (min-width: 1200px) {
+		flex-flow: row wrap;
+	}
+
+	.rapidos-box {
+		flex: 0 0 40%;
+		min-width: 30ch;
+		margin-bottom: 3em;
+		background-size: 12vmin;
+		padding-top: 18vmin;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		@media (min-width: 768px) {
+			min-width: 35ch;
+			background-size: 6vmin;
+			background-position: 1% 15%;
+			padding-top: 0;
+			padding-left: 9vmin;
+			text-align: left;
+		}
+
+		@media (min-width: 1200px) {
+			flex: 0 0 45%;
+			max-width: 40ch;
+		}
+
+		&:nth-child(1) {
+			background-image: url(../ico/microphone.png);
+		}
+
+		&:nth-child(2) {
+			background-image: url(../ico/diploma.png);
+		}
+
+		&:nth-child(3) {
+			background-image: url(../ico/backpack.png);
+		}
+
+		&:nth-child(4) {
+			background-image: url(../ico/presentation.png);
+		}
+
+		h3 {
+			font-variant: small-caps;
+			font-size: 1.3em;
+			font-weight: 500;
+			color: var(--main-h3);
+		}
+
+		p {
+			max-width: 40ch;
+			margin: 0 auto;
+		}
+	}
+
+	a {
+		display: block;
+		width: fit-content;
+		margin: 0 10%;
+	}
+}

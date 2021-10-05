@@ -1,0 +1,68 @@
+@use "../abstracts/" as *;
+
+section.teams {
+	background: var(--main-bg);
+	text-align: center;
+	padding-top: 4em;
+	padding-bottom: 5em;
+
+	.teams-title h2 {
+		@include main-h2;
+	}
+
+	.teams-title h4 {
+		@include main-h4;
+	}
+}
+
+.teams-details {
+	@include main;
+
+	.teams-box {
+		min-width: 27ch;
+		margin: 0 0.5em 3em 0.5em;
+		flex: 0 0 40%;
+
+		@media (min-width: 1200px) {
+			flex: 0 0 20%;
+			max-width: 32ch;
+		}
+
+		h3 {
+			font-size: 1.2rem;
+			font-weight: 500;
+			color: var(--main-h3);
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 15vmin;
+			padding-top: 20vmin;
+
+			@media (min-width: 576px) {
+				background-size: 6vmin;
+				padding-top: 8vmin;
+			}
+		}
+
+		&:nth-child(1) h3 {
+			background-image: url(../ico/online-education.png);
+		}
+
+		&:nth-child(2) h3 {
+			background-image: url(../ico/thinking.png);
+		}
+
+		&:nth-child(3) h3 {
+			background-image: url(../ico/test.png);
+		}
+
+		&:nth-child(4) h3 {
+			background-image: url(../ico/success.png);
+		}
+
+		p {
+			margin: 0 auto;
+			line-height: 2;
+			max-width: 30ch;
+		}
+	}
+}
