@@ -4,14 +4,14 @@ This is a new version of fluente.me that would actually make a frontend develope
 
 ## Demo
 
--   Landing page: https://dev.fluente.me
--   Portfolio: https://dev.fluente.me/portfolio.html
--   Docs page: https://dev.fluente.me/docs.html
+-   Landing page: https://fluente.me
+-   Portfolio: https://fluente.me/portfolio/
+-   Docs page: https://fluente.me/docs/
 
 ## Features
 
--   CSS-only navbar
--   Bootstrap-free full responsiveness
+-   Full responsiveness (no frameworks used)
+-   CSS flexbox and grid, user-preference media queries
 -   Light and dark mode at the OS level
 -   Device mockup (Thanks to marvelapps/devices.css)
--   Flexbox all over the place
+-   Other JS libraries
