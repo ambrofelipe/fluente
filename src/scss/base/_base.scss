@@ -1,0 +1,119 @@
+@use "../abstracts" as *;
+
+/*
+* Light mode
+*/
+
+:root {
+	--bg-01: #{$G-00}; //--main-bg
+	--bg-02: #{$G-01}; //--alt-bg
+	--bg-03: #{$G-02}; //--bg-testimonials
+	--bg-04: #{$G-03}; //--bg-nav-hover
+	--bg-05: #{$G-08}; //--nav-toggle-label
+	--bg-06: #{$S-11}; //--main-mask
+	--bg-07: rgba(#{$G-03}, 0.5); //--bg-input
+	--bg-08: #{$S-10}; //--bg-nav
+	--bg-09: url(../img/logo-light.svg);
+	
+	--fc-01: #{$G-08}; //--main-h1
+	--fc-02: #{$G-06}; //--main-h4
+	--fc-03: #{$G-07}; //--paragraph
+	--fc-04: #{$G-07}; //--link
+	--fc-05: #{$G-07}; //--text
+	--fc-06: #{$G-08}; //--text-testimonials
+	--fc-07: #{$G-09}; //--placeholder
+	--fc-08: linear-gradient(190deg, darken(#{$M-03}, 20%), lighten(#{$M-03}, 10%)); //--font-gradient
+
+	// <code> em docs.html
+	--code-bg: #{$G-01};
+	--code-bc: #{$G-02};
+	--code-fc: #{$G-07};
+}
+
+/*
+* END - Light mode
+*/
+
+/*
+* Dark mode
+*/
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--bg-01: #{$G-09}; //--main-bg
+		--bg-02: #{$G-10}; //--alt-bg
+		--bg-03: #{$G-08}; //--bg-testimonials
+		--bg-04: #{$G-09}; //--bg-nav-hover
+		--bg-05: #{$G-05}; //--nav-toggle-label
+		--bg-06: #{$S-13}; //--main-mask
+		--bg-07: rgba(#{$G-07}, 0.5); //--bg-input
+		--bg-08: #{$S-12}; //--bg-nav
+		--bg-09: url(../img/logo-dark.svg);
+		
+		--fc-01: #{$G-02}; //--main-h1
+		--fc-02: #{$G-04}; //--main-h4
+		--fc-03: #{$G-04}; //--paragraph
+		--fc-04: #{$G-03}; //--link
+		--fc-05: #{$G-02}; //--text
+		--fc-06: #{$G-02}; //--text-testimonials
+		--fc-07: #{$G-01}; //--placeholder
+		--fc-08: linear-gradient(190deg, lighten(#{$M-03}, 20%), lighten(#{$M-03}, 70%)); //--font-gradient
+
+		// <code> em docs.html
+		--code-bg: #{$G-08};
+		--code-bc: #{$G-07};
+		--code-fc: #{$G-03};
+	}
+}
+
+/*
+* END - Dark mode
+*/
+
+html {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	background-color: var(--main-bg, $G-00);
+	font-family: $F-00;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--fc-05, $G-07);
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&.fluente {
+		position: relative;
+		overflow-x: hidden;
+	}
+}
+
+p {
+	margin: 0 auto 1rem;
+	font-size: 0.9rem;
+	color: var(--fc-03, $G-07);
+}
+
+strong {
+	font-weight: 900;
+}
+
+em {
+	font-style: italic;
+}
+
+.wrapper {
+	width: min(100%, 75rem);
+	margin: 0 auto;
+}

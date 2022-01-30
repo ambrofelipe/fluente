@@ -1,0 +1,143 @@
+@use "../abstracts" as *;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	background-color: var(--bg-01, $G-00);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+	text-align: center;
+
+	@include desktop {
+		text-align: left;
+	}
+
+	&__overlay {
+		width: 100%;
+		max-height: 75rem;
+		padding: 40vh 0 25vh;
+		background: var(--bg-06, $G-01);
+	}
+
+	&__home {
+		background-image: url(../img/bg/bg-home.jpg);
+	}
+
+	&__home &__overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 3rem;
+
+		.calendar {
+			flex: 1 0 40%;
+
+			min-width: 18rem;
+			max-width: 25rem;
+			margin-bottom: 1em;
+		}
+
+		hgroup {
+			flex: 1 1 60%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			min-width: 18rem;
+			max-width: 40ch;
+			margin: 0 1rem;
+
+			@include tablet {
+				margin-left: 1em;
+			}
+
+			h1 {
+				margin: 1rem 0;
+				font-weight: 800;
+				font-size: clamp(1.75rem, 8vw, 2rem);
+				color: var(--fc-01, $G-08);
+				line-height: 2.5ex;
+				text-shadow: 3px 5px 10px $S-40;
+
+				strong {
+					font-weight: 800;
+					color: $D-01;
+					line-height: 0.5em;
+				}
+			}
+
+			h2 {
+				font-weight: 700;
+				font-size: 1.25em;
+				color: var(--fc-01, $G-08);
+				line-height: 2.5ex;
+				text-shadow: 1px 3px 4px $S-40;
+			}
+		}
+	}
+
+	&__hire {
+		background-image: url(../img/bg/bg-hire.jpg);
+	}
+
+	&__hire &__overlay {
+		padding: 25vh 0 35vh;
+		display: block;
+
+		hgroup {
+			width: fit-content;
+			max-width: 75rem;
+			margin: 0 auto;
+			text-align: center;
+
+			h1 {
+				margin-bottom: 0;
+				font-weight: 900;
+				font-size: clamp(2.5rem, 7vw + 1rem, 3.75rem);
+				text-shadow: 3px 5px 10px $S-40;
+			}
+
+			h2 {
+				margin-top: 0;
+				font-weight: 500;
+				font-size: clamp(1rem, 5vw + 0.25rem, 1.25rem);
+			}
+		}
+
+		section {
+			width: fit-content;
+			max-width: 75rem;
+			margin: 4rem auto 0;
+
+			h1 {
+				text-align: center;
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					font-weight: 500;
+					line-height: 2;
+				}
+			}
+
+			p {
+				font-weight: 500;
+			}
+
+			button {
+				margin-top: 2rem;
+			}
+		}
+	}
+}

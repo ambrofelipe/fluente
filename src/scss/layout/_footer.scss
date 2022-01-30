@@ -1,0 +1,246 @@
+@use "../abstracts" as *;
+
+.footer {
+	position: sticky;
+	top: 100vh;
+	width: 100%;
+	padding: 6rem 1rem 0;
+	background-color: $M-01;
+	color: $G-00;
+
+	&__wrapper {
+		display: grid;
+		grid-template-areas: "logo nav social cta";
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		@include mobile {
+			grid-template-areas: 
+				"logo"
+				"nav"
+				"social"
+				"cta";
+			grid-template-columns: 1fr;
+			align-items: center;
+			grid-gap: 2rem 0;
+		}
+	}
+
+	&__title {
+		display: block;
+		margin: 0.75rem 0;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	&__logo {
+		grid-area: logo;
+		width: 12rem;
+		height: 2.5rem;
+		background: url(../img/logo-dark.svg) left center / contain no-repeat;
+
+		@include mobile {
+			margin: auto;
+		}
+	}
+
+	&__nav {
+		grid-area: nav;
+		text-align: left;
+
+		li {
+			@include link-active;
+
+			a {
+				display: block;
+				width: fit-content;
+				margin: 0.25rem 0;
+				padding: 0.5rem 0;
+				font-weight: 700;
+				color: $G-00;
+				text-align: left;
+				text-decoration: none;
+
+				@include link-hover($direction: start);
+
+				@include mobile {
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		}
+
+		.header__button {
+			display: none;
+		}
+	}
+
+	&__social {
+		grid-area: social;
+
+		@include mobile {
+			width: fit-content;
+			margin: auto;
+		}
+
+		ul {
+			text-align: left;
+		}
+
+		li {
+			display: inline;
+			text-align: left;
+		}
+
+		a {
+			display: inline-block;
+			width: 2.25rem;
+			height: 2.25rem;
+			margin-right: 0.75rem;
+			background-color: $G-00;
+			mask-size: contain;
+			mask-position: center;
+			mask-repeat: no-repeat;
+			transition: 300ms ease;
+
+			&:hover {
+				background-color: $M-03;
+				transition: 300ms ease;
+			}
+		}
+
+		&--fb {
+			mask-image: url(../img/ico-fb.svg);
+		}
+
+		&--ig {
+			mask-image: url(../img/ico-ig.svg);
+		}
+
+		&--in {
+			mask-image: url(../img/ico-in.svg);
+		}
+	}
+
+	&__cta {
+		grid-area: cta;
+		width: clamp(18rem, 35vw, 100%);
+		margin: auto;
+
+		input[type="email"] {
+			@include input-text;
+			width: calc(100% - 75px);
+			color: $T-03;
+			padding-right: 1.75rem;
+		}
+
+		input[type="checkbox"] {
+			@include input-checkbox;
+
+			&:checked + label::before {
+				background-color: $T-03;
+			}
+		}
+
+		label {
+			display: block;
+			width: 100%;
+			position: relative;
+			margin-bottom: 0.5rem;
+
+			&[for="check-email"] {
+				@include checkbox-label;
+
+				text-align: left;
+
+				&.error {
+					color: $M-03;
+
+					&::after {
+						background: none;
+					}
+				}
+
+				&.success {
+					color: $T-03;
+
+					&::after {
+						background: none;
+					}
+				}
+			}
+
+			p.error {
+				margin-top: 0.25rem;
+				font-size: 0.85em;
+				color: $M-03;
+				text-align: left;
+				opacity: 0;
+			}
+
+			&.error::after,
+			&.success::after {
+				content: "";
+				position: absolute;
+				width: 1.125rem;
+				height: 1.125rem;
+				top: 35%;
+				transform: translateY(-50%);
+				right: 5rem;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			&.error {
+				input {
+					border-color: $M-02;
+					transition: 300ms ease;
+				}
+
+				p.error {
+					opacity: 1;
+					transition: 300ms ease;
+				}
+
+				&::after {
+					background-image: url(../img/state-error.svg);
+				}
+			}
+
+			&.success {
+				input {
+					border-color: $G-03;
+					transition: 300ms ease;
+				}
+
+				p.error {
+					opacity: 0;
+					transition: 300ms ease;
+				}
+
+				&::after {
+					background-color: $G-03;
+					mask: url(../img/state-success.svg) center / contain no-repeat;
+				}
+			}
+		}
+	}
+
+	&__button {
+		position: relative;
+	}
+
+	&__bar {
+		grid-column: 1 / 5;
+		margin: 6rem 0 3rem;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		font-size: clamp(0.6em, 2vw, 0.9em);
+		color: $T-03;
+
+		@include mobile {
+			margin: 6rem 0.5rem 3rem;
+		}
+	}
+}

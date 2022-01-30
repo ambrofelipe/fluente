@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.button {
+	display: block;
+	min-width: 15rem;
+	width: fit-content;
+	height: fit-content;
+	background-size: 100% 200%;
+	margin: 0 auto;
+	border: none;
+	border-radius: 0.25rem;
+	padding: 0.7em 3em;
+	font-weight: 400;
+	font-size: inherit;
+	color: $G-02;
+	line-height: inherit;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 3px 40px $S-40;
+	cursor: pointer;
+	user-select: none;
+
+	&--primary {
+		background-image: linear-gradient(to top, $D-03 50%, $D-01 50%);
+		color: $G-00;
+		transition: 300ms ease;
+
+		&:hover {
+			background-position: 0 100%;
+			transition: 300ms ease;
+		}
+	}
+
+	&--secondary {
+		background-image: linear-gradient(to top, $G-00 50%, $D-02 50%);
+		color: $T-00;
+		transition: 300ms ease;
+
+		&:hover {
+			background-position: 0 100%;
+			color: $G-00;
+			transition: 300ms ease;
+		}
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	&--visible {
+		height: 100%;
+		transition: height 300ms ease;
+	}
+}
+
+a.terms {
+	display: block;
+	text-align: center;
+	font-weight: 500;
+	font-size: 0.875em;
+	color: $S-21;
+	text-decoration-thickness: 2px;
+}

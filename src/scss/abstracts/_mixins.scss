@@ -1,0 +1,210 @@
+@use "vars" as *;
+
+@mixin mobile {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: 769px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 1201px) {
+		@content;
+	}
+}
+
+@mixin tooltip {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin link-hover($direction: center) {
+	&::after {
+		content: "";
+		display: block;
+		position: relative;
+		bottom: -0.175rem;
+		width: 0;
+		height: 3px;
+		border-radius: 3px;
+		background: $M-03;
+		opacity: 0;
+		transition: 300ms ease;
+
+		@if $direction == center {
+			margin: 0 auto;
+		}
+	}
+
+	&:hover::after {
+		width: 100%;
+		opacity: 1;
+		transition: 300ms ease;
+	}
+}
+
+@mixin link-active {
+	&.current-menu-item a::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		border-radius: 3px;
+		background: $M-03;
+		position: relative;
+		bottom: -0.15rem;
+		opacity: 1;
+		transition: 300ms ease;
+	}
+}
+
+@mixin input-text {
+	padding: 0.5rem 0;
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid $G-03;
+	font-family: $F-00;
+	font-size: 1rem;
+	color: $T-02;
+	transition: border-bottom 300ms ease;
+
+	&:hover,
+	&:focus {
+		border-bottom: 3px solid $M-02;
+		transition: border-bottom 300ms ease;
+		outline: none;
+	}
+
+	&:focus::placeholder {
+		color: $T-01;
+	}
+}
+
+@mixin input-checkbox {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+
+	&:checked + label::before {
+		content: "";
+		width: 0.925rem;
+		height: 0.925rem;
+		-webkit-mask: url(../img/square-checked.svg);
+		mask: url(../img/square-checked.svg);
+		-webkit-mask-size: cover;
+		mask-size: cover;
+		background: $T-00;
+		transition: background-color 300ms ease;
+	}
+}
+
+@mixin checkbox-label {
+	position: relative;
+	padding-left: 1.5rem;
+	font-size: 0.75em;
+	color: $T-02;
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		width: 0.925rem;
+		height: 0.925rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-mask: url(../img/square.svg);
+		mask: url(../img/square.svg);
+		-webkit-mask-size: cover;
+		mask-size: cover;
+		display: inline-block;
+		background-color: $T-02;
+		transition: background-color 300ms ease;
+		cursor: pointer;
+	}
+
+	a {
+		color: $M-03;
+		text-decoration-color: $M-03;
+		transition: text-decoration-color 300ms ease;
+
+		&:hover {
+			text-decoration-color: transparent;
+			transition: text-decoration-color 300ms ease;
+		}
+	}
+}
+
+@mixin main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+
+	@media (min-width: 1200px) {
+		flex-flow: row nowrap;
+	}
+}
+
+@mixin main-h2 {
+	font-size: 2rem;
+	font-weight: 800;
+	line-height: 1.2;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	color: var(--main-h2);
+}
+
+@mixin main-h4 {
+	max-width: 40ch;
+	font-size: 0.9rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: var(--main-h4);
+	margin: 0 auto 4rem;
+
+	@media (min-width: 992px) {
+		max-width: 55ch;
+	}
+}
+
+@mixin side {
+	flex: 0 0 25%;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	margin-bottom: 5rem;
+
+	@media (min-width: 992px) {
+		text-align: left;
+		align-content: flex-start;
+		width: 52rem;
+		align-self: center;
+	}
+
+	@media (min-width: 1200px) {
+		align-self: flex-start;
+		max-width: 23rem;
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+
+	h2 {
+		@include main-h2;
+	}
+
+	h4 {
+		@include main-h4;
+	}
+
+	p {
+		max-width: 40ch;
+		margin-left: 0;
+	}
+}
+
+

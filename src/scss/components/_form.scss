@@ -1,0 +1,145 @@
+@use "../abstracts" as *;
+
+.contact {
+	form label {
+		display: block;
+		width: 100%;
+		position: relative;
+		margin-bottom: 1rem;
+
+		span {
+			position: absolute;
+			top: 0.75em;
+			pointer-events: none;
+			transition: all 200ms ease;
+			color: $T-00;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			color: $T-00 !important;
+			@include input-text;
+		}
+
+		textarea {
+			height: 2.4rem;
+			color: $T-00;
+		}
+
+		&.filled input,
+		&.filled textarea {
+			border-bottom: 3px solid $M-02;
+			transition: border-bottom 300ms ease;
+			outline: none;
+		}
+
+		&.focus span,
+		&.filled span {
+			top: -0.5em;
+			font-size: 0.75em;
+			color: $T-02;
+		}
+
+		p.error {
+			font-size: 0.85em;
+			color: $M-02;
+			opacity: 0;
+			transition: 300ms ease;
+		}
+
+		&[for="check-terms"] {
+			@include checkbox-label;
+
+			.terms {
+				margin: 1rem 0;
+			}
+
+			&.error {
+				color: $M-03;
+
+				&::after {
+					background: none;
+				}
+			}
+
+			&.success {
+				color: $M-01;
+
+				&::after {
+					background: none;
+				}
+			}
+		}
+
+		&.error::after,
+		&.success::after {
+			content: "";
+			position: absolute;
+			width: 1.125rem;
+			height: 1.125rem;
+			top: 45%;
+			transform: translateY(-50%);
+			right: 1rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&.error {
+			input,
+			textarea {
+				border-color: $M-02;
+				transition: 300ms ease;
+			}
+
+			p.error {
+				opacity: 1;
+				transition: 300ms ease;
+			}
+
+			&::after {
+				background-image: url(../img/state-error.svg);
+			}
+		}
+
+		&.success {
+			span {
+				top: -0.5em;
+				font-size: 0.75em;
+				color: $T-02;
+			}
+
+			input,
+			textarea {
+				border-color: $M-01;
+				transition: 300ms ease;
+			}
+
+			p.error {
+				opacity: 0;
+				transition: 300ms ease;
+			}
+
+			&::after {
+				background-image: url(../img/state-success.svg);
+			}
+		}
+	}
+
+	form input[type="checkbox"] {
+		@include input-checkbox;
+	}
+
+	&__button {
+		position: relative;
+		margin-top: 2rem;
+		padding: 1.25rem 4rem;
+
+		@include mobile {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+}

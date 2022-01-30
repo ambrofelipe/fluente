@@ -1,0 +1,28 @@
+{
+  "name": "fluente.me",
+  "description": "Fluente.me WordPress theme",
+  "version": "1.0.0",
+  "author": "Felipe Ambrosio",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.4.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-wp-pot": "^2.3.5",
+    "sass": "^1.43.4"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

@@ -1,0 +1,42 @@
+// MAIN colours
+$M-01: hsl(356, 87%, 60%);
+$M-02: hsl(154, 90%, 45%);
+$M-03: hsl(224, 29%, 25%);
+
+// GREYscale
+$G-00: hsl(210, 0%, 100%);
+$G-01: hsl(210, 20%, 98%);
+$G-02: hsl(210, 16%, 93%);
+$G-03: hsl(210, 14%, 89%);
+$G-04: hsl(210, 14%, 83%);
+$G-05: hsl(210, 11%, 71%);
+$G-06: hsl(208, 7%, 46%);
+$G-07: hsl(210, 9%, 31%);
+$G-08: hsl(210, 10%, 23%);
+$G-09: hsl(210, 0%, 12%);
+$G-10: hsl(210, 0%, 0%);
+
+// DESATURATED main colours
+$D-01: desaturate($M-01, 20%);//$primary-content
+$D-02: desaturate(darken($M-02, 20%), 20%);
+$D-03: desaturate($M-03, 20%);
+
+// SHADES
+$S-10: rgba($G-01, 0.75);
+$S-11: rgba($G-01, 0.60);
+$S-12: darken(rgba($M-03, 0.75), 20%);
+$S-13: darken(rgba($M-03, 0.60), 20%);
+$S-20: darken($M-02, 10%);//$a-active-color
+$S-21: darken($M-02, 25%);//T&C link
+$S-40: rgba($G-10, 0.2); //$shadow
+
+// FONT families
+$F-00: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", 
+	"Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 
+	"Noto Color Emoji";
+
+// FONT colours
+$T-00: hsl(198, 93%, 11%);
+$T-01: hsl(200, 10%, 39%);
+$T-02: hsl(203, 7%, 55%);
+$T-03: hsl(203, 7%, 78%);

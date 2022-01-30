@@ -1,0 +1,134 @@
+@use "../abstracts" as *;
+
+$t-duration: 300ms;
+$t-function: ease;
+
+.dim {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 400;
+	background: $G-08;
+	opacity: 0;
+	transition: opacity $t-duration $t-function;
+
+	&.visible {
+		visibility: visible;
+	}
+
+	&.on {
+		opacity: 0.85;
+		transition: opacity $t-duration $t-function;
+	}
+}
+
+.thanks {
+	visibility: hidden;
+	position: fixed;
+	z-index: 400;
+	overflow: hidden;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 800px;
+	width: min(90%, 800px);
+	max-height: 400px;
+	aspect-ratio: 1;
+	border: none;
+	padding: 1rem;
+	background: $M-01;
+	text-align: center;
+	color: lighten($T-03, 20%);
+	opacity: 0;
+	transition: opacity $t-duration $t-function;
+
+	@media (min-width: 768px) {
+		aspect-ratio: 2 / 1;
+	}
+
+	* {
+		z-index: 2;
+	}
+
+	button {
+		position: absolute;
+		right: 0.75rem;
+		top: 0.75rem;
+		width: 3rem;
+		height: 3rem;
+		background: url(../img/ico-close.svg) center / 3rem no-repeat;
+		border: none;
+		cursor: pointer;
+		transform: scale(1);
+		transition: 100ms $t-function;
+
+		@media (min-width: 768px) {
+			top: 1.5rem;
+			right: 1.5rem;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			transform: scale(1.15);
+			transition: 100ms $t-function;
+		}
+
+		&:active {
+			transform: scale(0.9);
+			transition: 50ms linear;
+		}
+	}
+
+	h1 {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15ch;
+		margin: 0 auto;
+		font-weight: 900;
+		font-size: 3.75rem;
+		font-size: clamp(2.5rem, 5vw + 0.25rem, 3.75rem);
+	}
+
+	p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 25ch;
+		margin: 1rem auto;
+		font-size: 1.25rem;
+
+		@media (min-width: 768px) {
+			width: 40ch;
+			margin: 4rem auto;
+		}
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		width: 12rem;
+		height: 2.5rem;
+		background: url(../img/logo-dark.svg) left center / contain no-repeat;
+	}
+
+	&::backdrop {
+		background: rgba($G-09, 85%);
+	}
+
+	&.visible {
+		display: block;
+		visibility: visible;
+	}
+
+	&.on {
+		opacity: 1;
+		transition: opacity $t-duration $t-function;
+	}
+}
