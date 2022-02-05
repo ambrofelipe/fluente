@@ -16,8 +16,9 @@
 
 		width: min(100%, 75rem);
 
-		@include desktop {
+		@include tablet {
 			justify-content: space-between;
+			padding: 0 1rem;
 		}
 	}
 
@@ -68,9 +69,35 @@
 					color: var(--fc-04, $G-07);
 					line-height: 1;
 					text-decoration: none;
+					transition: 300ms ease;
 
 					@include desktop {
 						@include link-hover($direction: center);
+					}
+				}
+
+				&:where(.menu-user) {
+					a::before {
+						content: "";
+						display: inline;
+						margin-right: 0.5rem;
+						padding-left: 1.75rem;
+						background-color: var(--fc-04, $G-07);
+						mask: url(../img/ico/ico-account.svg) left center / 1.75rem no-repeat;
+						transition: background-color 300ms ease;
+
+						@include tablet {
+							margin-right: 0.25rem;
+							padding-left: 1.275rem;
+							mask-size: 1.275rem;
+						}
+					}
+
+					@include desktop {
+						a:hover::before {
+							background-color: $M-02;
+							transition: background-color 300ms ease;
+						}
 					}
 				}
 			}

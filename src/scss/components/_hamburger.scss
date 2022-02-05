@@ -14,7 +14,7 @@
 	border: none;
 	background: transparent;
 
-	@include desktop {
+	@include tablet {
 		display: none;
 	}
 

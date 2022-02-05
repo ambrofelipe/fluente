@@ -1,26 +1,49 @@
 @use "../abstracts" as *;
 
 .section {
-	margin: 3rem 0;
+	width: 100%;
+	padding: 4em 0 5em;
 
 	&__title {
-		max-width: min(100%, 27ch);
-		margin: 3rem auto;
-		font-weight: 600;
-		font-size: clamp(1.5rem, 8vw, 2.1875rem);
-		color: $T-00;
-		line-height: 1.5;
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 2rem;
+			font-weight: 800;
+			font-size: 2rem;
+			color: var(--fc-01, $G-08);
+			line-height: 1.25;
+		}
+
+		h4 {
+			max-width: 40ch;
+			margin: 0 auto 4rem;
+			font-weight: 300;
+			font-size: 0.9rem;
+			color: var(--fc-02, $G-06);
+			line-height: 1.5;
+			
+			@include desktop {
+				max-width: 55ch;
+			}
+		}
+
+		p {
+			max-width: 40ch;
+			margin-left: 0;
+		}
+	}
+
+	&__details {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		text-align: center;
 
-		&--left {
-			max-width: min(100%, 900px);
-			margin: 3rem auto 1rem;
-			text-align: left;
-		}
+	}
 
-		&--full {
-			max-width: min(100%, 45ch);
-		}
+	&__item {
+
 	}
 
 	&__subtitle {
@@ -30,19 +53,6 @@
 		font-size: clamp(1.275rem, 6vw, 2.1875rem);
 		color: $M-03;
 		text-align: center;
-
-		&::after {
-			content: "";
-			display: block;
-			width: 4px;
-			height: 23px;
-			margin: 0 auto;
-			background: $M-03;
-			border-radius: 3px;
-			position: relative;
-			top: 1rem;
-			
-		}
 	}
 
 	&__copy {

@@ -1,0 +1,74 @@
+@use "../abstracts" as *;
+
+// Inherits from _section.scss
+
+.section {
+
+	&--teams {
+		background-color: var(--bg-01, $G-00);
+		text-align: center;
+	}
+
+	&__details {
+
+		&--teams {
+
+			@include desktop {
+				flex-flow: row nowrap;
+			}
+		}
+	}
+
+	&__item {
+		
+		&--teams {
+			flex: 0 0 40%;
+
+			min-width: 27ch;
+			margin: 0 0.5em 3em 0.5em;
+
+			@include desktop {
+				flex: 0 0 20%;
+
+				max-width: 32ch;
+			}
+
+			h3 {
+				padding-top: 20vmin;
+				background-position: top center;
+				background-size: 15vmin;
+				background-repeat: no-repeat;
+				font-weight: 500;
+				font-size: 1.2rem;
+				color: var(--fc-01, $G-08);
+
+				@include tablet {
+					background-size: 6vmin;
+					padding-top: 8vmin;
+				}
+			}
+
+			p {
+				margin: 0 auto;
+				line-height: 2;
+				max-width: 30ch;
+			}
+		}
+
+		&--online h3 {
+			background-image: url(../img/ico/online-education.png);
+		}
+
+		&--individual h3 {
+			background-image: url(../img/ico/thinking.png);
+		}
+
+		&--flexible h3 {
+			background-image: url(../img/ico/test.png);
+		}
+
+		&--success h3 {
+			background-image: url(../img/ico/success.png);
+		}
+	}
+}

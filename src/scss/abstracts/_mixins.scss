@@ -1,25 +1,19 @@
 @use "vars" as *;
 
 @mixin mobile {
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 767px) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media screen and (min-width: 769px) {
+	@media screen and (min-width: 768px) {
 		@content;
 	}
 }
 
 @mixin desktop {
-	@media screen and (min-width: 1201px) {
-		@content;
-	}
-}
-
-@mixin tooltip {
-	@media screen and (max-width: 767px) {
+	@media screen and (min-width: 1200px) {
 		@content;
 	}
 }
@@ -33,7 +27,7 @@
 		width: 0;
 		height: 3px;
 		border-radius: 3px;
-		background: $M-03;
+		background-color: $M-03;
 		opacity: 0;
 		transition: 300ms ease;
 
@@ -42,8 +36,14 @@
 		}
 	}
 
+	&:hover {
+		color: $M-02;
+		transition: 300ms ease;
+	}
+
 	&:hover::after {
 		width: 100%;
+		background-color: $M-02;
 		opacity: 1;
 		transition: 300ms ease;
 	}

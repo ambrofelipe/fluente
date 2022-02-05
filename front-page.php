@@ -168,71 +168,74 @@
 		</div>
 	</main>
 
-	<section class="teams">
-		<div class="teams-title">
+	<section class="section section--teams">
+		<header class="section__title">
 			<h2>English in Teams</h2>
 			<h4>
-				O maior diferencial é a carga horária. São 60 horas de contato individual por semestre. Outras escolas costumam oferecer só 35
-				horas.
+				O maior diferencial é a carga horária. São 60 horas de contato individual por semestre. Outras escolas costumam oferecer só 35 horas.
 			</h4>
-		</div>
-		<div class="teams-details">
-			<div class="teams-box">
+		</header>
+		<ul class="section__details">
+			<li class="section__item section__item--teams section__item--online">
 				<h3>Online</h3>
 				<p>Funciona como mágica. Só um curso que foi feito para ser online usa a melhor tecnologia.</p>
-			</div>
-			<div class="teams-box">
+			</li>
+			<li class="section__item section__item--teams section__item--individual">
 				<h3>Personalizado</h3>
 				<p>Escolha um objetivo pessoal que o curso traça uma rota até ele. A mais pedida é inglês para turismo.</p>
-			</div>
-			<div class="teams-box">
+			</li>
+			<li class="section__item section__item--teams section__item--flexible">
 				<h3>Flexível</h3>
 				<p>Agende aula a aula para seus melhores dias e horários. Acesse seu material e caderno de qualquer lugar.</p>
-			</div>
-			<div class="teams-box">
+			</li>
+			<li class="section__item section__item--teams section__item--success">
 				<h3>Eficaz</h3>
 				<p>O material e o método para alunos adultos é da editora Cambridge e tem eficácia demonstrada no aprendizado.</p>
-			</div>
-		</div>
-		<a href="contratar/#teams" class="botao-main" role="button">Valores e matrícula</a>
+			</li>
+		</ul>
+		<a class="button button--primary" href="contratar/#teams">Valores e matrícula</a>
 	</section>
 
-	<section class="rapidos">
-		<div class="side">
+	<section class="section section--fast">
+		<header class="section__title section__title--fast">
 			<h2>Cursos rápidos</h2>
-			<h4>Mande uma mensagem e conte-me o que você procura no seu curso.</h4>
-			<p>Cursos rápidos são para quem busca preparação focada em um assunto específico, geralmente em um curto prazo.</p>
-		</div>
+			<h4>
+				Mande uma mensagem e conte-me o que você procura no seu curso.
+			</h4>
+			<p>
+				Cursos rápidos são para quem busca preparação focada em um assunto específico, geralmente em um curto prazo.
+			</p>
+		</header>
 
-		<div class="rapidos-details">
-			<div class="rapidos-box">
+		<ul class="section__details section__details--fast">
+			<li class="section__item section__item--fast section__item--microphone">
 				<h3>Exam Prep</h3>
 				<p>IELTS, TOEFL ou ENEM Prep.</p>
 				<p>Praticamos habilidades específicas de cada prova, com materiais oficiais e feedbacks completos.</p>
-			</div>
-			<div class="rapidos-box">
+			</li>
+			<li class="section__item section__item--fast section__item--backpack">
 				<h3>for Tourism</h3>
 				<p>
 					Conversamos sobre aeroportos, transporte, hotel, restaurante, compras, saúde e mais. Ótimo para turismo, intercâmbio ou
 					emigração.
 				</p>
-			</div>
-			<div class="rapidos-box">
+			</li>
+			<li class="section__item section__item--fast section__item--diploma">
 				<h3>for Work</h3>
 				<p>
 					Ementas com situações que são específicas da sua função, e frequentes no seu cotidiano. Os mais frequentes são Medicina,
 					Cabeleireiro e Logística.
 				</p>
-			</div>
-			<div class="rapidos-box">
+			</li>
+			<li class="section__item section__item--fast section__item--presentation">
 				<h3>for Business</h3>
 				<p>
 					Inclui elaboração de CV e Cover Letter, prática de entrevista de emprego, aulas sobre ligações ao telefone, e vocabulário
 					apresentação de resultados.
 				</p>
-			</div>
-			<a href="contratar/#rapidos" class="botao-main" role="button">Valores e matrícula</a>
-		</div>
+			</li>
+			<a class="button button--primary" href="contratar/#rapidos">Valores e matrícula</a>
+		</ul>
 	</section>
 
 	<section class="galeria">
@@ -241,7 +244,7 @@
 			<h4>Veja algumas fotos de aulas.</h4>
 		</div>
 
-		<div id="galeria">
+		<!-- <div id="galeria">
 			<div>
 				<img src="//unsplash.it/557/387" alt="" class="demo-image" />
 			</div>
@@ -299,7 +302,7 @@
 			<div>
 				<img src="//unsplash.it/663/541" alt="" class="demo-image" />
 			</div>
-		</div>
+		</div> -->
 	</section>
 
 	<section class="bio">

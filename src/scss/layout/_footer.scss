@@ -10,18 +10,18 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-areas: "logo nav social cta";
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+			"logo"
+			"nav"
+			"social"
+			"cta";
+		grid-template-columns: 1fr;
+		align-items: center;
+		grid-gap: 2rem 0;
 
-		@include mobile {
-			grid-template-areas: 
-				"logo"
-				"nav"
-				"social"
-				"cta";
-			grid-template-columns: 1fr;
-			align-items: center;
-			grid-gap: 2rem 0;
+		@include desktop {
+			grid-template-areas: "logo nav social cta";
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 
@@ -36,10 +36,11 @@
 		grid-area: logo;
 		width: 12rem;
 		height: 2.5rem;
+		margin: auto;
 		background: url(../img/logo-dark.svg) left center / contain no-repeat;
 
-		@include mobile {
-			margin: auto;
+		@include desktop {
+			margin: 0;
 		}
 	}
 
@@ -53,18 +54,18 @@
 			a {
 				display: block;
 				width: fit-content;
-				margin: 0.25rem 0;
+				margin: 0 auto;
 				padding: 0.5rem 0;
 				font-weight: 700;
 				color: $G-00;
-				text-align: left;
+				text-align: center;
 				text-decoration: none;
 
 				@include link-hover($direction: start);
 
-				@include mobile {
-					margin: 0 auto;
-					text-align: center;
+				@include desktop {
+					margin: 0.25rem 0;
+					text-align: left;
 				}
 			}
 		}
@@ -76,10 +77,12 @@
 
 	&__social {
 		grid-area: social;
+		width: fit-content;
+		margin: auto;
 
-		@include mobile {
-			width: fit-content;
-			margin: auto;
+		@include desktop {
+			width: 100%;
+			margin: 0;
 		}
 
 		ul {
@@ -231,7 +234,7 @@
 
 	&__bar {
 		grid-column: 1 / 5;
-		margin: 6rem 0 3rem;
+		margin: 6rem 0.5rem 3rem;
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -239,8 +242,8 @@
 		font-size: clamp(0.6em, 2vw, 0.9em);
 		color: $T-03;
 
-		@include mobile {
-			margin: 6rem 0.5rem 3rem;
+		@include desktop {
+			margin: 6rem 0 3rem;
 		}
 	}
 }

@@ -1,0 +1,123 @@
+@use "../abstracts" as *;
+
+.section {
+
+	&--fast {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		padding-top: 10em;
+		background-color: var(--bg-02, $G-01);
+		clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
+
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__title {
+
+		&--fast {
+			flex: 0 0 25%;
+			display: flex;
+			flex-flow: column wrap;
+			align-content: center;
+			margin-bottom: 5rem;
+			text-align: center;
+
+			@include tablet {
+				align-self: center;
+				align-content: flex-start;
+
+				width: 52rem;
+				text-align: left;
+			}
+
+			@include desktop {
+				align-self: flex-start;
+
+				max-width: 23rem;
+				margin-left: 0;
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	&__details {
+
+		&--fast {
+			flex: 0 0 65%;
+			align-self: center;
+			justify-content: space-evenly;
+
+			max-width: 60rem;
+
+			@include desktop {
+				flex-flow: row wrap;
+			}
+		}
+	}
+
+	&__item {
+
+		&--fast {
+			flex: 0 0 40%;
+
+			min-width: 30ch;
+			margin-bottom: 3em;
+			padding-top: 18vmin;
+			background-size: 12vmin;
+			background-position: top center;
+			background-repeat: no-repeat;
+
+			@include tablet {
+				min-width: 35ch;
+				background-size: 6vmin;
+				background-position: 1% 15%;
+				padding-top: 0;
+				padding-left: 9vmin;
+				text-align: left;
+			}
+
+			@include desktop {
+				flex: 0 0 45%;
+				max-width: 40ch;
+			}
+
+			h3 {
+				font-variant: small-caps;
+				font-weight: 500;
+				font-size: 1.3rem;
+				color: var(--fc-01, $G-08);
+			}
+
+			p {
+				max-width: 40ch;
+				margin: 0 auto;
+			}
+
+			a {
+				display: block;
+				width: fit-content;
+				margin: 0 10%;
+			}
+		}
+
+		&--microphone {
+			background-image: url(../img/ico/microphone.png);
+		}
+
+		&--diploma {
+			background-image: url(../img/ico/diploma.png);
+		}
+
+		&--backpack {
+			background-image: url(../img/ico/backpack.png);
+		}
+
+		&--presentation {
+			background-image: url(../img/ico/presentation.png);
+		}
+	}
+}
