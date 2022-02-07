@@ -4,9 +4,8 @@
 
 .section {
 
-	&--teams {
+	.teams {
 		background-color: var(--bg-01, $G-00);
-		text-align: center;
 	}
 
 	&__details {
@@ -25,7 +24,6 @@
 			flex: 0 0 40%;
 
 			min-width: 27ch;
-			margin: 0 0.5em 3em 0.5em;
 
 			@include desktop {
 				flex: 0 0 20%;
@@ -34,18 +32,13 @@
 			}
 
 			h3 {
-				padding-top: 20vmin;
+				padding-top: 5rem;
 				background-position: top center;
-				background-size: 15vmin;
+				background-size: 3.75rem;
 				background-repeat: no-repeat;
 				font-weight: 500;
 				font-size: 1.2rem;
 				color: var(--fc-01, $G-08);
-
-				@include tablet {
-					background-size: 6vmin;
-					padding-top: 8vmin;
-				}
 			}
 
 			p {

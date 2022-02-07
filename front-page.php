@@ -161,14 +161,14 @@
 					<div class="clearfix"></div>
 				</form>
 			</div>
-			<hgroup>
+			<header>
 				<h1><strong>Todo mundo</strong> é capaz de aprender inglês online.</h1>
 				<h2>E a melhor forma é divertindo-se e fazendo o que gosta.</h2>
-			</hgroup>
+			</header>
 		</div>
 	</main>
 
-	<section class="section section--teams">
+	<section class="teams section">
 		<header class="section__title">
 			<h2>English in Teams</h2>
 			<h4>
@@ -196,53 +196,58 @@
 		<a class="button button--primary" href="contratar/#teams">Valores e matrícula</a>
 	</section>
 
-	<section class="section section--fast">
-		<header class="section__title section__title--fast">
-			<h2>Cursos rápidos</h2>
-			<h4>
-				Mande uma mensagem e conte-me o que você procura no seu curso.
-			</h4>
-			<p>
-				Cursos rápidos são para quem busca preparação focada em um assunto específico, geralmente em um curto prazo.
-			</p>
-		</header>
-
-		<ul class="section__details section__details--fast">
-			<li class="section__item section__item--fast section__item--microphone">
-				<h3>Exam Prep</h3>
-				<p>IELTS, TOEFL ou ENEM Prep.</p>
-				<p>Praticamos habilidades específicas de cada prova, com materiais oficiais e feedbacks completos.</p>
-			</li>
-			<li class="section__item section__item--fast section__item--backpack">
-				<h3>for Tourism</h3>
+	<section class="side section">
+		<div class="wrapper">
+			<header class="section__title section__title--side">
+				<h2>Cursos rápidos</h2>
+				<h4>
+					Mande uma mensagem e conte-me o que você procura no seu curso.
+				</h4>
 				<p>
-					Conversamos sobre aeroportos, transporte, hotel, restaurante, compras, saúde e mais. Ótimo para turismo, intercâmbio ou
-					emigração.
+					Cursos rápidos são para quem busca preparação focada em um assunto específico, geralmente em um curto prazo.
 				</p>
-			</li>
-			<li class="section__item section__item--fast section__item--diploma">
-				<h3>for Work</h3>
-				<p>
-					Ementas com situações que são específicas da sua função, e frequentes no seu cotidiano. Os mais frequentes são Medicina,
-					Cabeleireiro e Logística.
-				</p>
-			</li>
-			<li class="section__item section__item--fast section__item--presentation">
-				<h3>for Business</h3>
-				<p>
-					Inclui elaboração de CV e Cover Letter, prática de entrevista de emprego, aulas sobre ligações ao telefone, e vocabulário
-					apresentação de resultados.
-				</p>
-			</li>
-			<a class="button button--primary" href="contratar/#rapidos">Valores e matrícula</a>
-		</ul>
+			</header>
+			<div>
+				<ul class="section__details">
+					<li class="section__item section__item--side section__item--microphone">
+						<h3>Exam Prep</h3>
+						<p>IELTS, TOEFL ou ENEM Prep.</p>
+						<p>Praticamos habilidades específicas de cada prova, com materiais oficiais e feedbacks completos.</p>
+					</li>
+					<li class="section__item section__item--side section__item--backpack">
+						<h3>for Tourism</h3>
+						<p>
+							Conversamos sobre aeroportos, transporte, hotel, restaurante, compras, saúde e mais. Ótimo para turismo, intercâmbio ou
+							emigração.
+						</p>
+					</li>
+					<li class="section__item section__item--side section__item--diploma">
+						<h3>for Work</h3>
+						<p>
+							Ementas com situações que são específicas da sua função, e frequentes no seu cotidiano. Os mais frequentes são Medicina,
+							Cabeleireiro e Logística.
+						</p>
+					</li>
+					<li class="section__item section__item--side section__item--presentation">
+						<h3>for Business</h3>
+						<p>
+							Inclui elaboração de CV e Cover Letter, prática de entrevista de emprego, aulas sobre ligações ao telefone, e vocabulário
+							apresentação de resultados.
+						</p>
+					</li>
+				</ul>
+				<a class="button button--primary" href="contratar/#rapidos">Valores e matrícula</a>
+			</div>
+			
+		</div>
+		
 	</section>
 
-	<section class="galeria">
-		<div class="galeria-title">
+	<section class="gallery section">
+		<header class="section__title">
 			<h2>Vocês são o centro das aulas, e do site também</h2>
 			<h4>Veja algumas fotos de aulas.</h4>
-		</div>
+		</header>
 
 		<!-- <div id="galeria">
 			<div>
@@ -305,7 +310,7 @@
 		</div> -->
 	</section>
 
-	<section class="bio">
+	<section class="bio section">
 		<div class="marvel-device iphone-x">
 			<div class="notch">
 				<div class="camera"></div>
@@ -331,8 +336,10 @@
 		</div>
 		<!-- <div class="foto"></div> -->
 		<div class="info">
-			<h2>Muito prazer!</h2>
-			<h4>E obrigado pela visita.</h4>
+			<header class="section__title">
+				<h2>Muito prazer!</h2>
+				<h4>E obrigado pela visita.</h4>
+			</header>
 			<p>
 				Escolha aulas avulsas, cursos rápidos, ou um curso completo. Entre os cursos rápidos, pode escolher inglês para turismo, para
 				negócios, para a sua área de trabalho… Inglês para o TOEFL, para o IELTS, ou para o ENEM.
@@ -343,7 +350,10 @@
 				horários e local, quadro branco interativo, caderno interativo, aplicativos, jogos, material com áudio e vídeo sempre disponível
 				no computador e no celular, e outras. Faça um teste!
 			</p>
-			<p><span class="contador" id="anosExperiencia">0</span> anos de experiência</p>
+			<p>
+				<span class="contador" id="anosExperiencia">0</span> 
+				anos de experiência
+			</p>
 			<p>
 				Mais de
 				<span class="contador" id="numAlunos">0</span> aprenderam online
@@ -351,60 +361,63 @@
 		</div>
 	</section>
 
-	<section class="dizem">
-		<div class="dizem-title">
+	<section class="testimonials section">
+		<header class="section__title">
 			<h2>O que dizem</h2>
 			<h4>Em dezenas de avaliações voluntárias e anônimas, 100% dos alunos recomendam os cursos.</h4>
-		</div>
+		</header>
 
-		<div class="dizem-testimonials">
-			<div class="testimonial">
-				<blockquote>
+		<div class="wrapper">
+			<figure class="testimonials__item">
+				<blockquote class="testimonials__quote">
 					Excelente professor de inglês! Transforma as aulas em agradáveis momentos, dinâmicos e interessantes! Recomendo muito.
 				</blockquote>
-				<span class="autor"><span>Elza</span></span>
-			</div>
-			<div class="testimonial">
-				<blockquote>
+				<figcaption class="testimonials__author"><span>Elza</span></figcaption>
+			</figure>
+			<figure class="testimonials__item">
+				<blockquote class="testimonials__quote">
 					Tenho aulas com Felipe há pouco mais de um ano. Ele é extremamente profissional, sempre pontual, muito organizado, paciente,
 					com excelente didática e estrutura online de tirar o chapéu. Recomendo!
 				</blockquote>
-				<span class="autor"><span>Juliana</span></span>
-			</div>
-			<div class="testimonial">
-				<blockquote>
+				<figcaption class="testimonials__author"><span>Juliana</span></figcaption                                >
+			</figure>
+			<figure class="testimonials__item">
+				<blockquote class="testimonials__quote">
 					Calmo, tranquilo, excelente conhecimento da língua, bom material dadatico. Aprimoro o meu inglês com ele. Recomendo.
 				</blockquote>
-				<span class="autor"><span>Carlos</span></span>
-			</div>
-			<div class="testimonial">
-				<blockquote>
+				<span class="testimonials__author"><span>Carlos</span></span>
+			</figure>
+			<figure class="testimonials__item">
+				<blockquote class="testimonials__quote">
 					It was pretty fantastic experience with Felipe. My english improved very well and I obviously can recommend him.
 				</blockquote>
-				<span class="autor"><span>Rafael</span></span>
-			</div>
+				<span class="testimonials__author"><span>Rafael</span></span>
+			</figure>
 		</div>
 	</section>
 
-	<section class="brinde">
-		<div class="side">
-			<h2>Quero brinde</h2>
-			<h4>Complete com seu nome e e-mail.</h4>
-			<p>Obrigado por ler até aqui. Para ajudar no pontapé inicial da sua jornada em inglês, toma um brinde!</p>
-			<p>🔖 um cupom de desconto</p>
-			<p>📘 um guia para atividades divertidas em inglês</p>
-			<p>🔒 Seus dados nunca serão cedidos. Não enviamos emails promocionais.</p>
-		</div>
-		<form id="brinde-form" action="#">
-			<label id="name-label" for="nome">
-				<input type="text" name="nome" id="nome" autocomplete="name" placeholder="Nome: João da Silva" required />
-			</label>
-			<label id="email-label" for="email">
-				<input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail: joao@email.com" required />
-			</label>
+	<section class="subscribe side section">
+		<div class="wrapper">
+			<header class="section__title section__title--side">
+				<h2>Quero brinde</h2>
+				<h4>Complete com seu nome e e-mail.</h4>
+				<p>Obrigado por ler até aqui. Para ajudar no pontapé inicial da sua jornada em inglês, toma um brinde!</p>
+				<p>🔖 um cupom de desconto</p>
+				<p>📘 um guia para atividades divertidas em inglês</p>
+				<p>🔒 Seus dados nunca serão cedidos. Não enviamos emails promocionais.</p>
+			</header>
+			<form id="brinde-form" action="">
+				<label id="name-label" for="nome">
+					<input type="text" name="nome" id="nome" autocomplete="name" placeholder="Nome: João da Silva" required />
+				</label>
+				<label id="email-label" for="email">
+					<input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail: joao@email.com" required />
+				</label>
 
-			<button id="submit" class="botao-main" type="submit" form="brinde-form">Manda!</button>
-		</form>
+				<button id="submit" class="botao-main" type="submit" form="brinde-form">Manda!</button>
+			</form>
+		</div>
+		
 	</section>
 
 <?php

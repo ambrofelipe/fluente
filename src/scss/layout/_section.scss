@@ -2,35 +2,39 @@
 
 .section {
 	width: 100%;
-	padding: 4em 0 5em;
+	padding: 4em 0;
 
 	&__title {
+		margin-bottom: 4em;
+		padding: 0 1em;
+		text-align: center;
 
 		h2 {
-			margin-top: 0;
-			margin-bottom: 2rem;
+			margin: 0 auto 2rem;
 			font-weight: 800;
 			font-size: 2rem;
 			color: var(--fc-01, $G-08);
 			line-height: 1.25;
 		}
 
-		h4 {
+		h4, p {
 			max-width: 40ch;
-			margin: 0 auto 4rem;
-			font-weight: 300;
-			font-size: 0.9rem;
-			color: var(--fc-02, $G-06);
-			line-height: 1.5;
-			
+
 			@include desktop {
 				max-width: 55ch;
 			}
 		}
 
+		h4 {
+			margin: 0 auto;
+			font-weight: 300;
+			font-size: 0.9rem;
+			color: var(--fc-02, $G-06);
+			line-height: 1.5;
+		}
+
 		p {
-			max-width: 40ch;
-			margin-left: 0;
+			margin: 1rem auto;
 		}
 	}
 
@@ -38,12 +42,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 3rem;
+
 		text-align: center;
-
-	}
-
-	&__item {
-
 	}
 
 	&__subtitle {

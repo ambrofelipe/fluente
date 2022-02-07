@@ -13,6 +13,7 @@
 @use "layout/hero";
 @use "layout/section";
 @use "layout/section-teams";
+@use "layout/section-side";
 @use "layout/footer";
 
 
@@ -24,5 +25,5 @@
 @use "components/thanks";
 
 // Blocks
-
 @use "blocks/calendar";
+@use "blocks/testimonials";
