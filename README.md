@@ -3,6 +3,7 @@ Rewriting the website from scratch.
 
 # Run
 > npm ci
+
 > gulp
 
 # Build
@@ -10,10 +11,14 @@ Rewriting the website from scratch.
 
 # Demo
 Home page: http://fluente.me
+
 Pricing table: http://fluente.me/contratar
 
 # Features
 CSS flexbox and grid for responsiveness
+
 User-preference media queries for accessibility
+
 Light and dark mode at the OS level
+
 Macy, CountUp and other JS libraries
