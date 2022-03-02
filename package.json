@@ -24,5 +24,9 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "countup.js": "^2.0.8",
+    "macy": "^2.5.1"
+  }
 }

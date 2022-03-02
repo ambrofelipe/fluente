@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+$t-trans: 300ms;
+$t-func: ease;
+
+.gallery {
+	
+	&__item {
+		border: 1px solid $G-03;
+		border-radius: 0.5rem;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+			transform: scale(1);
+			filter: saturate(1) opacity(1);
+			transition: 
+				all $t-trans $t-func,
+				transform-origin 0ms;
+		}
+
+		&--hover {
+			img {
+				transform: scale(1.5);
+				transition: 
+					all $t-trans $t-func,
+					transform-origin 0ms;
+			}
+		}
+
+		&--out {
+			img {
+				filter: saturate(0) opacity(70%);
+				transition: 
+					all $t-trans $t-func,
+					transform-origin 0ms;
+			}
+		}
+	}
+}

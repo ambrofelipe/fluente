@@ -23,9 +23,7 @@ $D-03: desaturate($M-03, 20%);
 
 // SHADES
 $S-10: rgba($G-01, 0.75);
-$S-11: rgba($G-01, 0.60);
-$S-12: darken(rgba($M-03, 0.75), 20%);
-$S-13: darken(rgba($M-03, 0.60), 20%);
+$S-11: darken(rgba($M-03, 0.75), 20%);
 $S-20: darken($M-02, 10%);//$a-active-color
 $S-21: darken($M-02, 25%);//T&C link
 $S-40: rgba($G-10, 0.2); //$shadow

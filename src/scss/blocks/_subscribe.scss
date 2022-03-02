@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.subscribe {
+	flex-flow: column nowrap;
+	background: var(--bg-02) url(../img/gift-light.svg) center 65% / 35rem no-repeat;
+	padding-top: 10em 0;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+
+	@include desktop {
+		background: var(--bg-02) url(../img/gift-light.svg) center / 65rem no-repeat;
+	}
+
+	&__form {
+		flex: 0 1 100%;
+
+		align-content: center;
+		gap: 1em;
+		display: flex;
+		flex-flow: column wrap;
+
+		@include tablet {
+			max-width: 60rem;
+			padding: 6em;
+			align-content: space-between;
+		}
+	}
+}

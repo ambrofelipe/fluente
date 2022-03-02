@@ -4,7 +4,7 @@
 
 	<main class="main <?php echo is_front_page() ? "main__home" : "main__hire"; ?>">
 		<div class="main__overlay">
-			<div class="calendar">
+			<div class="main__calendar">
 				<div class="month-title">Maio 2021</div>
 				<form action="#">
 					<label class="weekday">Seg</label>
@@ -161,9 +161,13 @@
 					<div class="clearfix"></div>
 				</form>
 			</div>
-			<header>
-				<h1><strong>Todo mundo</strong> é capaz de aprender inglês online.</h1>
-				<h2>E a melhor forma é divertindo-se e fazendo o que gosta.</h2>
+			<header class="main__header">
+				<h1 class="main__title">
+					<strong>Todo mundo</strong> é capaz de aprender inglês online.
+				</h1>
+				<h2 class="main__subtitle">
+					E a melhor forma é divertindo-se e fazendo o que gosta.
+				</h2>
 			</header>
 		</div>
 	</main>
@@ -249,115 +253,83 @@
 			<h4>Veja algumas fotos de aulas.</h4>
 		</header>
 
-		<!-- <div id="galeria">
-			<div>
-				<img src="//unsplash.it/557/387" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/602/660" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/660/646" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/741/375" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/813/455" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/470/896" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/664/653" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/708/313" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/738/578" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/458/482" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/439/856" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/549/315" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/877/693" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/542/805" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/683/445" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/616/340" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/533/317" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/700/894" alt="" class="demo-image" />
-			</div>
-			<div>
-				<img src="//unsplash.it/663/541" alt="" class="demo-image" />
-			</div>
-		</div> -->
+		<div class="wrapper">
+			<ul class="gallery__list">
+				<li class="gallery__item"><img src="//unsplash.it/557/387" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/602/660" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/660/646" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/741/375" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/813/455" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/470/896" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/664/653" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/708/313" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/738/578" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/458/482" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/458/482" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/439/856" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/549/315" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/877/693" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/542/805" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/683/445" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/616/340" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/533/317" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/700/894" alt=""></li>
+				<li class="gallery__item"><img src="//unsplash.it/663/541" alt=""></li>
+			</ul>
+		</div>
 	</section>
 
-	<section class="bio section">
-		<div class="marvel-device iphone-x">
-			<div class="notch">
-				<div class="camera"></div>
-				<div class="speaker"></div>
-			</div>
-			<div class="top-bar"></div>
-			<div class="sleep"></div>
-			<div class="bottom-bar"></div>
-			<div class="volume"></div>
-			<div class="overflow">
-				<div class="shadow shadow--tr"></div>
-				<div class="shadow shadow--tl"></div>
-				<div class="shadow shadow--br"></div>
-				<div class="shadow shadow--bl"></div>
-			</div>
-			<div class="inner-shadow"></div>
-			<div class="screen">
-				<video class="device-content" controls muted autoplay playsinline>
-					<source src="img/video.mp4" type="video/mp4" />
+	<section class="bio side section">
+		<div class="wrapper">
+			<div class="bio__screen">
+				<video class="device-content" muted autoplay playsinline>
+					<source src="http://fluente.local/wp-content/uploads/2022/02/video.mp4" type="video/mp4" />
 					Seu navegador não oferece a funcionalidade de vídeos.
 				</video>
 			</div>
-		</div>
-		<!-- <div class="foto"></div> -->
-		<div class="info">
-			<header class="section__title">
-				<h2>Muito prazer!</h2>
-				<h4>E obrigado pela visita.</h4>
-			</header>
-			<p>
-				Escolha aulas avulsas, cursos rápidos, ou um curso completo. Entre os cursos rápidos, pode escolher inglês para turismo, para
-				negócios, para a sua área de trabalho… Inglês para o TOEFL, para o IELTS, ou para o ENEM.
-			</p>
-			<p>Sou professor de inglês com experiência. Ensino principalmente ao público adulto, do básico ao avançado.</p>
-			<p>
-				Meus cursos são todos por videoconferência. São tantas vantagens que as aulas são até melhores que presenciais! Flexibilidade de
-				horários e local, quadro branco interativo, caderno interativo, aplicativos, jogos, material com áudio e vídeo sempre disponível
-				no computador e no celular, e outras. Faça um teste!
-			</p>
-			<p>
-				<span class="contador" id="anosExperiencia">0</span> 
-				anos de experiência
-			</p>
-			<p>
-				Mais de
-				<span class="contador" id="numAlunos">0</span> aprenderam online
-			</p>
+			<div class="bio__info">
+				<header class="section__title section__title--side">
+					<h2>Muito prazer!</h2>
+					<h4>E obrigado pela visita.</h4>
+				</header>
+				<p>
+					Escolha aulas avulsas, cursos rápidos, ou um curso completo. Entre os cursos rápidos, pode escolher inglês para turismo, para
+					negócios, para a sua área de trabalho… Inglês para o TOEFL, para o IELTS, ou para o ENEM.
+				</p>
+				<p>Sou professor de inglês com experiência. Ensino principalmente ao público adulto, do básico ao avançado.</p>
+				<p>
+					Meus cursos são todos por videoconferência. São tantas vantagens que as aulas são até melhores que presenciais! Flexibilidade de
+					horários e local, quadro branco interativo, caderno interativo, aplicativos, jogos, material com áudio e vídeo sempre disponível
+					no computador e no celular, e outras. Faça um teste!
+				</p>
+				<ul class="bio__counters">
+					<li class="bio__counter">
+						<p>
+							<span 
+								class="bio__countup" 
+								id="exp"
+								aria-label="6"
+								aria-live="off"
+								data-unit="decimal"
+								data-count="6"
+							>0</span> anos de experiência
+						</p>
+					</li>
+					<li class="bio__counter">
+						<p>
+							Mais de 
+							<span 
+								class="bio__countup" 
+								id="std"
+								aria-label="150"
+								aria-live="off"
+								data-unit="decimal"
+								data-count="150"
+							>0</span> aprenderam online
+						</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
@@ -396,6 +368,9 @@
 		</div>
 	</section>
 
+	<?php
+		$nonce    = wp_create_nonce('fluente_' . get_the_ID());
+	?>
 	<section class="subscribe side section">
 		<div class="wrapper">
 			<header class="section__title section__title--side">
@@ -406,15 +381,39 @@
 				<p>📘 um guia para atividades divertidas em inglês</p>
 				<p>🔒 Seus dados nunca serão cedidos. Não enviamos emails promocionais.</p>
 			</header>
-			<form id="brinde-form" action="">
-				<label id="name-label" for="nome">
-					<input type="text" name="nome" id="nome" autocomplete="name" placeholder="Nome: João da Silva" required />
+			<form class="subscribe__form" id="brinde-form" action="">
+				<label>
+					<span><?php _e( 'Seu nome', 'fluente' ) ?></span>
+						<input
+							type="text"
+							autocomplete="given-name"
+							id="given-name"
+							name="given-name"
+							required
+						/>
+						<p class="error"><?php _e( 'Por favor, complete com seu nome', 'fluente' ) ?></p>
 				</label>
-				<label id="email-label" for="email">
-					<input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail: joao@email.com" required />
+				<label>
+					<span><?php _e( 'Seu email', 'fluente' ) ?></span>
+					<input
+						type="email"
+						inputmode="email"
+						autocomplete="email"
+						id="email"
+						name="email"
+						required
+					/>
+					<p class="error"><?php _e( 'Por favor, complete com seu email', 'fluente' ) ?></p>
 				</label>
 
-				<button id="submit" class="botao-main" type="submit" form="brinde-form">Manda!</button>
+				<button 
+					type="submit"
+					class="button subscribe__button button--primary"
+					data-nonce="<?php echo $nonce; ?>"
+					data-post="<?php echo get_the_ID(); ?>"
+				>
+					<?php _e( 'Manda!', 'fluente' ) ?> <span class="loading"></span>
+				</button>
 			</form>
 		</div>
 		

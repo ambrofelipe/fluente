@@ -4,18 +4,8 @@
 
 .section {
 
-	.teams {
+	&.teams {
 		background-color: var(--bg-01, $G-00);
-	}
-
-	&__details {
-
-		&--teams {
-
-			@include desktop {
-				flex-flow: row nowrap;
-			}
-		}
 	}
 
 	&__item {

@@ -1,34 +1,34 @@
 @use "../abstracts" as *;
 
-.contact {
+.subscribe {
 	form label {
 		display: block;
-		width: 100%;
 		position: relative;
-		margin-bottom: 1rem;
+		min-width: min(100%, 15rem);
 
 		span {
 			position: absolute;
 			top: 0.75em;
+			width: 100%;
+			font-weight: 700;
+			color: $T-00;
+			text-align: center;
 			pointer-events: none;
 			transition: all 200ms ease;
-			color: $T-00;
+			
 		}
 
-		input,
-		textarea {
+		input {
+			height: 2.5rem;
 			width: 100%;
-			color: $T-00 !important;
+			font-size: inherit;
+			font-weight: 700;
+			line-height: inherit;
+			text-align: center;
 			@include input-text;
 		}
 
-		textarea {
-			height: 2.4rem;
-			color: $T-00;
-		}
-
-		&.filled input,
-		&.filled textarea {
+		&.filled input {
 			border-bottom: 3px solid $M-02;
 			transition: border-bottom 300ms ease;
 			outline: none;
@@ -38,7 +38,6 @@
 		&.filled span {
 			top: -0.5em;
 			font-size: 0.75em;
-			color: $T-02;
 		}
 
 		p.error {
@@ -98,7 +97,7 @@
 			}
 
 			&::after {
-				background-image: url(../img/state-error.svg);
+				background-image: url(../img/ico/state-error.svg);
 			}
 		}
 
@@ -121,7 +120,7 @@
 			}
 
 			&::after {
-				background-image: url(../img/state-success.svg);
+				background-image: url(../img/ico/state-success.svg);
 			}
 		}
 	}
@@ -132,8 +131,7 @@
 
 	&__button {
 		position: relative;
-		margin-top: 2rem;
-		padding: 1.25rem 4rem;
+		margin: 1em auto 0;
 	}
 
 }

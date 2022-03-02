@@ -64,9 +64,18 @@
 
 a.terms {
 	display: block;
+	width: fit-content;
+	margin: 0.5rem auto;
 	text-align: center;
 	font-weight: 500;
 	font-size: 0.875em;
-	color: $S-21;
+	color: var(--fc-08, $M-02);
+	text-decoration-color: var(--fc-08, $M-02);
 	text-decoration-thickness: 2px;
+	transition: text-decoration-color 300ms ease;
+
+	&:hover {
+		text-decoration-color: transparent;
+		transition: text-decoration-color 300ms ease;
+	}
 }

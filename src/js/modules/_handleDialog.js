@@ -1,6 +1,6 @@
-app.dialog = {
+app.handleDialog = {
 
-    init:function(){
+    init: function() {
         const thanks = document.querySelectorAll(".thanks, .dim");
         const closeBtn = document.querySelector(".thanks button");
         const loading = document.querySelector(".loading");

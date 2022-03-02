@@ -4,246 +4,143 @@
 	position: sticky;
 	top: 100vh;
 	width: 100%;
-	padding: 6rem 1rem 0;
-	background-color: $M-01;
+	padding: 2rem 1rem 0;
+	background-color: darken($M-03, 5%);
 	color: $G-00;
 
-	&__wrapper {
-		display: grid;
-		grid-template-areas: 
-			"logo"
-			"nav"
-			"social"
-			"cta";
-		grid-template-columns: 1fr;
-		align-items: center;
-		grid-gap: 2rem 0;
+	.wrapper {
+		display: flex;
+		flex-flow: column wrap;
+		padding-top: 2em;
 
 		@include desktop {
-			grid-template-areas: "logo nav social cta";
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			padding: 2rem;
 		}
 	}
 
-	&__title {
+	&__home {
 		display: block;
-		margin: 0.75rem 0;
-		font-weight: 700;
-		text-align: left;
-	}
-
-	&__logo {
-		grid-area: logo;
-		width: 12rem;
-		height: 2.5rem;
-		margin: auto;
-		background: url(../img/logo-dark.svg) left center / contain no-repeat;
-
-		@include desktop {
-			margin: 0;
-		}
+		align-self: center;
+		background: url(../img/logo-e.svg) no-repeat;
+		width: 9rem;
+		height: 9rem;
+		opacity: 0.7;
 	}
 
 	&__nav {
-		grid-area: nav;
-		text-align: left;
+		flex: 1 1 40%;
+		margin-top: 1rem;
+		align-items: flex-start;
+		max-width: 60rem;
+		
 
-		li {
-			@include link-active;
-
-			a {
-				display: block;
-				width: fit-content;
-				margin: 0 auto;
-				padding: 0.5rem 0;
-				font-weight: 700;
-				color: $G-00;
-				text-align: center;
-				text-decoration: none;
-
-				@include link-hover($direction: start);
-
-				@include desktop {
-					margin: 0.25rem 0;
-					text-align: left;
-				}
-			}
-		}
-
-		.header__button {
-			display: none;
+		@include desktop {
+			max-width: 50rem;
 		}
 	}
 
-	&__social {
-		grid-area: social;
-		width: fit-content;
-		margin: auto;
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
 
 		@include desktop {
-			width: 100%;
-			margin: 0;
+			flex-direction: row;
 		}
+	}
 
-		ul {
-			text-align: left;
-		}
+	&__social &__list {
+		flex-direction: row;
+	}
 
-		li {
-			display: inline;
-			text-align: left;
-		}
+	&__item {
+		text-align: center;
 
 		a {
-			display: inline-block;
-			width: 2.25rem;
-			height: 2.25rem;
-			margin-right: 0.75rem;
-			background-color: $G-00;
-			mask-size: contain;
-			mask-position: center;
-			mask-repeat: no-repeat;
-			transition: 300ms ease;
+			margin: 0 auto;
+			padding: 0.5em 0 2px 0;
+			display: block;
+			width: fit-content;
+			font-size: 0.9rem;
+			color: $G-05;
+			text-decoration-line: underline;
+			text-decoration-color: transparent;
+			text-underline-offset: 0.25rem;
+			text-transform: uppercase;
+			transition: text-decoration-color 300ms ease;
 
 			&:hover {
-				background-color: $M-03;
-				transition: 300ms ease;
+				text-decoration-color: $G-05;
+				transition: text-decoration-color 300ms ease;
 			}
 		}
 
-		&--fb {
-			mask-image: url(../img/ico-fb.svg);
+		&--active a {
+			color: darken($M-02, 20%);
+			text-decoration-color: darken($M-02, 20%);
+			transition: text-decoration-color 300ms ease;
+			pointer-events: none;
 		}
 
-		&--ig {
-			mask-image: url(../img/ico-ig.svg);
+		&--fb a,
+		&--ig a {
+			fill: $G-05;
+			width: 2.5rem;
+			height: 2.5rem;
 		}
 
-		&--in {
-			mask-image: url(../img/ico-in.svg);
-		}
-	}
-
-	&__cta {
-		grid-area: cta;
-		width: clamp(18rem, 35vw, 100%);
-		margin: auto;
-
-		input[type="email"] {
-			@include input-text;
-			width: calc(100% - 75px);
-			color: $T-03;
-			padding-right: 1.75rem;
+		&--fb a {
+			background: url(../img/ico/ico-fb.svg) center / 100% no-repeat;
 		}
 
-		input[type="checkbox"] {
-			@include input-checkbox;
-
-			&:checked + label::before {
-				background-color: $T-03;
-			}
-		}
-
-		label {
-			display: block;
-			width: 100%;
-			position: relative;
-			margin-bottom: 0.5rem;
-
-			&[for="check-email"] {
-				@include checkbox-label;
-
-				text-align: left;
-
-				&.error {
-					color: $M-03;
-
-					&::after {
-						background: none;
-					}
-				}
-
-				&.success {
-					color: $T-03;
-
-					&::after {
-						background: none;
-					}
-				}
-			}
-
-			p.error {
-				margin-top: 0.25rem;
-				font-size: 0.85em;
-				color: $M-03;
-				text-align: left;
-				opacity: 0;
-			}
-
-			&.error::after,
-			&.success::after {
-				content: "";
-				position: absolute;
-				width: 1.125rem;
-				height: 1.125rem;
-				top: 35%;
-				transform: translateY(-50%);
-				right: 5rem;
-				background-position: center;
-				background-repeat: no-repeat;
-			}
-
-			&.error {
-				input {
-					border-color: $M-02;
-					transition: 300ms ease;
-				}
-
-				p.error {
-					opacity: 1;
-					transition: 300ms ease;
-				}
-
-				&::after {
-					background-image: url(../img/state-error.svg);
-				}
-			}
-
-			&.success {
-				input {
-					border-color: $G-03;
-					transition: 300ms ease;
-				}
-
-				p.error {
-					opacity: 0;
-					transition: 300ms ease;
-				}
-
-				&::after {
-					background-color: $G-03;
-					mask: url(../img/state-success.svg) center / contain no-repeat;
-				}
-			}
+		&--ig a {
+			background: url(../img/ico/ico-ig.svg) center / 100% no-repeat;
 		}
 	}
 
-	&__button {
-		position: relative;
-	}
+	&__info {
+		flex: 1 0 100%;
+		margin: 3em 1em 0;
+		padding-top: 2rem;
+		border-top: 1px solid rgba($G-07, 0.3);
+		text-align: center;
 
-	&__bar {
-		grid-column: 1 / 5;
-		margin: 6rem 0.5rem 3rem;
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
+		p,
+		address {
+			color: $G-05;
+		}
 
-		font-size: clamp(0.6em, 2vw, 0.9em);
-		color: $T-03;
+		address {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			margin: 2em 0 1em;
+			font-style: normal;
+		}
 
 		@include desktop {
-			margin: 6rem 0 3rem;
+			display: flex;
+			justify-content: space-between;
+
+			p {
+				flex: 0 0 45%;
+				text-align: left;
+				max-width: 45ch;
+				margin-left: 0;
+			}
+
+			address {
+				flex: 0 0 40%;
+				margin-top: 0;
+				max-width: 35ch;
+			}
 		}
 	}
 }

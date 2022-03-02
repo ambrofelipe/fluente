@@ -1,0 +1,206 @@
+@use "../abstracts" as *;
+
+// Inherits from _section.scss
+
+.pricing {
+
+	background-color: var(--bg-01, $G-00);
+
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+
+	&__item {
+
+		flex: 0 0 40%;
+
+		position: relative;
+		min-width: 27ch;
+
+		@include desktop {
+			flex: 0 0 20%;
+
+			max-width: 32ch;
+		}
+
+		h3 {
+			padding-top: 5rem;
+			font-weight: 500;
+			font-size: 1.2rem;
+			color: var(--fc-01, $G-08);
+		}
+
+		p {
+			margin: 0.5rem auto;
+			line-height: 2;
+			max-width: 30ch;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 5rem;
+			background-color: var(--fc-01, $G-08);
+			
+			mask-position: top center;
+			mask-size: 3.75rem;
+			mask-repeat: no-repeat;
+		}
+
+		&--load::before {
+			mask-image: url(../img/ico/bw/ico-bw-37.svg);
+		}
+
+		&--individual::before {
+			mask-image: url(../img/ico/bw/ico-bw-43.svg);
+		}
+
+		&--digital::before {
+			mask-image: url(../img/ico/bw/ico-bw-17.svg);
+		}
+
+		&--flexible::before {
+			mask-image: url(../img/ico/bw/ico-bw-42.svg);
+		}
+
+		&--specific::before {
+			mask-image: url(../img/ico/bw/ico-bw-35.svg);
+		}
+
+		&--complete::before {
+			mask-image: url(../img/ico/bw/ico-bw-1.svg);
+		}
+
+		&--specialised::before {
+			mask-image: url(../img/ico/bw/ico-bw-22.svg);
+		}
+
+		&--objectivity::before {
+			mask-image: url(../img/ico/bw/ico-bw-33.svg);
+		}
+	}
+
+	&__table {
+		margin-top: 3rem;
+		background-color: var(--bg-01, $G-00);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		
+		&--teams {
+			background-image: url(../img/bg/bg4.jpg);
+		}
+
+		&--prep {
+			background-image: url(../img/bg/bg2.jpg);
+		}
+
+		&--esp {
+			background-image: url(../img/bg/bg1.jpg);
+		}
+	}
+
+	&__overlay {
+		width: 100%;
+		padding: 6rem 0;
+		background: var(--bg-06, $G-01);
+	}
+
+	&__opener {
+		padding: 0 1rem;
+		margin-bottom: 6rem;
+		text-align: center;
+	}
+
+	&__options {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 6rem;
+	}
+
+	&__option {
+		padding: 9rem 3rem 3rem;
+		border: 2px solid $G-03;
+		border-radius: 0.5rem;
+		background-color: transparent;
+		background-position: center 3rem;
+		background-size: 4rem;
+		background-repeat: no-repeat;
+
+		&:nth-child(2) {
+			padding: 10rem 3rem 4rem;
+			background-color: $G-00;
+			color: var(--fc-09, $G-04);
+		}
+
+		&--book {
+			background-image: url(../img/ico/flat/1477507696_36.png);
+		}
+
+		&--books {
+			background-image: url(../img/ico/flat/1477508154_30.png);
+		}
+
+		&--pair {
+			background-image: url(../img/ico/flat/1477507934_27.png);
+		}
+
+		&--toefl {
+			background-image: url(../img/ico/ico-toefl.png);
+		}
+
+		&--ielts {
+			background-image: url(../img/ico/ico-ielts.png);
+		}
+
+		&--enem {
+			background-image: url(../img/ico/ico-enem.png);
+		}
+
+		&--tourism {
+			background-image: url(../img/ico/flat/1477508052_37.png);
+		}
+
+		&--business {
+			background-image: url(../img/ico/flat/1477507748_42.png);
+		}
+
+		&--work {
+			background-image: url(../img/ico/flat/1477508172_47.png);
+		}
+	}
+
+	&__course {
+		font-size: 1.25rem;
+		color: $D-01;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__fee {
+		margin: 1rem 0;
+		font-weight: 700;
+		font-size: 1.75rem;
+		color: $D-01;
+		text-align: center;
+
+		small {
+			font-size: 0.5em;
+		}
+	}
+
+	&__detail {
+		margin: 0.5rem 0;
+		text-align: center;
+
+		&--spaced {
+			margin: 1rem 0;
+		}
+	}
+}

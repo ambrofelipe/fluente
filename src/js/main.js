@@ -47,8 +47,9 @@ async function sendMail(url = "", data = {}) {
 $(function() {
 	app.drySplash.init();
 	app.flipBurger.init();
-	app.contactForm.init();
-	app.scrollTestimonials.init();
-	app.dialog.init();
+	app.handleGallery.init();
+	app.countUp.init();
+	app.subscribeForm.init();
+	app.handleDialog.init();
 });
 

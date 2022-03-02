@@ -55,7 +55,8 @@ task('scripts', function() {
 
 task('vendor', function() {
 	return src([
-		'src/js/_scrollTimeline.js',
+		'node_modules/macy/dist/macy.js',
+		'node_modules/countup.js/dist/countUp.umd.js'
 	])
 		.pipe(concat('vendor.js'))
 		.pipe(dest('src/js'));

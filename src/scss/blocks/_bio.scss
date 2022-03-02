@@ -1,0 +1,75 @@
+@use "../abstracts/" as *;
+
+.bio {
+
+	.wrapper {
+		width: min(100%, 70rem);
+		gap: 0;
+
+		@include desktop {
+			gap: 6rem;
+		}
+		
+	}
+
+	&__screen {
+		min-width: 325px;
+		max-width: 75%;
+		margin: 0 auto;
+		padding: 30px 15px;
+		background: url(../img/frame.png) center/100% no-repeat;
+
+		video {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 9 / 19.5;
+			border-radius: 2rem;
+			z-index: -1;
+		}
+	}
+
+	&__info {
+		padding-top: 6rem;
+
+		header {
+			padding: 0;
+		}
+
+		h4 {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__counters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3rem;
+		margin-top: 3rem;
+	}
+
+	&__counter {
+		padding: 1rem 0;
+		padding-left: 4rem;
+		background: center left / 3rem no-repeat padding-box;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&:first-child {
+			background-image: url(../img/ico/presentation-1.png);
+		}
+
+		&:last-child {
+			background-image: url(../img/ico/chat.png);
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&__countup {
+		font-feature-settings: "tnum";
+		font-variant-numeric: tabular-nums;
+	}
+}

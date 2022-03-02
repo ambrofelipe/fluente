@@ -1,6 +1,6 @@
 app.flipBurger = {
 
-    init:function(){
+    init: function() {
 
 		const burger = document.querySelector(".header__hamburger");
 

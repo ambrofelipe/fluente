@@ -1,11 +1,11 @@
-app.contactForm = {
+app.subscribeForm = {
 
     init:function(){
-        const form = document.querySelector(".contact__form");
+        const form = document.querySelector(".subscribe__form");
 
 		if(form !== null) {
 			const fields = form.querySelectorAll("input, textarea");
-			const submit = form.querySelector(".contact__button");
+			const submit = form.querySelector(".subscribe__button");
 			const loading = form.querySelector(".loading");
 			const label = form.querySelector("label");
 

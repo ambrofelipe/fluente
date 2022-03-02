@@ -4,7 +4,7 @@
 
 .section {
 
-	.side {
+	&.side {
 		padding: 10em 0;
 		width: 100%;
 		background-color: var(--bg-02, $G-01);
