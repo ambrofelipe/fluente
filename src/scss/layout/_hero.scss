@@ -97,27 +97,6 @@
 			width: fit-content;
 			max-width: 75rem;
 			margin: 4rem auto 0;
-
-			h1 {
-				text-align: center;
-			}
-
-			ul {
-				list-style: none;
-
-				li {
-					font-weight: 500;
-					line-height: 2;
-				}
-			}
-
-			p {
-				font-weight: 500;
-			}
-
-			button {
-				margin-top: 2rem;
-			}
 		}
 	}
 
@@ -130,6 +109,7 @@
 
 	&__hire &__title {
 		margin-bottom: 0;
+		padding: 0 1rem;
 		font-weight: 900;
 		font-size: clamp(2.5rem, 7vw + 1rem, 3.75rem);
 		text-shadow: 3px 5px 10px $S-40;
@@ -139,5 +119,23 @@
 		margin-top: 0;
 		font-weight: 500;
 		font-size: clamp(1rem, 5vw + 0.25rem, 1.25rem);
+	}
+
+	&__hire &__desc {
+		padding: 0 1rem;
+		font-weight: 500;
+	}
+
+	&__hire &__list {
+		list-style: none;
+	}
+
+	&__hire &__listitem {
+		font-weight: 500;
+		line-height: 2;
+	}
+
+	&__hire &__button {
+		margin-top: 2rem;
 	}
 }

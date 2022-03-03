@@ -8,18 +8,18 @@
 				<h1 class="main__title">
 					As reservas estão fechadas
 				</h1>
-				<p>
+				<p class="main__desc">
 					Infelizmente, as vagas para este mês estão todas preenchidas. Veja como é fácil reservar a sua vaga sem pagar a mais por isso.
 				</p>
 			</header>
 			<section>
 				<h2 class="main__subtitle">Reserve já para o English in Teams</h2>
-				<ul>
-					<li>🗓 Comece em janeiro</li>
-					<li>🔖 O voucher para reserva é de R$199</li>
+				<ul class="main__list">
+					<li class="main__listitem">🗓 Comece em janeiro</li>
+					<li class="main__listitem">🔖 O voucher para reserva é de R$199</li>
 				</ul>
-				<p>Não é uma taxa extra, pois o voucher é usado no primeiro mês de aulas.</p>
-				<button class="button button--primary">Quero reservar</button>
+				<p class="main__desc">Não é uma taxa extra, pois o voucher é usado no primeiro mês de aulas.</p>
+				<button class="button main__button button--primary">Quero reservar</button>
 				<a class="terms" href="#">Termos & Condições</a>
 			</section>
 		</div>
