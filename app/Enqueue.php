@@ -60,6 +60,18 @@ class Enqueue {
 			true
 		);
 
+		// enqueue stripe.js on Contratar com Segurança
+
+		if(is_page( 8 )) {
+			wp_enqueue_script(
+				'fluente-payments',
+				'https://js.stripe.com/v3/',
+				array(),
+				false,
+				true
+			);
+		}
+
 		// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
 		wp_localize_script( 'fluente-scripts', 'ajaxObj', 
 		array( 

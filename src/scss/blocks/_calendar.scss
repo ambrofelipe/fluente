@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 @use 'sass:math';
 
-.main__calendar {
+.booked-calendar-wrap {
 	margin: 0 1em;
 	padding: 0;
 	border-radius: 5px;
@@ -9,7 +9,8 @@
 	color: $G-02;
 	box-shadow: 3px 5px 10px $S-40;
 	
-	.month-title {
+	//.month-title {
+	thead tr:not(.days) th {
 		width: 100%;
 		margin: 0;
 		padding: 1.2em 0;
@@ -72,4 +73,44 @@
 			}
 		}
 	}
+}
+
+body table.booked-calendar,
+body table.booked-calendar td .date {
+	background-color: $D-01 !important;
+	font-family: $F-00 !important;
+	font-size: 1rem !important;
+	color: $G-02 !important;
+}
+
+body table.booked-calendar td {
+	border-right: none !important;
+}
+
+body table.booked-calendar td.prev-date .date,
+body table.booked-calendar td.today.prev-date .date {
+	background-color: $D-01 !important;
+	color: $G-02 !important;
+
+	span {
+		border: none;
+		color: $G-02 !important;
+	}
+}
+
+body table.booked-calendar td.prev-date:hover .date,
+body table.booked-calendar td.today.prev-date:hover .date {
+	background-color: $D-01 !important;
+
+	span {
+		background-color: $D-01 !important;
+		color: $G-02 !important;
+	}
+}
+
+body table.booked-calendar td.prev-month .date span,
+body table.booked-calendar td.prev-month:hover .date span,
+body table.booked-calendar td.next-month .date span,
+body table.booked-calendar td.next-month:hover .date span {
+	color: transparent !important;
 }

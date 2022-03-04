@@ -4,7 +4,7 @@
 
 	<main class="main <?php echo is_front_page() ? "main__home" : "main__hire"; ?>">
 		<div class="main__overlay">
-			<div class="main__calendar">
+			<!-- <div class="main__calendar">
 				<div class="month-title">Maio 2021</div>
 				<form action="#">
 					<label class="weekday">Seg</label>
@@ -160,7 +160,8 @@
 					</label>
 					<div class="clearfix"></div>
 				</form>
-			</div>
+			</div> -->
+			<?php echo do_shortcode("[booked-calendar]") ?>
 			<header class="main__header">
 				<h1 class="main__title">
 					<strong>Todo mundo</strong> é capaz de aprender inglês online.

@@ -4,7 +4,7 @@
 	
 	<main class="main main__hire">
 		<div class="main__overlay">
-			<header class="main__header">
+			<!-- <header class="main__header">
 				<h1 class="main__title">
 					As reservas estão fechadas
 				</h1>
@@ -19,9 +19,18 @@
 					<li class="main__listitem">🔖 O voucher para reserva é de R$199</li>
 				</ul>
 				<p class="main__desc">Não é uma taxa extra, pois o voucher é usado no primeiro mês de aulas.</p>
-				<button class="button main__button button--primary">Quero reservar</button>
+				<a class="button main__button button--primary" href="https://buy.stripe.com/14k2bqgNYdKpf5e6or">Quero reservar</a>
 				<a class="terms" href="#">Termos & Condições</a>
-			</section>
+			</section> -->
+
+			<header class="main__header">
+				<h1 class="main__title">
+					As matrículas estão abertas
+				</h1>
+				<p class="main__desc">
+					Matricule-se no melhor curso abaixo. É uma boa ideia conversarmos antes para definirmos seu melhor curso — mande-nos uma mensagem no Instagram!
+				</p>
+			</header>
 		</div>
 	</main>
 
@@ -60,24 +69,24 @@
 					<li class="pricing__option pricing__option--book">
 						<dl>
 							<dt class="pricing__course">Semestral</dt>
-							<dd class="pricing__fee"><small>6x</small> R$ 569 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>6x</small> R$ 599 <small>/mês</small></dd>
 							<dd class="pricing__detail">60 horas de aulas particulares</dd>
 							<dd class="pricing__detail">com um módulo personalizado</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 6 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/9AQ4jybtEeOt1eocMN">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
 					<li class="pricing__option pricing__option--books">
 						<dl>
 							<dt class="pricing__course">Anual</dt>
-							<dd class="pricing__fee"><small>12x</small> R$ 529 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>12x</small> R$ 569 <small>/mês</small></dd>
 							<dd class="pricing__detail">120 horas de aulas particulares</dd>
 							<dd class="pricing__detail">com dois módulos personalizados</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 12 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/9AQaHW9lwgWB5uEdQS">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
@@ -89,7 +98,7 @@
 							<dd class="pricing__detail">com a mesma participação em aula</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Por quase a metade do valor</dd>
 							<dd class="pricing__detail">Comece já</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/6oEeYc8hs8q58GQ3cc">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
@@ -133,36 +142,36 @@
 					<li class="pricing__option pricing__option--toefl">
 						<dl>
 							<dt class="pricing__course">TOEFL Prep</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas de aulas particulares</dd>
 							<dd class="pricing__detail">com duas correções de redações</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/cN2g2g1T4dKpg9i3cg">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
 					<li class="pricing__option pricing__option--ielts">
 						<dl>
 							<dt class="pricing__course">IELTS Prep</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas de aulas particulares</dd>
 							<dd class="pricing__detail">com duas correções de redações</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/eVa4jyapAbChg9i4gl">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
 					<li class="pricing__option pricing__option--enem">
 						<dl>
 							<dt class="pricing__course">ENEM Prep</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas de aulas particulares</dd>
 							<dd class="pricing__detail">com duas correções de redações</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/4gw4jy8hseOt2is5kq">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
@@ -206,36 +215,36 @@
 					<li class="pricing__option pricing__option--tourism">
 						<dl>
 							<dt class="pricing__course">English for Tourism</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas em aeroportos, hotel</dd>
 							<dd class="pricing__detail">restaurante, farmácia, transporte, etc.</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/aEU3fu0P049P6yIdQX">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
 					<li class="pricing__option pricing__option--business">
 						<dl>
 							<dt class="pricing__course">English for Business</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas de entrevistas, telefone</dd>
 							<dd class="pricing__detail">CV e Cover Letter, negociação, etc.</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/00g7vKcxI0XD5uE28g">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
 					<li class="pricing__option pricing__option--work">
 						<dl>
 							<dt class="pricing__course">English for Work</dt>
-							<dd class="pricing__fee"><small>2x</small> R$ 369 <small>/mês</small></dd>
+							<dd class="pricing__fee"><small>2x</small> R$ 389 <small>/mês</small></dd>
 							<dd class="pricing__detail">12 horas no seu trabalho, seja ele</dd>
 							<dd class="pricing__detail">cabeleireiro, chef, engenheiro, etc.</dd>
 							<dd class="pricing__detail pricing__detail--spaced">Agende a qualquer momento</dd>
 							<dd class="pricing__detail">Válido por 2 meses</dd>
-							<button class="button button--primary">Quero reservar</button>
+							<a class="button button--primary" href="https://buy.stripe.com/7sI6rG55g9u9g9idQZ">Matrícula</a>
 							<a class="terms" href="#">Termos & Condições</a>
 						</dl>
 					</li>
