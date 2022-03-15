@@ -12,6 +12,8 @@ class Setup {
 		add_action( 'after_setup_theme', array( $this, 'fluente_setup' ) );
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		add_filter( 'login_redirect', array( $this, 'fluente_login_redirect' ), 10, 3 );
+		add_filter( 'nav_menu_css_class', array( $this, 'add_additional_class' ), 1, 3 );
 	}
 
 
@@ -64,11 +66,42 @@ class Setup {
 		// Add excerpt to pages
 		add_post_type_support( 'page', 'excerpt' );
 
+	}
 
-		// Register image sizes
-		//add_image_size( 'example', 760, 500, true );
+	/**
+	 * Redirect user after successful login.
+	 *
+	 * @param string $url URL to redirect to.
+	 * @param string $request URL the user is coming from.
+	 * @param object $user Logged user's data.
+	 * @return string
+	 */
 
+	public function fluente_login_redirect( $url, $request, $user ) {
+		if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+			if ( $user->has_cap( 'edit_posts' ) ) {
+				$url = admin_url();
+			} else {
+				$url = home_url( '/perfil/' );
+			}
+		}
+		return $url;
+	}
 
+	/**
+	 * Adds custom property to wp_nav_menu options array that lets us add CSS classes to the <li> element.
+	 *
+	 * @param object $classes Array of the CSS classes that are applied to the menu item's <li> element.
+	 * @param string $item The current menu item object.
+	 * @param object $args An object of wp_nav_menu() arguments.
+	 * @return object
+	 */
+
+	function add_additional_class($classes, $item, $args) {
+		if(isset($args->item_class)) {
+			$classes[] = $args->item_class;
+		}
+		return $classes;
 	}
 
 }

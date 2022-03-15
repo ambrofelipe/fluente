@@ -1,0 +1,428 @@
+{
+    "key": "group_62277a2f3b71b",
+    "title": "Pricing table",
+    "fields": [
+        {
+            "key": "field_62277a3ac22fa",
+            "label": "Title",
+            "name": "table_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "English in Teams",
+            "prepend": "",
+            "append": "",
+            "maxlength": 50
+        },
+        {
+            "key": "field_62277aa0c22fb",
+            "label": "Subtitle",
+            "name": "table_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Mais aulas. Mais confiança ao falar. É o melhor curso para progredir nos níveis de fluência.",
+            "prepend": "",
+            "append": "",
+            "maxlength": 140
+        },
+        {
+            "key": "field_62277ac5c22fc",
+            "label": "Description",
+            "name": "table_desc",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_62277aebc22fd",
+                    "label": "Item title",
+                    "name": "table_desc_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Carga horária",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 25
+                },
+                {
+                    "key": "field_62277b0ac22fe",
+                    "label": "Item subtitle",
+                    "name": "table_desc_subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "O curso oferece quase o dobro da carga horária de aulas de grandes escolas.",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 140
+                },
+                {
+                    "key": "field_62277b3dc22ff",
+                    "label": "Item icon",
+                    "name": "table_desc_icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "load": "Load",
+                        "individual": "Individual",
+                        "flexible": "Flexible",
+                        "digital": "Digital",
+                        "specific": "Specific",
+                        "complete": "Complete",
+                        "specialised": "Specialised",
+                        "objectivity": "Objectivity"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62277f2ac230b",
+            "label": "Prices background",
+            "name": "table_background",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "teams": "Teams",
+                "prep": "Exam Prep",
+                "esp": "ESP"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62277f67c230c",
+            "label": "Prices opening",
+            "name": "table_opening",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "São 60 horas de aulas em um semestre. É por isso que você aprende de verdade.",
+            "prepend": "",
+            "append": "",
+            "maxlength": 140
+        },
+        {
+            "key": "field_62277c48c2300",
+            "label": "Prices",
+            "name": "table_prices",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 2,
+            "max": 3,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_62277c82c2301",
+                    "label": "Course",
+                    "name": "table_prices_course",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Semestral",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 25
+                },
+                {
+                    "key": "field_62277cd0c2302",
+                    "label": "Instalments",
+                    "name": "table_prices_instalments",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": 6,
+                    "prepend": "",
+                    "append": "x",
+                    "min": 1,
+                    "max": 12,
+                    "step": ""
+                },
+                {
+                    "key": "field_62277d11c2303",
+                    "label": "Fee",
+                    "name": "table_prices_fee",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": 599,
+                    "prepend": "R$",
+                    "append": "\/mês",
+                    "min": 0,
+                    "max": 999,
+                    "step": ""
+                },
+                {
+                    "key": "field_62277d56c2304",
+                    "label": "Line 1",
+                    "name": "table_prices_line_1",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "60 horas de aulas particulares",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30
+                },
+                {
+                    "key": "field_62277d93c2305",
+                    "label": "Line 2",
+                    "name": "table_prices_line_2",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "com um módulo personalizado",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30
+                },
+                {
+                    "key": "field_62277dabc2306",
+                    "label": "Line 3",
+                    "name": "table_prices_line_3",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Agende a qualquer momento",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30
+                },
+                {
+                    "key": "field_62277dd9c2307",
+                    "label": "Line 4",
+                    "name": "table_prices_line_4",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Válido por 6 meses",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30
+                },
+                {
+                    "key": "field_62277dfbc2308",
+                    "label": "Payment link",
+                    "name": "table_prices_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https:\/\/buy.stripe.com\/9AQ4jybtEeOt1eocMN"
+                },
+                {
+                    "key": "field_62277e19c2309",
+                    "label": "T&C",
+                    "name": "table_prices_tc",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "teams": "Teams",
+                        "fast": "Fast"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62277eb2c230a",
+                    "label": "Icon",
+                    "name": "table_prices_icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "book": "Book",
+                        "books": "Books",
+                        "pair": "Pair",
+                        "toefl": "TOEFL",
+                        "ielts": "IELTS",
+                        "enem": "ENEM",
+                        "tourism": "Tourism",
+                        "business": "Business",
+                        "work": "Work"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/pricing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1646760265
+}

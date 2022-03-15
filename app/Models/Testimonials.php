@@ -13,7 +13,7 @@ class Testimonials {
     /**
      * 
      */
-    private static function query_helper(){
+    private static function query_helper() {
         if ( is_null( self::$query_helper ) ) {
             self::$query_helper = new Helpers\Query();
         }
@@ -25,7 +25,7 @@ class Testimonials {
      /**
      * 
      */
-    public static function get_all_testimonials(){
+    public static function get_all_testimonials() {
         $args = self::query_helper()->get_all( self::$post_type );
         return self::prepare_query_and_return_results( $args );
     }
@@ -35,7 +35,7 @@ class Testimonials {
      /**
      * 
      */
-    private static function prepare_query_and_return_results( $args ){
+    private static function prepare_query_and_return_results( $args ) {
 
         $query = new \WP_Query($args);
 

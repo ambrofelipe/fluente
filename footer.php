@@ -1,34 +1,45 @@
-
+<?php
+	$facebook  = get_field( 'facebook', 'option' );
+	$instagram = get_field( 'instagram', 'option' );
+	$linkedin  = get_field( 'linkedin', 'option' );
+?>
+		
 		<footer class="footer">
 			<div class="wrapper">
 				<a class="footer__home" href="https://fluente.me" title="Go to the home page"></a>
 				<nav class="footer__nav">
-					<ul class="footer__list">
-						<li class="footer__item footer__item--active">
-							<a aria-current="page" href="">Por que estudar online</a>
-						</li>
-						<li class="footer__item">
-							<a href="">Contratar com segurança</a>
-						</li>
-						<li class="footer__item">
-							<a href="">Acessar</a>
-						</li>
-						<li class="footer__item">
-							<a href=""></a>
-						</li>
-						<li class="footer__item">
-							<a href=""></a>
-						</li>
-					</ul>
+					<?php 
+						wp_nav_menu( 
+							array( 
+								'menu'           => 'Footer',
+								'menu_class'     => 'footer__list',
+								'theme_location' => 'primary', 
+								'container'      => false,
+								'item_class'     => 'footer__item'
+							) 
+						);
+					?>
 				</nav>
 				<nav class="footer__social">
 					<ul class="footer__list">
-						<li class="footer__item footer__item--fb">
-							<a href="https://facebook.com/fluente.me" target="_blank" title="Facebook (opens in another tab)"></a>
-						</li>
+
+						<?php if( $facebook ): ?>
+							<li class="footer__item footer__item--fb">
+								<a href="<?php echo $facebook ?>" target="_blank" title="Facebook (opens in another tab)"></a>
+							</li>
+						<?php endif; ?>
+
+						<?php if( $instagram ): ?>
 						<li class="footer__item footer__item--ig">
-							<a href="https://instagram.com/fluente" target="_blank" title="Instagram (opens in another tab)"></a>
+							<a href="<?php echo $instagram ?>" target="_blank" title="Instagram (opens in another tab)"></a>
 						</li>
+						<?php endif; ?>
+
+						<?php if( $linkedin ): ?>
+							<li class="footer__item footer__item--fb">
+								<a href="<?php echo $linkedin ?>" target="_blank" title="LinkedIn (opens in another tab)"></a>
+							</li>
+						<?php endif; ?>
 					</ul>
 				</nav>
 				<div class="footer__info">
@@ -44,10 +55,15 @@
 		</footer>
 
 		<div class="dim"></div>
+		<dialog class="modal">
+			<button aria-label="<?php _e( 'Close', 'fluente' ) ?>"><i class="booked-icon booked-icon-close"></i></button>
+			<h1></h1>
+			<div></div>
+		</dialog>
 		<dialog class="thanks">
-			<button aria-label="<?php _e( 'Close', 'fluente' ) ?>"></button>
-			<h1><?php _e( 'We\'ve received your thoughts.', 'fluente' ) ?></h1>
-			<p><?php _e( 'Thanks for reaching out. We\'ll get back to you soon.', 'fluente' ) ?></p>
+			<button aria-label="<?php _e( 'Close', 'fluente' ) ?>"><i class="booked-icon booked-icon-close"></i></button>
+			<h1></h1>
+			<div></div>
 		</dialog>
 		<?php wp_footer(); ?>
 

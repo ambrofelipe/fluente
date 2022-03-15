@@ -60,7 +60,8 @@
 		flex-direction: row;
 	}
 
-	&__item {
+	&__item,
+	.menu-user {
 		text-align: center;
 
 		a {
@@ -82,7 +83,7 @@
 			}
 		}
 
-		&--active a {
+		&.current_page_item a {
 			color: darken($M-02, 20%);
 			text-decoration-color: darken($M-02, 20%);
 			transition: text-decoration-color 300ms ease;

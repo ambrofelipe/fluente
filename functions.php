@@ -31,9 +31,6 @@ new \app\PostTypes();
 // Log in and log out button
 new \app\Loginout();
 
-// Form
-new \app\Form();
-
 // Options page
 new \app\OptionsPage();
 

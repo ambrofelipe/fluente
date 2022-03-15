@@ -4,6 +4,7 @@ namespace app;
 
 /**
  * Adds a Log in / Log out link to the menu
+ *
  * @package app
  */
 class Loginout {

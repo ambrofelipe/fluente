@@ -1,11 +1,30 @@
 {
-    "key": "group_61cc888a88d07",
-    "title": "Portfolio & Cases",
+    "key": "group_6227346e366f2",
+    "title": "Hero",
     "fields": [
         {
-            "key": "field_61cc88b7b2b3e",
-            "label": "Título",
-            "name": "portfolio_title",
+            "key": "field_62273471ace40",
+            "label": "Open for enrolment",
+            "name": "open_enrolment",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Open for enrolment",
+            "ui_off_text": "Open for reservation"
+        },
+        {
+            "key": "field_6227355bace42",
+            "label": "Next available date",
+            "name": "next_available_date",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -16,29 +35,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "janeiro",
             "prepend": "",
             "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61cc88c5b2b3f",
-            "label": "Subtítulo",
-            "name": "portfolio_subtitle",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": 50
         }
     ],
     "location": [
@@ -46,7 +46,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/portfolio"
+                "value": "acf\/hero"
             }
         ]
     ],
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1640794329
+    "modified": 1646737362
 }

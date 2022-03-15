@@ -15,6 +15,7 @@ class Enqueue {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'login_enqueue_scripts', array( $this, 'fluente_login_logo' ) );
 		
 	}
 
@@ -60,18 +61,6 @@ class Enqueue {
 			true
 		);
 
-		// enqueue stripe.js on Contratar com Segurança
-
-		if(is_page( 8 )) {
-			wp_enqueue_script(
-				'fluente-payments',
-				'https://js.stripe.com/v3/',
-				array(),
-				false,
-				true
-			);
-		}
-
 		// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
 		wp_localize_script( 'fluente-scripts', 'ajaxObj', 
 		array( 
@@ -97,5 +86,20 @@ class Enqueue {
 		);
 
 	}
+
+	/**
+	 * Enqueue admin css to use the Fluente logo on login
+	 */
+	public function fluente_login_logo() { ?>
+		<style type="text/css">
+			#login h1 a, .login h1 a {
+				background-image: url(<?php echo get_template_directory_uri() ?>/dist/img/logo-light.svg);
+				width: 9rem;
+				height: 3rem;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		</style>
+	<?php }
 
 }

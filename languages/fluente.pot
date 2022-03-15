@@ -13,35 +13,27 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: footer.php:48, template-parts/service-card.php:17
+#: footer.php:59, footer.php:64
 msgid "Close"
 msgstr ""
 
-#: footer.php:49
-msgid "We've received your thoughts."
-msgstr ""
-
-#: footer.php:50
-msgid "Thanks for reaching out. We'll get back to you soon."
-msgstr ""
-
-#: front-page.php:386
+#: front-page.php:26
 msgid "Seu nome"
 msgstr ""
 
-#: front-page.php:394
+#: front-page.php:34
 msgid "Por favor, complete com seu nome"
 msgstr ""
 
-#: front-page.php:397
+#: front-page.php:37
 msgid "Seu email"
 msgstr ""
 
-#: front-page.php:406
+#: front-page.php:46
 msgid "Por favor, complete com seu email"
 msgstr ""
 
-#: front-page.php:415
+#: front-page.php:55
 msgid "Manda!"
 msgstr ""
 
@@ -49,74 +41,70 @@ msgstr ""
 msgid "Toggle menu"
 msgstr ""
 
-#: app/CustomBlocks.php:27
+#: app/CustomBlocks.php:33
 msgid "Fluente"
 msgstr ""
 
 #: app/OptionsPage.php:18
-msgid "Site Options"
+msgid "Redes sociais"
 msgstr ""
 
-#: app/PostTypes.php:22, app/PostTypes.php:31, app/blocks/testimonials.php:4
-msgid "Testemunhos"
+#: app/PostTypes.php:22, app/PostTypes.php:31
+msgid "Depoimentos"
 msgstr ""
 
 #: app/PostTypes.php:23
-msgid "Testemunho"
+msgid "Depoimento"
 msgstr ""
 
 #: app/PostTypes.php:24
-msgid "Adicionar Testemunho"
+msgid "Adicionar Depoimento"
 msgstr ""
 
 #: app/PostTypes.php:25
-msgid "Adicionar Novo Testemunho"
+msgid "Adicionar Novo Depoimento"
 msgstr ""
 
 #: app/PostTypes.php:26
-msgid "Editar Testemunho"
+msgid "Editar Depoimento"
 msgstr ""
 
 #: app/PostTypes.php:27
-msgid "Novo Testemunho"
+msgid "Novo Depoimento"
 msgstr ""
 
-#: app/Setup.php:49
+#: app/Setup.php:53
 msgid "Main Menu"
 msgstr ""
 
-#: app/Setup.php:50
+#: app/Setup.php:54
 msgid "Footer Menu"
 msgstr ""
 
-#: gutenberg/testimonials.php:16, gutenberg/testimonials.php:18
+#: app/blocks/bio.php:4
+msgid "Bio"
+msgstr ""
+
+#: app/blocks/fast.php:4
+msgid "Fast courses"
+msgstr ""
+
+#: app/blocks/gallery.php:4
+msgid "Gallery"
+msgstr ""
+
+#: app/blocks/hero.php:4
+msgid "Hero"
+msgstr ""
+
+#: app/blocks/pricing.php:4
+msgid "Pricing table"
+msgstr ""
+
+#: app/blocks/teams.php:4
+msgid "English in Teams"
+msgstr ""
+
+#: app/blocks/testimonials.php:4
 msgid "Testimonials"
-msgstr ""
-
-#: gutenberg/testimonials.php:57
-msgid "Check out our Portfolio & Case Studies"
-msgstr ""
-
-#: template-parts/about-video.php:6
-msgid "Watch Video"
-msgstr ""
-
-#: template-parts/case-card.php:8
-msgid "Open case"
-msgstr ""
-
-#: template-parts/positions-job.php:8
-msgid "Know more"
-msgstr ""
-
-#: template-parts/service-card.php:8
-msgid "Open card"
-msgstr ""
-
-#: template-parts/service-card.php:9
-msgid "See Our Services"
-msgstr ""
-
-#: template-parts/service-card.php:16
-msgid "Close card"
 msgstr ""

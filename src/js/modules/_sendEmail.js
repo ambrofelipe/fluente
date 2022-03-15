@@ -1,0 +1,127 @@
+app.sendEmail = {
+
+    init: function() {
+        const form = document.querySelector(".subscribe__form");
+
+		if(form !== null) {
+			const fields = form.querySelectorAll("input");
+			const submit = form.querySelector(".subscribe__button");
+			const loading = form.querySelector(".loading");
+
+			const name = form.querySelector("#name");
+			const email = form.querySelector("#email");
+
+			// Reset error on input focus
+			fields.forEach(field => {
+				field.addEventListener("focus", function () {
+					const parent = this.parentNode;
+					parent.classList.remove("error");
+					parent.classList.add("focus");
+				})
+				field.addEventListener("blur", function () {
+					const parent = this.parentNode;
+					parent.classList.remove("error");
+					parent.classList.add("focus");
+				})
+				field.addEventListener("focusout", function () {
+					const parent = this.parentNode;
+					if(field.value === "") {
+						parent.classList.remove("focus");
+						parent.classList.remove("filled");
+					} else {
+						parent.classList.add("filled");
+					}
+				})
+			});
+
+			// Checks fields on submit
+			submit.addEventListener("click", async function (e) {
+				e.preventDefault();
+				loading.classList.add("loading--visible");
+				submit.disabled = true;
+
+				fields.forEach(function(field) {
+					if(field.value !== "") {
+						field.parentNode.classList.add("filled");
+					}
+				});
+
+				if (name.value.trim().length === 0) {
+					name.parentNode.className = "error";
+				} else {
+					name.parentNode.className = "success";
+				}
+
+				if (email.value.trim().length <= 5) {
+					email.parentNode.className = "error";
+				} else {
+					const checkEmailResponse = await app.checkEmail(email.value);
+
+					if (checkEmailResponse) {
+						if (
+							!checkEmailResponse.valid ||
+							checkEmailResponse.block ||
+							checkEmailResponse.disposable
+						) {
+							email.parentNode.className = "error";
+						} else {
+							email.parentNode.className = "success";
+						}
+					} else {
+						email.parentNode.className = "success";
+					}
+				}
+
+				const errors = form.querySelectorAll("label.error");
+
+				if (errors.length === 0) {
+
+					// SUBMIT FORM
+					const subscriber = {
+						"name": name.value,
+						"email": email.value,
+					};
+                    console.log("🚀 ~ file: _sendEmail.js ~ line 84 ~ subscriber", subscriber)
+
+					const subscribe = await app.sendEmail.send(subscriber);
+
+					console.log(subscribe);
+
+					// Reset form
+					fields.forEach(function(field) {
+						field.value = "";
+						field.parentNode.className = "";
+					});
+					submit.disabled = false;
+					loading.classList.remove("loading--visible");
+
+				} else {
+					this.disabled = false;
+					loading.classList.remove("loading--visible");
+				}
+			});
+		}
+    },
+
+	send: async (data) => {
+		const apiURL = "//api.fluente.me/sendEmail";
+
+		const options = {
+			method: "POST",
+			mode: "cors",
+			cache: "no-cache",
+			credentials: "same-origin",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			redirect: "follow",
+			referrerPolicy: "no-referrer",
+			body: JSON.stringify(data)
+		};
+
+		const response = await fetch(apiURL, options);
+
+		return response.json();
+	}
+
+}

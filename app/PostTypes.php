@@ -14,21 +14,21 @@ class PostTypes {
 	 * Constructor
 	 */
 	public function __construct() {
-		add_action( 'init', array( $this, 'register_cpt_testimonials' ) );
+		add_action( 'init', array( $this, 'fluente_register_cpt_testimonials' ) );
 	}
 
-	public function register_cpt_testimonials() {
+	public function fluente_register_cpt_testimonials() {
 		$labels = array(
-			"name" => __( "Testemunhos", "fluente" ),
-			"singular_name" => __( "Testemunho", "fluente" ),
-			"add_new" => __( "Adicionar Testemunho", "fluente" ),
-			"add_new_item" => __( "Adicionar Novo Testemunho", "fluente" ),
-			"edit_item" => __( "Editar Testemunho", "fluente" ),
-			"new_item" => __( "Novo Testemunho", "fluente" ),
+			"name" => __( "Depoimentos", "fluente" ),
+			"singular_name" => __( "Depoimento", "fluente" ),
+			"add_new" => __( "Adicionar Depoimento", "fluente" ),
+			"add_new_item" => __( "Adicionar Novo Depoimento", "fluente" ),
+			"edit_item" => __( "Editar Depoimento", "fluente" ),
+			"new_item" => __( "Novo Depoimento", "fluente" ),
 		);
 
 		$args = array(
-			"label" => __( "Testemunhos", "fluente" ),
+			"label" => __( "Depoimentos", "fluente" ),
 			"labels" => $labels,
 			"description" => "",
 			"public" => true,

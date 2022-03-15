@@ -23,6 +23,7 @@ $t-function: ease;
 	}
 }
 
+.modal,
 .thanks {
 	visibility: hidden;
 	position: fixed;
@@ -36,8 +37,7 @@ $t-function: ease;
 	aspect-ratio: 1;
 	border: none;
 	padding: 1rem;
-	background: $M-01;
-	text-align: center;
+	background: $M-03;
 	color: lighten($T-03, 20%);
 	opacity: 0;
 	transition: opacity $t-duration $t-function;
@@ -52,19 +52,21 @@ $t-function: ease;
 
 	button {
 		position: absolute;
-		right: 0.75rem;
-		top: 0.75rem;
+		right: 0.5rem;
+		top: 0.5rem;
 		width: 3rem;
 		height: 3rem;
-		background: url(../img/ico-close.svg) center / 3rem no-repeat;
 		border: none;
+		background: none;
+		font-size: 1.25rem;
+		color: $G-00;
 		cursor: pointer;
 		transform: scale(1);
 		transition: 100ms $t-function;
 
 		@media (min-width: 768px) {
-			top: 1.5rem;
-			right: 1.5rem;
+			top: 1rem;
+			right: 1rem;
 		}
 
 		&:hover,
@@ -81,39 +83,20 @@ $t-function: ease;
 	}
 
 	h1 {
-		position: absolute;
-		top: 20%;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 15ch;
-		margin: 0 auto;
 		font-weight: 900;
-		font-size: 3.75rem;
-		font-size: clamp(2.5rem, 5vw + 0.25rem, 3.75rem);
 	}
 
 	p {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 25ch;
-		margin: 1rem auto;
-		font-size: 1.25rem;
-
-		@media (min-width: 768px) {
-			width: 40ch;
-			margin: 4rem auto;
-		}
+		color: $G-00;
 	}
 
 	&::after {
 		content: "";
 		display: block;
 		position: absolute;
-		bottom: 1.5rem;
-		left: 1.5rem;
-		width: 12rem;
+		bottom: 0.5rem;
+		left: 1rem;
+		width: 8rem;
 		height: 2.5rem;
 		background: url(../img/logo-dark.svg) left center / contain no-repeat;
 	}
@@ -130,5 +113,66 @@ $t-function: ease;
 	&.on {
 		opacity: 1;
 		transition: opacity $t-duration $t-function;
+	}
+}
+
+.modal {
+	min-height: 80vh;
+	aspect-ratio: unset;
+
+	div {
+		position: absolute;
+		height: calc(100% - 9rem);
+		overflow-y: scroll;
+	}
+
+	h1 {
+		top: 1rem;
+		width: 100%;
+		padding-right: 2rem;
+		font-size: clamp(1.5rem, 5vw + 0.25rem, 1.75rem);
+	}
+
+	h2 {
+		font-weight: 700;
+		margin: 0.5rem 0;
+	}
+
+	ul {
+		margin: 0 auto 1rem;
+		list-style: circle;
+	}
+
+	ul li {
+		margin-left: 1.5rem;
+	}
+}
+
+.thanks {
+	text-align: center;
+
+	h1 {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15ch;
+		margin: 0 auto;
+		font-size: clamp(2.5rem, 5vw + 0.25rem, 3.75rem);
+	}
+
+	p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 25ch;
+		margin: 1rem auto;
+		font-size: 1.25rem;
+
+		@media (min-width: 768px) {
+			width: 40ch;
+			margin: 4rem auto;
+		}
 	}
 }

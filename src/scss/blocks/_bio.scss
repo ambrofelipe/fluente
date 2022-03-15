@@ -55,11 +55,11 @@
 		font-weight: 700;
 		text-transform: uppercase;
 
-		&:first-child {
+		&--presentation {
 			background-image: url(../img/ico/presentation-1.png);
 		}
 
-		&:last-child {
+		&--chat {
 			background-image: url(../img/ico/chat.png);
 		}
 

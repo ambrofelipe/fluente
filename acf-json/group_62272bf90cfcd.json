@@ -1,11 +1,11 @@
 {
-    "key": "group_61cc7d51e2b4d",
-    "title": "Clientes",
+    "key": "group_62272bf90cfcd",
+    "title": "English in Teams",
     "fields": [
         {
-            "key": "field_61cc7d7842817",
-            "label": "Título",
-            "name": "clients_title",
+            "key": "field_62272bfe72579",
+            "label": "Title",
+            "name": "teams_title",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -16,18 +16,18 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "English in Teams",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 50
         },
         {
-            "key": "field_61cc7efc42818",
-            "label": "Subtítulo",
-            "name": "clients_subtitle",
+            "key": "field_62272c217257a",
+            "label": "Subtitle",
+            "name": "teams_subtitle",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -35,18 +35,18 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "O maior diferencial é a carga horária. São 60 horas de contato individual por semestre. Outras escolas costumam oferecer só 35 horas.",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 140
         },
         {
-            "key": "field_61cc80274281c",
-            "label": "Lista de clientes",
-            "name": "clients_rows",
+            "key": "field_62272c3b7257b",
+            "label": "Description",
+            "name": "teams_desc",
             "type": "repeater",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -54,39 +54,15 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 0,
-            "max": 0,
+            "min": 2,
+            "max": 4,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_61cc80384281d",
-                    "label": "Imagem",
-                    "name": "clients_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "full",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_61cc80844281e",
-                    "label": "Nome",
-                    "name": "clients_name",
+                    "key": "field_62272c497257c",
+                    "label": "Item title",
+                    "name": "teams_desc_title",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -97,18 +73,18 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "Online",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": 25
                 },
                 {
-                    "key": "field_61cc809d4281f",
-                    "label": "Website",
-                    "name": "clients_website",
-                    "type": "url",
+                    "key": "field_62272c747257d",
+                    "label": "Item subtitle",
+                    "name": "teams_desc_subtitle",
+                    "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -116,6 +92,36 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "placeholder": "Funciona como mágica. Só um curso que foi feito para ser online usa a melhor tecnologia.",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 140
+                },
+                {
+                    "key": "field_62272cdd7257e",
+                    "label": "Item icon",
+                    "name": "teams_desc_icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "online": "Online",
+                        "individual": "Individual",
+                        "flexible": "Flexible",
+                        "success": "Success"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
                     "placeholder": ""
                 }
             ]
@@ -126,17 +132,17 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/clients"
+                "value": "acf\/teams"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1640805106
+    "modified": 1646754334
 }

@@ -1,11 +1,11 @@
 {
-    "key": "group_61cc929f31c31",
-    "title": "Vídeo",
+    "key": "group_62274672eb19a",
+    "title": "Gallery",
     "fields": [
         {
-            "key": "field_61cc92a492b84",
-            "label": "Título",
-            "name": "video_title",
+            "key": "field_62274672eea59",
+            "label": "Title",
+            "name": "gallery_title",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -16,35 +16,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Vocês são o centro das aulas, e do site também",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 50
         },
         {
-            "key": "field_61cc92b092b85",
-            "label": "Subtítulo",
-            "name": "video_subtitle",
+            "key": "field_62274672eea76",
+            "label": "Subtitle",
+            "name": "gallery_subtitle",
             "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61cc92bf92b86",
-            "label": "Vídeo",
-            "name": "video_file",
-            "type": "file",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -53,9 +34,36 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "default_value": "",
+            "placeholder": "Veja algumas fotos de aulas.",
+            "prepend": "",
+            "append": "",
+            "maxlength": 140
+        },
+        {
+            "key": "field_62274672eea7c",
+            "label": "Gallery",
+            "name": "gallery_photos",
+            "type": "gallery",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "insert": "append",
             "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ""
         }
@@ -65,7 +73,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/video"
+                "value": "acf\/gallery"
             }
         ]
     ],
@@ -77,5 +85,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1640796991
+    "modified": 1646743127
 }

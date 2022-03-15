@@ -1,13 +1,13 @@
 <?php
 acf_register_block_type(array(
-    'name'              => 'testimonails',
-    'title'             => __('Testemunhos', 'fluente'),
+    'name'              => 'testimonials',
+    'title'             => __('Testimonials', 'fluente'),
     'render_template'   => 'gutenberg/testimonials.php',
     'mode'              => 'auto',
     'enqueue_style'     => get_template_directory_uri() . '/style.css',
-    'category'          => 'wy-blocks',
+    'category'          => 'fluente-blocks',
     'icon'              => 'smiley',
-    'keywords'          => array( 'testemunhos' ),
+    'keywords'          => array( 'depoimentos', 'testemunhos' ),
     'post_types'        => array( 'page' ),
 ));
 

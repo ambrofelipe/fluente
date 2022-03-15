@@ -1,15 +1,20 @@
 @use "../abstracts/" as *;
 @use 'sass:math';
 
+body table.booked-calendar {
+	border-bottom: none !important;
+}
+
+.main__calendar,
 .booked-calendar-wrap {
-	margin: 0 1em;
+	margin: 0 1em 0 !important;
 	padding: 0;
 	border-radius: 5px;
 	background-color: $D-01;
 	color: $G-02;
 	box-shadow: 3px 5px 10px $S-40;
 	
-	//.month-title {
+	.month-title,
 	thead tr:not(.days) th {
 		width: 100%;
 		margin: 0;
@@ -83,8 +88,45 @@ body table.booked-calendar td .date {
 	color: $G-02 !important;
 }
 
+@media screen and (max-width: 600px) {
+	body table.booked-calendar td .date .number {
+		margin: auto;
+		margin-top: 7px;
+		font-size: 1rem !important;
+	}
+}
+
 body table.booked-calendar td {
-	border-right: none !important;
+	border: none !important;
+}
+
+body table.booked-calendar td {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+body table.booked-calendar tr.booked-loading td {
+	height: 132px !important;
+}
+
+body table.booked-calendar td .date {
+	line-height: 50px !important;
+}
+
+body table.booked-calendar td .date span {
+	box-sizing: content-box !important;
+	width: 30px !important;
+	height: 30px !important;
+	line-height: 30px !important;
+	border-radius: 50% !important;
+	border: 2px solid !important;
+	border-color: transparent !important;
+	transition: all 300ms ease;
+}
+
+body table.booked-calendar td:hover .date span {
+	border-color: darken(desaturate($D-01, 20), 10) !important;
+	transition: all 300ms ease;
 }
 
 body table.booked-calendar td.prev-date .date,
@@ -113,4 +155,48 @@ body table.booked-calendar td.prev-month:hover .date span,
 body table.booked-calendar td.next-month .date span,
 body table.booked-calendar td.next-month:hover .date span {
 	color: transparent !important;
+}
+
+body table.booked-calendar td.prev-date:hover .date span,
+body table.booked-calendar td.prev-month:hover .date span,
+body table.booked-calendar td.next-month:hover .date span {
+	border-color: transparent !important;
+}
+
+body table.booked-calendar td.next-month:hover {
+	cursor: not-allowed;
+}
+
+body table.booked-calendar td.next-month:hover .date {
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+body table.booked-calendar tr.week td.active .date .number {
+	transform: none !important;
+	background: $G-00 !important;
+}
+
+body .booked-calendar-wrap .booked-appt-list .timeslot .timeslot-people button {
+	float: none;
+	min-width: unset;
+}
+
+body .booked-modal input[type=submit].button-primary,
+body .booked-modal button.cancel {
+	min-width: unset;
+}
+
+body table.booked-calendar tr.entryBlock td {
+	padding: 0 !important;
+}
+
+.main__hire .booked-calendar-shortcode-wrap {
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+#booked-profile-page {
+	min-width: min(100%, 700px);
+	padding: 0 1rem;
 }

@@ -1,63 +1,42 @@
 <?php 
 	if( is_admin() ) {
 
-		echo '<h3>Bloco: Testemunhos</h3>';
+		echo '<h3>Bloco: Depoimentos</h3>';
 
 	} else {
 		
+		$title    = get_field( 'testimonials_title');
+		$subtitle = get_field( 'testimonials_subtitle' );
+
 		$testimonials = \app\Models\Testimonials::get_all_testimonials();
 
 		$main_slide = 2;
 
 	?>
 
-
 	<section class="testimonials section">
-		<h2 class="section__title testimonials__title"><?php _e( 'Testimonials', 'fluente' ) ?></h2>
+		<header class="section__title">
+			<h2><?php echo $title ?></h2>
+			<h4><?php echo $subtitle ?></h4>
+		</header>
 
-		<div class="testimonials__slider slider" role="region" aria-roledescription="carousel" aria-label="<?php _e( 'Testimonials', 'fluente' ) ?>" data-index="<?php echo $main_slide ?>">
-			
-			<?php if( $testimonials ) { $x = 0; ?>
+		<?php if( $testimonials ): ?>
 
-				<ul id="testimonials__slider" aria-live="on" aria-live="polite">
+			<div class="wrapper">
 
-					
+				<?php
 
-					<?php
+					foreach( $testimonials as $testimonial ) {
+						extract( $testimonial );
+						include( locate_template( 'template-parts/testimonial-card.php' ) );
+					}
 
-						foreach( $testimonials as $testimonial ) {
-							extract( $testimonial );
-							include( locate_template( 'template-parts/testimonial-card.php' ) );
-							$x++;
-						}
+				?>
 
-					?>
+			</div>
 
-				</ul>
-
-				<ol class="testimonials__dots">
-
-					<?php
-
-						for( $i = 0; $i <= (count( $testimonials ) - 1); $i++ ) {
-						include( locate_template( 'template-parts/testimonial-dot.php' ) );
-						}
-
-					?>
-
-				</ol>
-
-				<?php 
-			} ?>
-
-
-		</div>
-
-		<a class="button testimonials__button button--primary" href="<?php echo home_url(); ?>/portfolio-cases/"
-			><?php _e( 'Check out our Portfolio & Case Studies', 'fluente' ) ?></a
-		>
+		<?php endif; ?>
 	</section>
-
 
 <?php
 	}

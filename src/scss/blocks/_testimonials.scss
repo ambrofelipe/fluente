@@ -65,30 +65,22 @@
 		margin-left: 0;
 		border-radius: 50%;
 		background-size: 4rem;
+
+		img {
+			position: absolute;
+			left: 0;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+		}
 		
 
 		span {
 			margin-left: 5rem;
 			font-size: 1.5em;
 			color: var(--fc-05, $G-07);
-			line-height: 4em;
+			line-height: 4rem;
 			text-align: left;
 		}
-	}
-
-	&__item:nth-child(1) &__author {
-		background-image: url(../img/pp/pp-10.jpg);
-	}
-
-	&__item:nth-child(2) &__author {
-		background-image: url(../img/pp/pp-2.jpg);
-	}
-
-	&__item:nth-child(3) &__author {
-		background-image: url(../img/pp/pp.jpg);
-	}
-
-	&__item:nth-child(4) &__author {
-		background-image: url(../img/pp/pp-1.jpg);
 	}
 }
