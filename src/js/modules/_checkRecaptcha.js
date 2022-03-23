@@ -28,7 +28,7 @@ app.checkRecaptcha = async () => {
 app.getToken = () => {
 	return new Promise(resolve => {
 		grecaptcha.ready(function() {
-			const token = grecaptcha.execute('6LdXwmkeAAAAAM57n9mu6tC6PiQUoz6m0mt6lqaK', {action: 'submit'});
+			const token = grecaptcha.execute('6LepYdcZAAAAAAEQ3yx9_xIFc3ox41h-EWs6UPT0', {action: 'submit'});
 
 			resolve(token);
 		});

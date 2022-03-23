@@ -61,6 +61,13 @@ class Enqueue {
 			true
 		);
 
+		wp_enqueue_script(
+			'fluente-recaptcha',
+			'https://www.google.com/recaptcha/api.js?render=6LepYdcZAAAAAAEQ3yx9_xIFc3ox41h-EWs6UPT0',
+			'',
+			null
+		);
+
 		// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
 		wp_localize_script( 'fluente-scripts', 'ajaxObj', 
 		array( 

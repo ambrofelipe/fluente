@@ -63,7 +63,7 @@
 		<dialog class="thanks">
 			<button aria-label="<?php _e( 'Close', 'fluente' ) ?>"><i class="booked-icon booked-icon-close"></i></button>
 			<h1></h1>
-			<div></div>
+			<p></p>
 		</dialog>
 		<?php wp_footer(); ?>
 

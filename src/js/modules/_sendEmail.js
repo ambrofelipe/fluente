@@ -74,19 +74,39 @@ app.sendEmail = {
 
 				const errors = form.querySelectorAll("label.error");
 
-				if (errors.length === 0) {
+				const recaptcha = await app.checkRecaptcha();
+
+				if (errors.length === 0 && recaptcha.score >= 0.5) {
 
 					// SUBMIT FORM
 					const subscriber = {
 						"name": name.value,
 						"email": email.value,
 					};
-                    console.log("🚀 ~ file: _sendEmail.js ~ line 84 ~ subscriber", subscriber)
 
 					const subscribe = await app.sendEmail.send(subscriber);
+                    console.log("🚀 ~ file: _sendEmail.js ~ line 88 ~ subscribe", subscribe)
 
-					console.log(subscribe);
+					// Populate dialog
+					const heading = document.querySelector(".thanks h1");
+					const message = document.querySelector(".thanks p");
 
+					if(subscribe.status === "success") {
+						heading.textContent = subscribe.data.title;
+						message.textContent = subscribe.data.message;
+					} else {
+						heading.textContent = "Oops!";
+						message.textContent = subscribe.message;
+					}
+
+					// Show dialog
+					const thanks = document.querySelectorAll(".thanks, .dim");
+
+					thanks.forEach(el => {
+						el.classList.add("visible");
+						el.classList.add("on");
+					});
+					
 					// Reset form
 					fields.forEach(function(field) {
 						field.value = "";
