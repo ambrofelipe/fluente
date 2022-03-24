@@ -74,9 +74,11 @@ app.sendEmail = {
 
 				const errors = form.querySelectorAll("label.error");
 
-				const recaptcha = await app.checkRecaptcha();
+				if (errors.length === 0) {
 
-				if (errors.length === 0 && recaptcha.score >= 0.5) {
+					const recaptcha = await app.checkRecaptcha();
+
+					if(recaptcha.score < 0.5) return;
 
 					// SUBMIT FORM
 					const subscriber = {
@@ -85,19 +87,13 @@ app.sendEmail = {
 					};
 
 					const subscribe = await app.sendEmail.send(subscriber);
-                    console.log("🚀 ~ file: _sendEmail.js ~ line 88 ~ subscribe", subscribe)
 
 					// Populate dialog
 					const heading = document.querySelector(".thanks h1");
 					const message = document.querySelector(".thanks p");
 
-					if(subscribe.status === "success") {
-						heading.textContent = subscribe.data.title;
-						message.textContent = subscribe.data.message;
-					} else {
-						heading.textContent = "Oops!";
-						message.textContent = subscribe.message;
-					}
+					heading.textContent = subscribe.data.title;
+					message.textContent = subscribe.data.message;
 
 					// Show dialog
 					const thanks = document.querySelectorAll(".thanks, .dim");
