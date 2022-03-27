@@ -26,6 +26,10 @@
 
 				echo do_shortcode("[booked-calendar]");
 
+			elseif( is_page( 145 )):
+
+				echo do_shortcode("[get_certificate_search_form]");
+
 			else:
 
 				$open_enrolment    = get_field( 'open_enrolment' );
