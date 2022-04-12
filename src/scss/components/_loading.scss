@@ -41,6 +41,22 @@
 	animation: spin 1s ease infinite;
 }
 
+.main .loading {
+	background-color: transparent;
+
+	&::before {
+		width: 3rem;
+		height: 3rem;
+		border-width: 3px;
+	}
+
+	&::after {
+		width: 2rem;
+		height: 2rem;
+		border-width: 3px;
+	}
+}
+
 @keyframes spin {
 	from {
 		transform: rotate(0deg);

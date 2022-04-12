@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	app.handleGallery.init();
 	app.countUp.init();
 	app.sendEmail.init();
+	app.checkSubscriber.init();
 	app.showTC.init();
 	app.handleDialog.init();
 });

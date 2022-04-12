@@ -30,7 +30,14 @@
 
 				echo do_shortcode("[get_certificate_search_form]");
 
-			else:
+			elseif( is_page( 152 )): ?>
+
+				<header class="main__header">
+					<h1 class="main__title"></h1>
+					<p class="main__desc"><span class="loading"></span></p>
+				</header>
+
+			<?php else:
 
 				$open_enrolment    = get_field( 'open_enrolment' );
 				$next_availability = get_field( 'next_available_date' );
