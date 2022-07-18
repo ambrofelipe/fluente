@@ -10,12 +10,12 @@ namespace app;
 class OptionsPage {
 
 	/**
-	 * Constructor.
+	 * Constructor
 	 */
 	public function __construct() {
 
-		if( function_exists('acf_add_options_page') ) {
-			acf_add_options_page( array( 'page_title' => __('Redes sociais', 'fluente' ) ) );
+		if( function_exists( 'acf_add_options_page' ) ) {
+			acf_add_options_page( array( 'page_title' => __( 'Contatos', 'fluente' ) ) );
 		}
 
 

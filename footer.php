@@ -1,7 +1,9 @@
 <?php
-	$facebook  = get_field( 'facebook', 'option' );
-	$instagram = get_field( 'instagram', 'option' );
-	$linkedin  = get_field( 'linkedin', 'option' );
+	$facebook	= get_field( 'facebook', 'option' );
+	$instagram	= get_field( 'instagram', 'option' );
+	$linkedin	= get_field( 'linkedin', 'option' );
+	$email		= get_field( 'email', 'option' );
+	$phone		= get_field( 'phone', 'option' );
 ?>
 		
 		<footer class="footer">
@@ -36,7 +38,7 @@
 						<?php endif; ?>
 
 						<?php if( $linkedin ): ?>
-							<li class="footer__item footer__item--fb">
+							<li class="footer__item footer__item--in">
 								<a href="<?php echo $linkedin ?>" target="_blank" title="LinkedIn (opens in another tab)"></a>
 							</li>
 						<?php endif; ?>
@@ -45,8 +47,8 @@
 				<div class="footer__info">
 					<p>Todo mundo é capaz de aprender inglês online, e a melhor forma é divertindo-se e fazendo o que você gosta.</p>
 					<address>
-						<p>felipe [@] fluente.me</p>
-						<p>+351 912 111 555</p>
+						<p><?php echo $email ?></p>
+						<p><?php echo $phone ?></p>
 					</address>
 				</div>
 

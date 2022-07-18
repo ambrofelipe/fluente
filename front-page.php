@@ -17,9 +17,8 @@
 				<h2>Quero brinde</h2>
 				<h4>Complete com seu nome e e-mail.</h4>
 				<p>Obrigado por ler até aqui. Para ajudar no pontapé inicial da sua jornada em inglês, toma um brinde!</p>
-				<p>🔖 um cupom de desconto</p>
 				<p>📘 um guia para atividades divertidas em inglês</p>
-				<p>🔒 Seus dados nunca serão cedidos. Não enviamos emails promocionais.</p>
+				<p>🔒 Seus dados nunca serão cedidos.</p>
 			</header>
 			<form class="subscribe__form" id="brinde-form" action="">
 				<label>

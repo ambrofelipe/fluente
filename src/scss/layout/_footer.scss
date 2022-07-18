@@ -56,6 +56,14 @@
 		}
 	}
 
+	&__social {
+		margin-top: 2rem;
+
+		@include desktop {
+			margin-top: 0;
+		}
+	}
+
 	&__social &__list {
 		flex-direction: row;
 	}
@@ -91,18 +99,23 @@
 		}
 
 		&--fb a,
-		&--ig a {
+		&--ig a,
+		&--in a {
 			fill: $G-05;
 			width: 2.5rem;
 			height: 2.5rem;
 		}
 
 		&--fb a {
-			background: url(../img/ico/ico-fb.svg) center / 100% no-repeat;
+			background: url(../img/ico/social-fb.svg) center / 100% no-repeat;
 		}
 
 		&--ig a {
-			background: url(../img/ico/ico-ig.svg) center / 100% no-repeat;
+			background: url(../img/ico/social-ig.svg) center / 100% no-repeat;
+		}
+
+		&--in a {
+			background: url(../img/ico/social-in.svg) center / contain no-repeat;
 		}
 	}
 

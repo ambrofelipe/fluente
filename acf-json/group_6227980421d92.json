@@ -49,6 +49,44 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_62ceef492e351",
+            "label": "Email",
+            "name": "email",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62ceef632e352",
+            "label": "Telefone",
+            "name": "phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -56,7 +94,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-redes-sociais"
+                "value": "acf-options-contatos"
             }
         ]
     ],
@@ -68,5 +106,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1646762069
+    "modified": 1657729103
 }

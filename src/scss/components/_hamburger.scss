@@ -60,7 +60,7 @@
 		}
 
 		& + nav ul {
-			transform: translateX(0);
+			transform: translateX(-1rem);
 			transition: transform 300ms ease-out;
 		}
 	}

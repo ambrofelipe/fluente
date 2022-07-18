@@ -10,18 +10,18 @@ namespace app;
 class Loginout {
 
 	/**
-	 * Loginout constructor.
+	 * Loginout constructor
 	 */
 	public function __construct() {
 
-		add_filter('wp_nav_menu_items', array($this, 'fluente_login_logout_link'), 10, 2);
+		add_filter( 'wp_nav_menu_items', array( $this, 'fluente_login_logout_link' ), 10, 2 );
 		
 	}
 	
-	public function fluente_login_logout_link($items, $args) {
+	public function fluente_login_logout_link( $items, $args ) {
 	
 		ob_start();
-		wp_loginout('index.php');
+		wp_loginout( 'index.php' );
 		$loginoutlink = ob_get_contents();
 		ob_end_clean();
 		$items .= '<li class="menu-item menu-user">' . $loginoutlink . '</li>';

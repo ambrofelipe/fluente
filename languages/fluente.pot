@@ -13,27 +13,27 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: footer.php:59, footer.php:64
+#: footer.php:61, footer.php:66
 msgid "Close"
 msgstr ""
 
-#: front-page.php:26
+#: front-page.php:25
 msgid "Seu nome"
 msgstr ""
 
-#: front-page.php:34
+#: front-page.php:33
 msgid "Por favor, complete com seu nome"
 msgstr ""
 
-#: front-page.php:37
+#: front-page.php:36
 msgid "Seu email"
 msgstr ""
 
-#: front-page.php:46
+#: front-page.php:45
 msgid "Por favor, complete com seu email"
 msgstr ""
 
-#: front-page.php:55
+#: front-page.php:54
 msgid "Manda!"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgid "Fluente"
 msgstr ""
 
 #: app/OptionsPage.php:18
-msgid "Redes sociais"
+msgid "Contatos"
 msgstr ""
 
 #: app/PostTypes.php:22, app/PostTypes.php:31

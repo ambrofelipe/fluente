@@ -121,21 +121,29 @@
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: flex-start;
-		gap: 6rem;
+		gap: 1rem;
 
-		padding: 0 4rem;
+		padding: 0 4rem 3rem;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		overscroll-behavior: auto;
 
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
 		@include desktop {
 			justify-content: center;
+			gap: 6rem;
 		}
 	}
 
 	&__option {
 		position: relative;
-		padding: 9rem 3rem 3rem;
+		padding: 9rem 1rem 3rem;
 		border: 2px solid $G-03;
 		border-radius: 0.5rem;
 		background-color: var(--bg-07, $G-03);
@@ -146,10 +154,18 @@
 		scroll-snap-align: center;
 		scroll-snap-stop: always;
 
+		@include desktop {
+			padding: 9rem 3rem 3rem;
+		}
+
 		&:nth-child(2) {
-			padding: 10rem 3rem 4rem;
+			padding: 10rem 2rem 4rem;
 			background-color: $G-00;
 			color: $G-07;
+
+			@include desktop {
+				padding: 10rem 3rem 4rem;
+			}
 		}
 
 		// Safari ignores spacing at the end of a scroll container

@@ -17,12 +17,12 @@
 	<meta name="format-detection" content="telephone=no" />
 
 	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="192x192" href="/favicon/e192.png" />
-	<link rel="apple-touch-icon" sizes="128x128" href="/favicon/e128.png" />
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon/e64.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/e32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/e16.png" />
-	<link rel="manifest" href="/favicon/manifest.json" />
+	<link rel="apple-touch-icon" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/e192.png" />
+	<link rel="apple-touch-icon" sizes="128x128" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/e128.png" />
+	<link rel="icon" type="image/png" sizes="64x64" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/e64.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/e32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/e16.png" />
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/dist/favicon/manifest.json" />
 	<link rel="canonical" href="https://fluente.me/" />
 
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2404C" />
@@ -31,7 +31,7 @@
 	<meta property="og:title" content="Todo mundo é capaz de aprender inglês online." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://fluente.me/" />
-	<meta property="og:image" content="/favicon/e192.png" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/dist/favicon/e192.png" />
 	<meta
 		property="og:description"
 		content="E a melhor forma é divertindo-se e fazendo o que gosta. Escolha um curso de inglês por videoconferência que contempla seu objetivo pessoal, com professor experiente e ambiente de aula online profissional."
@@ -43,7 +43,7 @@
 		name="twitter:description"
 		content="E a melhor forma é divertindo-se e fazendo o que gosta. Escolha um curso de inglês por videoconferência que contempla seu objetivo pessoal, com professor experiente e ambiente de aula online profissional."
 	/>
-	<meta name="twitter:image" content="/favicon/e192.png" />
+	<meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/dist/favicon/e192.png" />
 
 	<style>
 		#splash {
